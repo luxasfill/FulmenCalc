@@ -2474,8 +2474,8 @@
       "descricao": "Formatos de componentes discretos (resistores, capacitores, diodos)",
       "imagem": "radial_axial",
       "detalhes": [
-        "Axial: terminais saem nas extremidades (ex: resistores de carbono)",
-        "Radial: terminais saem no mesmo lado (ex: capacitores eletrolíticos)"
+        "Axial: terminais saem nas extremidades (ex: resistores de carbono).",
+        "Radial: terminais saem no mesmo lado (ex: capacitores eletrolíticos)."
       ],
       "categoria": "encapsulamento",
       "svg": null
