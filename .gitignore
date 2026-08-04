@@ -1,0 +1,27 @@
+# Build outputs
+build/
+app/build/
+.gradle/
+local.properties
+*.apk
+
+# IDE
+.idea/
+*.iml
+
+# Signing (NUNA subir)
+fulmencalc.jks
+keystore.properties
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.bak

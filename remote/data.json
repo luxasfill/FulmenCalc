@@ -1,0 +1,2496 @@
+{
+  "cis": [
+    {
+      "id": "ne555",
+      "nome": "NE555",
+      "subtitulo": "Timer",
+      "imagem": "ne555_pinout",
+      "pinos": [
+        "1: GND",
+        "2: TRIG",
+        "3: OUT",
+        "4: RESET",
+        "5: CTRL",
+        "6: THRES",
+        "7: DISCH",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "NE555",
+          "funcao": "Timer",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "TRIG"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RESET"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "CTRL"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "THRES"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "DISCH"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm358",
+      "nome": "LM358",
+      "subtitulo": "OpAmp Duplo",
+      "imagem": "lm358_pinout",
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: GND",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM358",
+          "funcao": "OpAmp Duplo",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm324",
+      "nome": "LM324",
+      "subtitulo": "OpAmp Quádruplo",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: VCC",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: OUT3",
+        "9: IN3-",
+        "10: IN3+",
+        "11: GND",
+        "12: IN4+",
+        "13: IN4-",
+        "14: OUT4"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM324",
+          "funcao": "OpAmp Quádruplo",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 7,
+          "bottom": 0,
+          "right": 7,
+          "top": 0
+        },
+        "total_pins": 14,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "VCC"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "OUT3"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "IN3-"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "IN3+"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "IN4+"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "IN4-"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "OUT4"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "cd4017",
+      "nome": "CD4017",
+      "subtitulo": "Contador Johnson",
+      "imagem": "cd4017_pinout",
+      "pinos": [
+        "1: Q5",
+        "2: Q1",
+        "3: Q0",
+        "4: Q4",
+        "5: Q6",
+        "6: Q7",
+        "7: Q3",
+        "8: GND",
+        "9: Q8",
+        "10: Q4",
+        "11: Q9",
+        "12: CO",
+        "13: CLK",
+        "14: RST",
+        "15: EN",
+        "16: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "CD4017",
+          "funcao": "Contador Johnson",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 8,
+          "bottom": 0,
+          "right": 8,
+          "top": 0
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "Q5"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "Q1"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "Q0"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "Q4"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "Q6"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "Q7"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "Q3"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "Q8"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "Q4"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "Q9"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "CO"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "CLK"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "RST"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "EN"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "VCC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm7805",
+      "nome": "LM7805",
+      "subtitulo": "Regulador 5V",
+      "imagem": "lm7805_pinout",
+      "pinos": [
+        "1: IN",
+        "2: GND",
+        "3: OUT"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM7805",
+          "funcao": "Regulador 5V",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "IN"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm7812",
+      "nome": "LM7812",
+      "subtitulo": "Regulador 12V",
+      "imagem": "lm7812_pinout",
+      "pinos": [
+        "1: IN",
+        "2: GND",
+        "3: OUT"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM7812",
+          "funcao": "Regulador 12V",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "IN"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm317",
+      "nome": "LM317",
+      "subtitulo": "Regulador Ajustável",
+      "imagem": "lm317_pinout",
+      "pinos": [
+        "1: ADJ",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM317",
+          "funcao": "Regulador Ajustável",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ADJ"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm386",
+      "nome": "LM386",
+      "subtitulo": "Amplificador Áudio",
+      "imagem": "lm386_pinout",
+      "pinos": [
+        "1: GAIN",
+        "2: IN-",
+        "3: IN+",
+        "4: GND",
+        "5: OUT",
+        "6: VS",
+        "7: BYP",
+        "8: GAIN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM386",
+          "funcao": "Amplificador Áudio",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GAIN"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OUT"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "VS"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "BYP"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GAIN"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm741",
+      "nome": "LM741",
+      "subtitulo": "OpAmp",
+      "imagem": "lm741_pinout",
+      "pinos": [
+        "1: OFFSET N1",
+        "2: IN-",
+        "3: IN+",
+        "4: V-",
+        "5: OFFSET N2",
+        "6: OUT",
+        "7: V+",
+        "8: NC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM741",
+          "funcao": "OpAmp",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OFFSET N1"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "V-"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OFFSET N2"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "OUT"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "V+"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "NC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "lm1117",
+      "nome": "LM1117",
+      "subtitulo": "Regulador Ajustável",
+      "imagem": "lm1117_pinout",
+      "pinos": [
+        "1: ADJ/GND",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM1117",
+          "funcao": "Regulador Ajustável",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ADJ/GND"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "atmega328p",
+      "nome": "ATmega328P",
+      "subtitulo": "Microcontrolador (Arduino)",
+      "imagem": null,
+      "pinos": [
+        "1: PC6/RST",
+        "2: PD0/RX",
+        "3: PD1/TX",
+        "4: PD2/INT0",
+        "5: PD3/INT1",
+        "6: PD4/T0",
+        "7: VCC",
+        "8: GND",
+        "9: XTAL1",
+        "10: XTAL2",
+        "11: PD5/T1",
+        "12: PD6/AIN0",
+        "13: PD7/AIN1",
+        "14: PB0/ICP",
+        "15: PB1/OC1A",
+        "16: PB2/OC1B",
+        "17: PB3/MOSI",
+        "18: PB4/MISO",
+        "19: PB5/SCK",
+        "20: AVCC",
+        "21: AREF",
+        "22: GND",
+        "23: PC0/ADC0",
+        "24: PC1/ADC1",
+        "25: PC2/ADC2",
+        "26: PC3/ADC3",
+        "27: PC4/ADC4",
+        "28: PC5/ADC5"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ATmega328P",
+          "funcao": "Microcontrolador (Arduino)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 14,
+          "bottom": 0,
+          "right": 14,
+          "top": 0
+        },
+        "total_pins": 28,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "PC6/RST"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "PD0/RX"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "PD1/TX"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "PD2/INT0"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "PD3/INT1"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "PD4/T0"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "VCC"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "XTAL1"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "XTAL2"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "PD5/T1"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "PD6/AIN0"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "PD7/AIN1"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "PB0/ICP"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "PB1/OC1A"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "PB2/OC1B"
+            }
+          },
+          "17": {
+            "number": 17,
+            "fields": {
+              "Nome": "PB3/MOSI"
+            }
+          },
+          "18": {
+            "number": 18,
+            "fields": {
+              "Nome": "PB4/MISO"
+            }
+          },
+          "19": {
+            "number": 19,
+            "fields": {
+              "Nome": "PB5/SCK"
+            }
+          },
+          "20": {
+            "number": 20,
+            "fields": {
+              "Nome": "AVCC"
+            }
+          },
+          "21": {
+            "number": 21,
+            "fields": {
+              "Nome": "AREF"
+            }
+          },
+          "22": {
+            "number": 22,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "23": {
+            "number": 23,
+            "fields": {
+              "Nome": "PC0/ADC0"
+            }
+          },
+          "24": {
+            "number": 24,
+            "fields": {
+              "Nome": "PC1/ADC1"
+            }
+          },
+          "25": {
+            "number": 25,
+            "fields": {
+              "Nome": "PC2/ADC2"
+            }
+          },
+          "26": {
+            "number": 26,
+            "fields": {
+              "Nome": "PC3/ADC3"
+            }
+          },
+          "27": {
+            "number": 27,
+            "fields": {
+              "Nome": "PC4/ADC4"
+            }
+          },
+          "28": {
+            "number": 28,
+            "fields": {
+              "Nome": "PC5/ADC5"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "esp8266",
+      "nome": "ESP8266",
+      "subtitulo": "WiFi (ESP-01)",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: GPIO2",
+        "3: GPIO0",
+        "4: RXD",
+        "5: TXD",
+        "6: CH_PD",
+        "7: RST",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ESP8266",
+          "funcao": "WiFi (ESP-01)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GPIO2"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "GPIO0"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RXD"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "TXD"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "CH_PD"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "RST"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "ci_7404",
+      "nome": "CI 7404",
+      "subtitulo": "(Inversor hex)",
+      "imagem": "ci_7404",
+      "pinos": [
+        "Tem 14 pinos e contém seis portas lógicas inversoras (NOT) independentes.",
+        "Pino 1: Entrada 1 (1A)",
+        "Pino 2: Saída 1 (1Y)",
+        "Pino 3: Entrada 2 (2A)",
+        "Pino 4: Saída 2 (2Y)",
+        "Pino 5: Entrada 3 (3A)",
+        "Pino 6: Saída 3 (3Y)",
+        "Pino 7: Terra / GND (0V)",
+        "Pino 8: Saída 4 (4Y)",
+        "Pino 9: Entrada 4 (4A)",
+        "Pino 10: Saída 5 (5Y)",
+        "Pino 11: Entrada 5 (5A)",
+        "Pino 12: Saída 6 (6Y)",
+        "Pino 13: Entrada 6 (6A)",
+        "Pino 14: Alimentação / \\(V_{CC}\\) (+5V)"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "CI 7404",
+          "funcao": "(Inversor hex)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 7,
+          "bottom": 0,
+          "right": 7,
+          "top": 0
+        },
+        "total_pins": 14,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "Entrada 1 (1A)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "Saída 1 (1Y)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "Entrada 2 (2A)"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "Saída 2 (2Y)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "Entrada 3 (3A)"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "Saída 3 (3Y)"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "Terra / GND (0V)"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "Saída 4 (4Y)"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "Entrada 4 (4A)"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "Saída 5 (5Y)"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "Entrada 5 (5A)"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "Saída 6 (6Y)"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "Entrada 6 (6A)"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "Alimentação / \\(V_{CC}\\) (+5V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "bc548",
+      "nome": "BC548",
+      "subtitulo": "Transistor NPN",
+      "imagem": null,
+      "pinos": [],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "BC548",
+          "package": "transistor",
+          "custom_fields": {
+            "dissipação total calor": "625mW",
+            "tipo": "Transistor NPN",
+            "VCEO": "30V"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "none",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "Coletor",
+              "Funcao": "corrente",
+              "CC": "100mAdc"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "Base",
+              "Funcao": "Clock",
+              "voltagem 50 vdc": ""
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "Emissor",
+              "Funcao": "Emitir cargas",
+              "voltagem": "45 vdc"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "soketd",
+      "nome": "soketd",
+      "subtitulo": "tester coisas",
+      "imagem": null,
+      "pinos": [
+        "nem pino tem",
+        "acha que vai ter"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "soketd",
+          "funcao": "tester coisas",
+          "custom_fields": {
+            "sabe le nao?": "heuhuehu"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 64,
+        "body_style": "rect",
+        "marker_style": "none",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "so",
+              "Funcao": "pra vc ler",
+              "tem nada m": "ainda aqui"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {}
+          },
+          "3": {
+            "number": 3,
+            "fields": {}
+          },
+          "4": {
+            "number": 4,
+            "fields": {}
+          },
+          "5": {
+            "number": 5,
+            "fields": {}
+          },
+          "6": {
+            "number": 6,
+            "fields": {}
+          },
+          "7": {
+            "number": 7,
+            "fields": {}
+          },
+          "8": {
+            "number": 8,
+            "fields": {}
+          },
+          "9": {
+            "number": 9,
+            "fields": {}
+          },
+          "10": {
+            "number": 10,
+            "fields": {}
+          },
+          "11": {
+            "number": 11,
+            "fields": {}
+          },
+          "12": {
+            "number": 12,
+            "fields": {}
+          },
+          "13": {
+            "number": 13,
+            "fields": {}
+          },
+          "14": {
+            "number": 14,
+            "fields": {}
+          },
+          "15": {
+            "number": 15,
+            "fields": {}
+          },
+          "16": {
+            "number": 16,
+            "fields": {}
+          },
+          "17": {
+            "number": 17,
+            "fields": {}
+          },
+          "18": {
+            "number": 18,
+            "fields": {}
+          },
+          "19": {
+            "number": 19,
+            "fields": {}
+          },
+          "20": {
+            "number": 20,
+            "fields": {}
+          },
+          "21": {
+            "number": 21,
+            "fields": {}
+          },
+          "22": {
+            "number": 22,
+            "fields": {}
+          },
+          "23": {
+            "number": 23,
+            "fields": {}
+          },
+          "24": {
+            "number": 24,
+            "fields": {}
+          },
+          "25": {
+            "number": 25,
+            "fields": {}
+          },
+          "26": {
+            "number": 26,
+            "fields": {}
+          },
+          "27": {
+            "number": 27,
+            "fields": {}
+          },
+          "28": {
+            "number": 28,
+            "fields": {}
+          },
+          "29": {
+            "number": 29,
+            "fields": {}
+          },
+          "30": {
+            "number": 30,
+            "fields": {}
+          },
+          "31": {
+            "number": 31,
+            "fields": {}
+          },
+          "32": {
+            "number": 32,
+            "fields": {}
+          },
+          "33": {
+            "number": 33,
+            "fields": {}
+          },
+          "34": {
+            "number": 34,
+            "fields": {}
+          },
+          "35": {
+            "number": 35,
+            "fields": {}
+          },
+          "36": {
+            "number": 36,
+            "fields": {}
+          },
+          "37": {
+            "number": 37,
+            "fields": {}
+          },
+          "38": {
+            "number": 38,
+            "fields": {}
+          },
+          "39": {
+            "number": 39,
+            "fields": {}
+          },
+          "40": {
+            "number": 40,
+            "fields": {}
+          },
+          "41": {
+            "number": 41,
+            "fields": {}
+          },
+          "42": {
+            "number": 42,
+            "fields": {}
+          },
+          "43": {
+            "number": 43,
+            "fields": {}
+          },
+          "44": {
+            "number": 44,
+            "fields": {}
+          },
+          "45": {
+            "number": 45,
+            "fields": {}
+          },
+          "46": {
+            "number": 46,
+            "fields": {}
+          },
+          "47": {
+            "number": 47,
+            "fields": {}
+          },
+          "48": {
+            "number": 48,
+            "fields": {}
+          },
+          "49": {
+            "number": 49,
+            "fields": {}
+          },
+          "50": {
+            "number": 50,
+            "fields": {}
+          },
+          "51": {
+            "number": 51,
+            "fields": {}
+          },
+          "52": {
+            "number": 52,
+            "fields": {}
+          },
+          "53": {
+            "number": 53,
+            "fields": {}
+          },
+          "54": {
+            "number": 54,
+            "fields": {}
+          },
+          "55": {
+            "number": 55,
+            "fields": {}
+          },
+          "56": {
+            "number": 56,
+            "fields": {}
+          },
+          "57": {
+            "number": 57,
+            "fields": {}
+          },
+          "58": {
+            "number": 58,
+            "fields": {}
+          },
+          "59": {
+            "number": 59,
+            "fields": {}
+          },
+          "60": {
+            "number": 60,
+            "fields": {}
+          },
+          "61": {
+            "number": 61,
+            "fields": {}
+          },
+          "62": {
+            "number": 62,
+            "fields": {}
+          },
+          "63": {
+            "number": 63,
+            "fields": {}
+          },
+          "64": {
+            "number": 64,
+            "fields": {}
+          }
+        },
+        "bga_grid": [
+          8,
+          8
+        ],
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "test_sot23",
+      "nome": "TESTE SOT23",
+      "subtitulo": "Transistor NPN (SOT-23)",
+      "pinos": [
+        "1: BASE",
+        "2: EMITTER",
+        "3: COLLECTOR"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TESTE SOT23",
+          "funcao": "Transistor NPN (SOT-23)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 1,
+          "bottom": 0,
+          "right": 2,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "BASE"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "EMITTER"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "COLLECTOR"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "test_sot223",
+      "nome": "TESTE SOT223",
+      "subtitulo": "Regulador 3.3V (SOT-223)",
+      "pinos": [
+        "1: GND",
+        "2: VOUT",
+        "3: VIN",
+        "4: TAB"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TESTE SOT223",
+          "funcao": "Regulador 3.3V (SOT-223)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 4,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 4,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "VOUT"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "VIN"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "TAB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "test_qfn16",
+      "nome": "TESTE QFN16",
+      "subtitulo": "Microcontrolador (QFN-16)",
+      "pinos": [
+        "1: RESET",
+        "2: PB3",
+        "3: PB4",
+        "4: GND",
+        "5: PB0",
+        "6: PB1",
+        "7: PB2",
+        "8: VCC",
+        "9: PB6",
+        "10: PB7",
+        "11: NC",
+        "12: NC",
+        "13: NC",
+        "14: NC",
+        "15: NC",
+        "16: NC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TESTE QFN16",
+          "funcao": "Microcontrolador (QFN-16)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 4,
+          "right": 4,
+          "top": 4
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "RESET"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "PB3"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "PB4"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "PB0"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "PB1"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "PB2"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "PB6"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "PB7"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "NC"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "NC"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "NC"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "NC"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "NC"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "NC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": true,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "test_bga64",
+      "nome": "TESTE BGA64",
+      "subtitulo": "CPLD (BGA-64)",
+      "pinos": [
+        "1: VCC",
+        "2: GND",
+        "3: CLK",
+        "4: RST",
+        "5: IO0",
+        "6: IO1",
+        "7: IO2",
+        "8: IO3",
+        "9: IO4",
+        "10: IO5",
+        "11: IO6",
+        "12: IO7",
+        "13: IO8",
+        "14: IO9",
+        "15: IO10",
+        "16: IO11",
+        "17: IO12",
+        "18: IO13",
+        "19: IO14",
+        "20: IO15",
+        "21: IO16",
+        "22: IO17",
+        "23: IO18",
+        "24: IO19",
+        "25: IO20",
+        "26: IO21",
+        "27: IO22",
+        "28: IO23",
+        "29: IO24",
+        "30: IO25",
+        "31: IO26",
+        "32: IO27",
+        "33: IO28",
+        "34: IO29",
+        "35: IO30",
+        "36: IO31",
+        "37: IO32",
+        "38: IO33",
+        "39: IO34",
+        "40: IO35",
+        "41: IO36",
+        "42: IO37",
+        "43: IO38",
+        "44: IO39",
+        "45: IO40",
+        "46: IO41",
+        "47: IO42",
+        "48: IO43",
+        "49: IO44",
+        "50: IO45",
+        "51: IO46",
+        "52: IO47",
+        "53: IO48",
+        "54: IO49",
+        "55: IO50",
+        "56: IO51",
+        "57: IO52",
+        "58: IO53",
+        "59: IO54",
+        "60: IO55",
+        "61: IO56",
+        "62: IO57",
+        "63: IO58",
+        "64: IO59"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TESTE BGA64",
+          "funcao": "CPLD (BGA-64)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 0,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 64,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "VCC"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "CLK"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RST"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IO0"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IO1"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "IO2"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "IO3"
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "IO4"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "IO5"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "IO6"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "IO7"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "IO8"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "IO9"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "IO10"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "IO11"
+            }
+          },
+          "17": {
+            "number": 17,
+            "fields": {
+              "Nome": "IO12"
+            }
+          },
+          "18": {
+            "number": 18,
+            "fields": {
+              "Nome": "IO13"
+            }
+          },
+          "19": {
+            "number": 19,
+            "fields": {
+              "Nome": "IO14"
+            }
+          },
+          "20": {
+            "number": 20,
+            "fields": {
+              "Nome": "IO15"
+            }
+          },
+          "21": {
+            "number": 21,
+            "fields": {
+              "Nome": "IO16"
+            }
+          },
+          "22": {
+            "number": 22,
+            "fields": {
+              "Nome": "IO17"
+            }
+          },
+          "23": {
+            "number": 23,
+            "fields": {
+              "Nome": "IO18"
+            }
+          },
+          "24": {
+            "number": 24,
+            "fields": {
+              "Nome": "IO19"
+            }
+          },
+          "25": {
+            "number": 25,
+            "fields": {
+              "Nome": "IO20"
+            }
+          },
+          "26": {
+            "number": 26,
+            "fields": {
+              "Nome": "IO21"
+            }
+          },
+          "27": {
+            "number": 27,
+            "fields": {
+              "Nome": "IO22"
+            }
+          },
+          "28": {
+            "number": 28,
+            "fields": {
+              "Nome": "IO23"
+            }
+          },
+          "29": {
+            "number": 29,
+            "fields": {
+              "Nome": "IO24"
+            }
+          },
+          "30": {
+            "number": 30,
+            "fields": {
+              "Nome": "IO25"
+            }
+          },
+          "31": {
+            "number": 31,
+            "fields": {
+              "Nome": "IO26"
+            }
+          },
+          "32": {
+            "number": 32,
+            "fields": {
+              "Nome": "IO27"
+            }
+          },
+          "33": {
+            "number": 33,
+            "fields": {
+              "Nome": "IO28"
+            }
+          },
+          "34": {
+            "number": 34,
+            "fields": {
+              "Nome": "IO29"
+            }
+          },
+          "35": {
+            "number": 35,
+            "fields": {
+              "Nome": "IO30"
+            }
+          },
+          "36": {
+            "number": 36,
+            "fields": {
+              "Nome": "IO31"
+            }
+          },
+          "37": {
+            "number": 37,
+            "fields": {
+              "Nome": "IO32"
+            }
+          },
+          "38": {
+            "number": 38,
+            "fields": {
+              "Nome": "IO33"
+            }
+          },
+          "39": {
+            "number": 39,
+            "fields": {
+              "Nome": "IO34"
+            }
+          },
+          "40": {
+            "number": 40,
+            "fields": {
+              "Nome": "IO35"
+            }
+          },
+          "41": {
+            "number": 41,
+            "fields": {
+              "Nome": "IO36"
+            }
+          },
+          "42": {
+            "number": 42,
+            "fields": {
+              "Nome": "IO37"
+            }
+          },
+          "43": {
+            "number": 43,
+            "fields": {
+              "Nome": "IO38"
+            }
+          },
+          "44": {
+            "number": 44,
+            "fields": {
+              "Nome": "IO39"
+            }
+          },
+          "45": {
+            "number": 45,
+            "fields": {
+              "Nome": "IO40"
+            }
+          },
+          "46": {
+            "number": 46,
+            "fields": {
+              "Nome": "IO41"
+            }
+          },
+          "47": {
+            "number": 47,
+            "fields": {
+              "Nome": "IO42"
+            }
+          },
+          "48": {
+            "number": 48,
+            "fields": {
+              "Nome": "IO43"
+            }
+          },
+          "49": {
+            "number": 49,
+            "fields": {
+              "Nome": "IO44"
+            }
+          },
+          "50": {
+            "number": 50,
+            "fields": {
+              "Nome": "IO45"
+            }
+          },
+          "51": {
+            "number": 51,
+            "fields": {
+              "Nome": "IO46"
+            }
+          },
+          "52": {
+            "number": 52,
+            "fields": {
+              "Nome": "IO47"
+            }
+          },
+          "53": {
+            "number": 53,
+            "fields": {
+              "Nome": "IO48"
+            }
+          },
+          "54": {
+            "number": 54,
+            "fields": {
+              "Nome": "IO49"
+            }
+          },
+          "55": {
+            "number": 55,
+            "fields": {
+              "Nome": "IO50"
+            }
+          },
+          "56": {
+            "number": 56,
+            "fields": {
+              "Nome": "IO51"
+            }
+          },
+          "57": {
+            "number": 57,
+            "fields": {
+              "Nome": "IO52"
+            }
+          },
+          "58": {
+            "number": 58,
+            "fields": {
+              "Nome": "IO53"
+            }
+          },
+          "59": {
+            "number": 59,
+            "fields": {
+              "Nome": "IO54"
+            }
+          },
+          "60": {
+            "number": 60,
+            "fields": {
+              "Nome": "IO55"
+            }
+          },
+          "61": {
+            "number": 61,
+            "fields": {
+              "Nome": "IO56"
+            }
+          },
+          "62": {
+            "number": 62,
+            "fields": {
+              "Nome": "IO57"
+            }
+          },
+          "63": {
+            "number": 63,
+            "fields": {
+              "Nome": "IO58"
+            }
+          },
+          "64": {
+            "number": 64,
+            "fields": {
+              "Nome": "IO59"
+            }
+          }
+        },
+        "bga_grid": [
+          8,
+          8
+        ],
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    },
+    {
+      "id": "test_dip8",
+      "nome": "TESTE DIP8",
+      "subtitulo": "Comparador (DIP-8 chamfer)",
+      "pinos": [
+        "1: 1OUT",
+        "2: 1IN-",
+        "3: 1IN+",
+        "4: GND",
+        "5: 2IN+",
+        "6: 2IN-",
+        "7: 2OUT",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TESTE DIP8",
+          "funcao": "Comparador (DIP-8 chamfer)",
+          "custom_fields": {}
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "chamfer",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "1OUT"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "1IN-"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "1IN+"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "2IN+"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "2IN-"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "2OUT"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false,
+        "theme_colors": "light"
+      }
+    }
+  ],
+  "infos": [
+    {
+      "id": "dip",
+      "nome": "DIP (Dual In-line Package)",
+      "descricao": "Encapsulamento tradicional para CI's com dois lados de pinos",
+      "imagem": "ic_dip_package",
+      "detalhes": [
+        "Pinos: 4 a 64, espaçamento 2.54mm",
+        "Uso: CI's lógicos, OpAmps, microcontroladores",
+        "Montagem: through-hole, ideal para protoboards"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "to220",
+      "nome": "TO-220",
+      "descricao": "Encapsulamento de potência com 3 terminais e aba metálica",
+      "imagem": "ic_to220",
+      "detalhes": [
+        "Pinos: 3 (entrada, saída, referência)",
+        "Uso: Reguladores de tensão (7805, LM317), transistores de potência",
+        "Dissipação: até ~20W com dissipador",
+        "A aba metálica é conectada ao pino do meio"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "to92",
+      "nome": "TO-92",
+      "descricao": "Pequeno encapsulamento de 3 pinos para semicondutores de baixa potência",
+      "imagem": "ic_to92",
+      "detalhes": [
+        "Pinos: 3, espaçamento 1.27mm",
+        "Uso: Transistores pequenos (BC547, 2N2222), sensores (LM35)",
+        "Corrente: tipicamente até 500mA"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "radial_axial",
+      "nome": "Axial vs Radial",
+      "descricao": "Formatos de componentes discretos (resistores, capacitores, diodos)",
+      "imagem": "radial_axial",
+      "detalhes": [
+        "Axial: terminais saem nas extremidades (ex: resistores de carbono)",
+        "Radial: terminais saem no mesmo lado (ex: capacitores eletrolíticos)"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "pth_smd",
+      "nome": "PTH vs SMD",
+      "descricao": "Formatos de componentes discretos (resistores,capacitores,diodos)",
+      "imagem": "pth_smd",
+      "detalhes": [
+        "PTH - Pin Through-Hole (ou Plated Through-Hole)- Fabricação em que os terminais dos componentes eletrônicos passam por furos metalizados na placa de circuito impresso (PCI) e são soldados no lado oposto.",
+        "SMD- Surface Mount Device os componentes são soldados diretamente na parte de cima da placa de circuito sem precisar de furos."
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    }
+  ]
+}
