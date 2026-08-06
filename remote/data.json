@@ -65,10 +65,11 @@
             "number": 3,
             "fields": {
               "Nome": "OUT",
-              "Tipo": "Saída",
-              "Função": "Saída do timer, alta corrente (sink ou source).",
               "Corrente": "Até ±200 mA",
-              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)"
+              "Função": "Saída do timer, alta corrente (sink ou source).",
+              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
+              "Tipo": "Saída",
+              "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
             }
           },
           "4": {
