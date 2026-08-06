@@ -84,9 +84,10 @@
             "number": 5,
             "fields": {
               "Nome": "CONT",
-              "Tipo": "Entrada/Saída",
               "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
-              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)"
+              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)",
+              "Tipo": "Entrada/Saída",
+              "Extra": "Entrada de controle da tensão de referência dos comparadores internos.\nQuando não utilizada, recomenda-se capacitor de aproximadamente 10 nF para GND."
             }
           },
           "6": {
@@ -118,8 +119,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -204,8 +204,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -332,8 +331,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -474,8 +472,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -525,8 +522,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -576,8 +572,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -662,8 +657,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -748,8 +742,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -974,8 +967,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     },
     {
@@ -1060,8 +1052,7 @@
           }
         },
         "bga_grid": null,
-        "exposed_pad": false,
-        "theme_colors": "light"
+        "exposed_pad": false
       }
     }
   ],
