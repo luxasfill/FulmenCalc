@@ -1056,6 +1056,137 @@
         "bga_grid": null,
         "exposed_pad": false
       }
+    },
+    {
+      "id": "aoe6930",
+      "nome": "AOE6930",
+      "subtitulo": "MOSFET Dual 30V (Half-Bridge)",
+      "imagem": null,
+      "pinos": [
+        "1: G1",
+        "2: S1/D2",
+        "3: D1",
+        "4: D1",
+        "5: D2/S1",
+        "6: D2/S1",
+        "7: D2/S1",
+        "8: G2"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "AOE6930",
+          "funcao": "30V Dual Asymmetric N-Channel XSPairFET — half-bridge de potência para VRM DC/DC (Q1 high-side + Q2 low-side)",
+          "custom_fields": {
+            "Descrição": "MOSFET de potência dual assimétrico com tecnologia Bottom Source — half-bridge completo em um pacote DFN 5x6E para VRM de computadores, servidores e POL.",
+            "Fabricante": "Alpha & Omega Semiconductor (AOS)",
+            "Configuração": "Dual assimétrico — Q1 high-side + Q2 low-side (XSPairFET, bottom source S2)",
+            "VDS": "30V (Q1 e Q2)",
+            "ID (Q1)": "22A @ TC=25°C | 22A @ TA=25°C (IDSM)",
+            "ID (Q2)": "85A @ TC=25°C | 60A @ TA=25°C (IDSM)",
+            "IDM (pulsado)": "88A (Q1) | 340A (Q2)",
+            "RDS(ON) Q1": "< 4,3mΩ @VGS=10V | < 7,0mΩ @VGS=4,5V (ID=20A)",
+            "RDS(ON) Q2": "< 0,83mΩ @VGS=10V | < 1,05mΩ @VGS=4,5V (ID=30A)",
+            "VGS": "Q1 ±20V | Q2 ±12V",
+            "VGS(th)": "Q1 1,3–2,1V | Q2 1,2–1,9V",
+            "Qg(10V)": "Q1 15–25nC | Q2 95–150nC",
+            "Qg(4,5V)": "Q1 7–15nC | Q2 42–65nC",
+            "Capacitâncias (VDS=15V)": "Ciss 1075pF / Coss 480pF / Crss 55pF (Q1) | Ciss 5560pF / Coss 1670pF / Crss 200pF (Q2)",
+            "Térmica": "RθJC 4,0°C/W (Q1) | 1,25°C/W (Q2) | RθJA 30°C/W / 25°C/W (t≤10s)",
+            "Tj": "−55°C a +150°C",
+            "Pacote": "DFN 5x6E (Power DFN5x6) — 8 pinos + 2 pads expostos no fundo: S2 (fonte do Q2 / GND) e D1 (dreno do Q1)",
+            "Qualificações": "100% UIS Tested | 100% Rg Tested | RoHS 2.0 / Halogen-Free",
+            "Datasheet": "Rev 2.1 — Agosto 2023 (aosmd.com)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "right": 4,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "G1",
+              "Tipo": "Entrada (Gate)",
+              "Função": "Gate do Q1 (high-side) — comutação do MOSFET superior do half-bridge.",
+              "Tensão": "VGS ±20V",
+              "Extra": "VGS(th) 1,3–2,1V (VDS=VGS, ID=250mA)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "S1/D2",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — source de Q1 e drain de Q2 conectados internamente. Ponto de comutação do half-bridge.",
+              "Extra": "Mesmo nó dos pinos 5, 6 e 7. Conexão de alta di/dt — manter indutância baixa."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "D1",
+              "Tipo": "Potência",
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
+              "Corrente": "ID 22A (Q1, TC=25°C)"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "D1",
+              "Tipo": "Potência",
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
+              "Corrente": "ID 22A (Q1, TC=25°C)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente. Ponto de comutação do half-bridge.",
+              "Extra": "Mesmo nó dos pinos 2, 6 e 7."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
+              "Extra": "Mesmo nó dos pinos 2, 5 e 7."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
+              "Extra": "Mesmo nó dos pinos 2, 5 e 6."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "G2",
+              "Tipo": "Entrada (Gate)",
+              "Função": "Gate do Q2 (low-side / síncrono) — comutação do MOSFET inferior do half-bridge.",
+              "Tensão": "VGS ±12V",
+              "Extra": "VGS(th) 1,2–1,9V (VDS=VGS, ID=250mA)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
     }
   ],
   "infos": [
