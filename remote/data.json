@@ -4,7 +4,7 @@
       "id": "ne555",
       "nome": "NE555",
       "subtitulo": "Timer",
-      "imagem": "ne555_pinout",
+      "imagem": null,
       "pinos": [
         "1: GND",
         "2: TRIG",
@@ -90,7 +90,7 @@
       "id": "lm358",
       "nome": "LM358",
       "subtitulo": "OpAmp Duplo",
-      "imagem": "lm358_pinout",
+      "imagem": null,
       "pinos": [
         "1: OUT1",
         "2: IN1-",
@@ -304,7 +304,7 @@
       "id": "cd4017",
       "nome": "CD4017",
       "subtitulo": "Contador Johnson",
-      "imagem": "cd4017_pinout",
+      "imagem": null,
       "pinos": [
         "1: Q5",
         "2: Q1",
@@ -446,7 +446,7 @@
       "id": "lm7805",
       "nome": "LM7805",
       "subtitulo": "Regulador 5V",
-      "imagem": "lm7805_pinout",
+      "imagem": null,
       "pinos": [
         "1: IN",
         "2: GND",
@@ -497,7 +497,7 @@
       "id": "lm317",
       "nome": "LM317",
       "subtitulo": "Regulador Ajustável",
-      "imagem": "lm317_pinout",
+      "imagem": null,
       "pinos": [
         "1: ADJ",
         "2: OUT",
@@ -548,7 +548,7 @@
       "id": "lm386",
       "nome": "LM386",
       "subtitulo": "Amplificador Áudio",
-      "imagem": "lm386_pinout",
+      "imagem": null,
       "pinos": [
         "1: GAIN",
         "2: IN-",
@@ -634,7 +634,7 @@
       "id": "lm741",
       "nome": "LM741",
       "subtitulo": "OpAmp",
-      "imagem": "lm741_pinout",
+      "imagem": null,
       "pinos": [
         "1: OFFSET N1",
         "2: IN-",
