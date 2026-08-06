@@ -103,9 +103,10 @@
             "number": 7,
             "fields": {
               "Nome": "DISCH",
-              "Tipo": "Saída (coletor aberto)",
               "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
-              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)"
+              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)",
+              "Tipo": "Saída",
+              "Extra": "Transistor NPN de descarga com coletor aberto para GND"
             }
           },
           "8": {
