@@ -3,14 +3,14 @@
     {
       "id": "ne555",
       "nome": "NE555",
-      "subtitulo": "Timer",
+      "subtitulo": "Timer de Precisão",
       "imagem": null,
       "pinos": [
         "1: GND",
         "2: TRIG",
         "3: OUT",
         "4: RESET",
-        "5: CTRL",
+        "5: CONT",
         "6: THRES",
         "7: DISCH",
         "8: VCC"
@@ -19,8 +19,19 @@
         "version": 4,
         "component": {
           "name": "NE555",
-          "funcao": "Timer",
-          "custom_fields": {}
+          "funcao": "Timer de precisão — temporização de microssegundos a horas (astável e monoestável)",
+          "custom_fields": {
+            "Descrição": "Timer de precisão — temporização de microssegundos a horas, modos astável e monoestável. Níveis de disparo: TRIG ≈ ⅓ VCC, THRES ≈ ⅔ VCC.",
+            "Fabricante": "Texas Instruments (xx555)",
+            "VCC (alimentação)": "4,5V a 16V (SE555: até 18V) — operação especificada de 5V a 15V",
+            "Temperatura de operação": "NE555: 0°C a 70°C | NA555: −40°C a +105°C | SA555: −40°C a +85°C | SE555: −55°C a +125°C",
+            "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
+            "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
+            "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C | Tstg −65°C a +150°C",
+            "ESD": "HBM ±500V | CDM ±1500V",
+            "Térmica (PDIP-8)": "RθJA 98,5 °C/W",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8)"
+          }
         },
         "pins_per_side": {
           "left": 4,
@@ -35,49 +46,74 @@
           "1": {
             "number": 1,
             "fields": {
-              "Nome": "GND"
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito."
             }
           },
           "2": {
             "number": 2,
             "fields": {
-              "Nome": "TRIG"
+              "Nome": "TRIG",
+              "Tipo": "Entrada",
+              "Função": "Início do ciclo de temporização. Quando TRIG cai abaixo de ⅓ de VCC, a saída vai para nível alto.",
+              "Nível": "Dispara em < ⅓ VCC",
+              "Corrente": "0,5 µA típ. (TRIG em 0V)"
             }
           },
           "3": {
             "number": 3,
             "fields": {
-              "Nome": "OUT"
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída do timer, alta corrente (sink ou source).",
+              "Corrente": "Até ±200 mA",
+              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)"
             }
           },
           "4": {
             "number": 4,
             "fields": {
-              "Nome": "RESET"
+              "Nome": "RESET",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "Força a saída e a descarga para nível baixo. Sobrescreve todos os outros pinos.",
+              "Nível": "Reset em < 0,7V"
             }
           },
           "5": {
             "number": 5,
             "fields": {
-              "Nome": "CTRL"
+              "Nome": "CONT",
+              "Tipo": "Entrada/Saída",
+              "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
+              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)"
             }
           },
           "6": {
             "number": 6,
             "fields": {
-              "Nome": "THRES"
+              "Nome": "THRES",
+              "Tipo": "Entrada",
+              "Função": "Fim do ciclo de temporização. Quando THRES fica acima de CONT, a saída e a descarga vão para nível baixo.",
+              "Nível": "Compara com ≈ ⅔ VCC"
             }
           },
           "7": {
             "number": 7,
             "fields": {
-              "Nome": "DISCH"
+              "Nome": "DISCH",
+              "Tipo": "Saída (coletor aberto)",
+              "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
+              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)"
             }
           },
           "8": {
             "number": 8,
             "fields": {
-              "Nome": "VCC"
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva.",
+              "Tensão": "4,5V a 16V (SE555: 18V)"
             }
           }
         },
