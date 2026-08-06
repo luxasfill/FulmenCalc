@@ -1592,8 +1592,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector).",
+              "Função": "Coletor",
               "Tensão": "VCBO 50V, VCEO 45V",
               "Corrente": "IC até 100 mA"
             }
@@ -1602,8 +1601,7 @@
             "number": 2,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
@@ -1612,8 +1610,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE ~0,66V",
               "Corrente": "IE = IC + IB"
             }
@@ -1669,8 +1666,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector).",
+              "Função": "Coletor",
               "Tensão": "VCBO −50V, VCEO −45V",
               "Corrente": "IC até −100 mA"
             }
@@ -1679,8 +1675,7 @@
             "number": 2,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO −5V",
               "Corrente": "IB (controla IC via hFE)"
             }
@@ -1689,8 +1684,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE ~−0,66V",
               "Corrente": "IE = IC + IB"
             }
@@ -1745,8 +1739,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector).",
+              "Função": "Coletor",
               "Tensão": "VCBO 75V, VCEO 40V",
               "Corrente": "IC até 600 mA"
             }
@@ -1755,8 +1748,7 @@
             "number": 2,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
@@ -1765,8 +1757,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE ~0,7V",
               "Corrente": "IE = IC + IB"
             }
@@ -1821,8 +1812,7 @@
             "number": 1,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE ~0,7V",
               "Corrente": "IE = IC + IB"
             }
@@ -1831,8 +1821,7 @@
             "number": 2,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
@@ -1841,8 +1830,7 @@
             "number": 3,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector).",
+              "Função": "Coletor",
               "Tensão": "VCBO 60V, VCEO 40V",
               "Corrente": "IC até 200 mA"
             }
@@ -1897,8 +1885,7 @@
             "number": 1,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE ~−0,7V",
               "Corrente": "IE = IC + IB"
             }
@@ -1907,8 +1894,7 @@
             "number": 2,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 5V",
               "Corrente": "IB (controla IC via hFE)"
             }
@@ -1917,8 +1903,7 @@
             "number": 3,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector).",
+              "Função": "Coletor",
               "Tensão": "VCBO 40V, VCEO 40V",
               "Corrente": "IC até 200 mA"
             }
@@ -1972,8 +1957,7 @@
             "number": 1,
             "fields": {
               "Nome": "S",
-              "Tipo": "Source",
-              "Função": "Source (fonte).",
+              "Função": "Source",
               "Tensão": "—",
               "Corrente": "IS até 200 mA"
             }
@@ -1982,8 +1966,7 @@
             "number": 2,
             "fields": {
               "Nome": "G",
-              "Tipo": "Gate",
-              "Função": "Gate (porta). Ligado a nível lógico de MCU via resistor.",
+              "Função": "Gate",
               "Tensão": "VGS ±20V; VGS(th) 0,8–3,0V",
               "Corrente": "IG ~0 (alta impedância)"
             }
@@ -1992,8 +1975,7 @@
             "number": 3,
             "fields": {
               "Nome": "D",
-              "Tipo": "Drain",
-              "Função": "Drain (dreno).",
+              "Função": "Drain",
               "Tensão": "VDSS 60V",
               "Corrente": "ID até 200 mA"
             }
@@ -2049,8 +2031,7 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 5V",
               "Corrente": "IB até 1A"
             }
@@ -2059,8 +2040,7 @@
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector). O tab (heatsink) também é o coletor.",
+              "Função": "Coletor (tab = coletor)",
               "Tensão": "VCEO 100V",
               "Corrente": "IC até 3A (5A pico)"
             }
@@ -2069,8 +2049,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE(on) 1,8V",
               "Corrente": "IE = IC + IB"
             }
@@ -2126,8 +2105,7 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 5V",
               "Corrente": "IB até 1A"
             }
@@ -2136,8 +2114,7 @@
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector). O tab (heatsink) também é o coletor.",
+              "Função": "Coletor (tab = coletor)",
               "Tensão": "VCEO 100V",
               "Corrente": "IC até 3A (5A pico)"
             }
@@ -2146,8 +2123,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE(on) 1,8V",
               "Corrente": "IE = IC + IB"
             }
@@ -2202,8 +2178,7 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 5V",
               "Corrente": "IB até 120 mA"
             }
@@ -2212,8 +2187,7 @@
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector). O tab (heatsink) também é o coletor.",
+              "Função": "Coletor (tab = coletor)",
               "Tensão": "VCEO 60V",
               "Corrente": "IC até 5A (8A pico)"
             }
@@ -2222,8 +2196,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE(on) 2,5V",
               "Corrente": "IE = IC + IB"
             }
@@ -2278,8 +2251,7 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Tipo": "Base",
-              "Função": "Base (Base).",
+              "Função": "Base",
               "Tensão": "VEBO 5V",
               "Corrente": "IB até 120 mA"
             }
@@ -2288,8 +2260,7 @@
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Tipo": "Coletor",
-              "Função": "Coletor (Collector). O tab (heatsink) também é o coletor.",
+              "Função": "Coletor (tab = coletor)",
               "Tensão": "VCEO 100V",
               "Corrente": "IC até 5A (8A pico)"
             }
@@ -2298,8 +2269,7 @@
             "number": 3,
             "fields": {
               "Nome": "E",
-              "Tipo": "Emissor",
-              "Função": "Emissor (Emitter).",
+              "Função": "Emissor",
               "Tensão": "VBE(on) 2,5V",
               "Corrente": "IE = IC + IB"
             }
@@ -2354,8 +2324,7 @@
             "number": 1,
             "fields": {
               "Nome": "G",
-              "Tipo": "Gate",
-              "Função": "Gate (porta). Drive VGS=10V para RDS(on) mínimo; NÃO deixar flutuando.",
+              "Função": "Gate",
               "Tensão": "VGS ±20V; VGS(th) 2–4V",
               "Corrente": "IG ~0 (alta impedância)"
             }
@@ -2364,8 +2333,7 @@
             "number": 2,
             "fields": {
               "Nome": "D",
-              "Tipo": "Drain",
-              "Função": "Drain (dreno). O tab (heatsink) também é o drain.",
+              "Função": "Drain (tab = drain)",
               "Tensão": "VDSS 55V",
               "Corrente": "ID até 49A (160A pico)"
             }
@@ -2374,8 +2342,7 @@
             "number": 3,
             "fields": {
               "Nome": "S",
-              "Tipo": "Source",
-              "Função": "Source (fonte).",
+              "Função": "Source",
               "Tensão": "—",
               "Corrente": "IS até 49A"
             }
@@ -2430,8 +2397,7 @@
             "number": 1,
             "fields": {
               "Nome": "G",
-              "Tipo": "Gate",
-              "Função": "Gate (porta). Drive VGS=−10V para RDS(on) mínimo; NÃO deixar flutuando.",
+              "Função": "Gate",
               "Tensão": "VGS ±20V; VGS(th) −2 a −4V",
               "Corrente": "IG ~0 (alta impedância)"
             }
@@ -2440,8 +2406,7 @@
             "number": 2,
             "fields": {
               "Nome": "D",
-              "Tipo": "Drain",
-              "Função": "Drain (dreno). O tab (heatsink) também é o drain.",
+              "Função": "Drain (tab = drain)",
               "Tensão": "VDSS −100V",
               "Corrente": "ID até −23A (−76A pico)"
             }
@@ -2450,8 +2415,7 @@
             "number": 3,
             "fields": {
               "Nome": "S",
-              "Tipo": "Source",
-              "Função": "Source (fonte).",
+              "Função": "Source",
               "Tensão": "—",
               "Corrente": "IS até −23A"
             }
