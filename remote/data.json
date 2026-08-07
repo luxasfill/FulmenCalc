@@ -2712,9 +2712,9 @@
             "Descrição": "Timer de precisão 555 em tecnologia bipolar — versão de 8 pinos com pinagem idêntica ao NE555 (drop-in).",
             "Fabricante": "Texas Instruments (LM555)",
             "VCC (alimentação)": "4,5V a 16V",
-            "Temperatura de operação": "0°C a 70°C (LM555C) | −40°C a +85°C (LM555)",
+            "Temperatura de operação": "0°C a 70°C (LM555C)",
             "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
-            "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
+            "Consumo": "3 a 6 mA (VCC=5V, RL=∞)",
             "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C",
             "Pacotes": "P (PDIP-8), D (SOIC-8)",
             "Datasheet": "SNAS548 — Set 1994, rev. Mai 2023"
@@ -3094,13 +3094,13 @@
           "custom_fields": {
             "Descrição": "Amplificador operacional duplo de baixo ruído e alta performance — pinagem igual ao LM358, porém requer alimentação de maior tensão (tip. ±15V). Bom substituto em aplicações de áudio e precisão.",
             "Fabricante": "Texas Instruments (NE5532 / NE5532A)",
-            "Alimentação": "±3V a ±20V (dual) — tip. ±15V",
+            "Alimentação": "±5V a ±15V (recomendado) — tip. ±15V | máx. abs. ±18V",
             "Consumo (por amplificador)": "8 mA typ",
             "GBW": "10 MHz typ",
             "Slew rate": "9 V/µs",
             "Ruído de entrada": "5 nV/√Hz typ",
             "IIB (bias de entrada)": "200 nA typ / 800 nA max",
-            "Temperatura de operação": "0°C a 70°C (NE5532) | −40°C a +85°C (NE5532A)",
+            "Temperatura de operação": "0°C a 70°C (NE5532/NE5532A) | −40°C a +85°C (SA5532)",
             "Pacotes": "P (PDIP-8), D (SOIC-8), PS (SO-8)",
             "Datasheet": "SLOS075 — Jan 1979, rev. Mar 2023"
           }
@@ -3402,7 +3402,7 @@
           "custom_fields": {
             "Descrição": "Amplificador operacional quádruplo com entrada JFET — alta impedância de entrada e maior largura de banda, pinagem padrão (drop-in do LM324 em circuitos com fonte adequada).",
             "Fabricante": "Texas Instruments (TL084 / TL084A / TL084B)",
-            "Alimentação": "±3,5V a ±18V (dual) ou 7V a 36V (fonte simples)",
+            "Alimentação": "±2,25V a ±20V (dual) ou 4,5V a 40V total (fonte simples) — TI SLOS081",
             "Consumo (por amplificador)": "1,4 mA typ",
             "GBW": "3 MHz typ",
             "Slew rate": "13 V/µs",
@@ -3758,13 +3758,13 @@
             "Fabricante": "STMicroelectronics (L78M05) — família 78Mxx",
             "Tensão de saída": "5V (tolerância 4% | versão AB: 2%)",
             "Tensão de entrada": "7V a 25V (típ.); máx. 35V (absoluto para VO=5V)",
-            "Corrente de saída": "até 500 mA (IO); curto-circuito típ. 1,4A (L78M05AC)",
-            "Quiescent current": "5,5 mA typ / 8 mA max",
+            "Corrente de saída": "até 500 mA (IO); curto-circuito típ. 300 mA | pico 700 mA (L78M05AC)",
+            "Quiescent current": "6 mA @ TJ=25°C",
             "Dropout": "2V typ @IO=350mA",
             "Proteções": "Térmica, curto-circuito e SOA (internas)",
             "Temperatura de operação": "L78M05AC: 0°C a 125°C | L78M05AB: −40°C a 125°C",
-            "Pacotes": "TO-220, DPAK, SO-8",
-            "Datasheet": "ST L78M — DocID 2146 Rev 29, Set 2017"
+            "Pacotes": "TO-220, TO-220FP, DPAK, IPAK",
+            "Datasheet": "ST L78M — DocID 2147"
           }
         },
         "pins_per_side": {
@@ -3833,8 +3833,8 @@
             "Descrição": "Regulador positivo ajustável de 3 terminais — versão de 3A do LM317, mesma pinagem e tensão de referência (drop-in).",
             "Fabricante": "Texas Instruments (LM350 / LM350A)",
             "Tensão de saída": "1,2V a 33V (ajustável)",
-            "Tensão de entrada": "até 35V",
-            "Corrente de saída": "até 3A (IO); limite interno 3A min / 4,2A typ (VI−VO ≤ 15V)",
+            "Tensão de entrada": "VI−VO ≤ 35V (máx. absoluto); Vin mín. 4,2V (recomendado)",
+            "Corrente de saída": "até 3A (IO); limite interno 3,0A min / 4,5A max (VI−VO ≤ 10V)",
             "VREF": "1,25V typ entre ADJ e OUT",
             "IADJ (corrente de ajuste)": "50 µA typ / 100 µA max",
             "Regulação de linha": "0,02 %/V typ / 0,05 %/V max (25°C)",
@@ -3842,8 +3842,8 @@
             "Proteções": "Limite de corrente, proteção térmica e SOA (internas)",
             "Temperatura": "0°C a 125°C (TJ); Tstg −65°C a 150°C",
             "Máximos absolutos": "VI−VO 35V | PD internamente limitada | Tj 150°C",
-            "Pacotes": "TO-220 (KCS/KCT), TO-263/D2PAK (KTT)",
-            "Datasheet": "SLVS014 — Jun 1986, rev. Mai 2022"
+            "Pacotes": "TO-220, TO-3",
+            "Datasheet": "SNVS772 (LM150/LM350A/LM350) — TI"
           }
         },
         "pins_per_side": {
@@ -3919,7 +3919,7 @@
             "Fabricante": "New Japan Radio (NJR / NJM386)",
             "Alimentação": "4V a 12V",
             "Ganho": "20× (26 dB) a 200× (46 dB) via pinos 1 e 8",
-            "Potência de saída": "≈ 700 mW típ. @ 6V/8Ω",
+            "Potência de saída": "325 mW típ. @ 6V/8Ω (THD 10%)",
             "Consumo (quiescente)": "≈ 4 mA typ @ 6V",
             "Impedância de entrada": "50 kΩ typ",
             "Temperatura de operação": "−20°C a +70°C (típ.)",
