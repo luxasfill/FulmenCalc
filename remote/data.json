@@ -326,7 +326,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -335,7 +335,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
@@ -1547,7 +1547,6 @@
               "Nome": "G1",
               "Tipo": "Entrada (Gate)",
               "Função": "Gate do Q1 (high-side) — comutação do MOSFET superior do half-bridge.",
-              "Tensão": "VGS ±20V",
               "Extra": "VGS(th) 1,3–2,1V (VDS=VGS, ID=250mA)"
             }
           },
@@ -1565,8 +1564,7 @@
             "fields": {
               "Nome": "D1",
               "Tipo": "Potência",
-              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
-              "Corrente": "ID 22A (Q1, TC=25°C)"
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail)."
             }
           },
           "4": {
@@ -1574,8 +1572,7 @@
             "fields": {
               "Nome": "D1",
               "Tipo": "Potência",
-              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
-              "Corrente": "ID 22A (Q1, TC=25°C)"
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail)."
             }
           },
           "5": {
@@ -1611,7 +1608,6 @@
               "Nome": "G2",
               "Tipo": "Entrada (Gate)",
               "Função": "Gate do Q2 (low-side / síncrono) — comutação do MOSFET inferior do half-bridge.",
-              "Tensão": "VGS ±12V",
               "Extra": "VGS(th) 1,2–1,9V (VDS=VGS, ID=250mA)"
             }
           }
@@ -1666,9 +1662,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO 50V, VCEO 45V",
-              "Corrente": "IC até 100 mA"
+              "Função": "Coletor"
             }
           },
           "2": {
@@ -1676,7 +1670,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -1685,7 +1678,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~0,66V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -1745,9 +1737,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO −50V, VCEO −45V",
-              "Corrente": "IC até −100 mA"
+              "Função": "Coletor"
             }
           },
           "2": {
@@ -1755,7 +1745,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO −5V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -1764,7 +1753,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~−0,66V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -1823,9 +1811,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO 75V, VCEO 40V",
-              "Corrente": "IC até 600 mA"
+              "Função": "Coletor"
             }
           },
           "2": {
@@ -1833,7 +1819,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -1842,7 +1827,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~0,7V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -1902,9 +1886,7 @@
             "number": 1,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO 60V, VCEO 60V",
-              "Corrente": "IC até 600 mA"
+              "Função": "Coletor"
             }
           },
           "2": {
@@ -1912,7 +1894,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO 5V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -1921,7 +1902,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~0,7V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -1979,7 +1959,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~0,7V",
               "Corrente": "IE = IC + IB"
             }
           },
@@ -1988,7 +1967,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO 6V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -1996,9 +1974,7 @@
             "number": 3,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO 60V, VCEO 40V",
-              "Corrente": "IC até 200 mA"
+              "Função": "Coletor"
             }
           }
         },
@@ -2057,7 +2033,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE ~−0,7V",
               "Corrente": "IE = IC + IB"
             }
           },
@@ -2066,7 +2041,6 @@
             "fields": {
               "Nome": "B",
               "Função": "Base",
-              "Tensão": "VEBO 5V",
               "Corrente": "IB (controla IC via hFE)"
             }
           },
@@ -2074,9 +2048,7 @@
             "number": 3,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor",
-              "Tensão": "VCBO 40V, VCEO 40V",
-              "Corrente": "IC até 200 mA"
+              "Função": "Coletor"
             }
           }
         },
@@ -2133,9 +2105,7 @@
             "number": 1,
             "fields": {
               "Nome": "S",
-              "Função": "Source",
-              "Tensão": "—",
-              "Corrente": "IS até 200 mA"
+              "Função": "Source"
             }
           },
           "2": {
@@ -2143,7 +2113,6 @@
             "fields": {
               "Nome": "G",
               "Função": "Gate",
-              "Tensão": "VGS ±20V; VGS(th) 0,8–3,0V",
               "Corrente": "IG ~0 (alta impedância)"
             }
           },
@@ -2151,9 +2120,7 @@
             "number": 3,
             "fields": {
               "Nome": "D",
-              "Função": "Drain",
-              "Tensão": "VDSS 60V",
-              "Corrente": "ID até 200 mA"
+              "Função": "Drain"
             }
           }
         },
@@ -2206,9 +2173,7 @@
             "number": 1,
             "fields": {
               "Nome": "S",
-              "Função": "Source",
-              "Tensão": "VGS ±20V; VGS(th) −1,0 a −3,5V",
-              "Corrente": "IS até 230 mA"
+              "Função": "Source"
             }
           },
           "2": {
@@ -2216,7 +2181,6 @@
             "fields": {
               "Nome": "G",
               "Função": "Gate",
-              "Tensão": "VGS ±20V",
               "Corrente": "IG ~0 (alta impedância)"
             }
           },
@@ -2224,9 +2188,7 @@
             "number": 3,
             "fields": {
               "Nome": "D",
-              "Função": "Drain",
-              "Tensão": "VDSS −45V",
-              "Corrente": "ID até 230 mA"
+              "Função": "Drain"
             }
           }
         }
@@ -2280,18 +2242,14 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Função": "Base",
-              "Tensão": "VEBO 5V",
-              "Corrente": "IB até 1A"
+              "Função": "Base"
             }
           },
           "2": {
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor (tab = coletor)",
-              "Tensão": "VCEO 100V",
-              "Corrente": "IC até 3A (5A pico)"
+              "Função": "Coletor (tab = coletor)"
             }
           },
           "3": {
@@ -2299,7 +2257,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE(on) 1,8V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -2356,18 +2313,14 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Função": "Base",
-              "Tensão": "VEBO 5V",
-              "Corrente": "IB até 1A"
+              "Função": "Base"
             }
           },
           "2": {
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor (tab = coletor)",
-              "Tensão": "VCEO 100V",
-              "Corrente": "IC até 3A (5A pico)"
+              "Função": "Coletor (tab = coletor)"
             }
           },
           "3": {
@@ -2375,7 +2328,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE(on) 1,8V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -2431,18 +2383,14 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Função": "Base",
-              "Tensão": "VEBO 5V",
-              "Corrente": "IB até 120 mA"
+              "Função": "Base"
             }
           },
           "2": {
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor (tab = coletor)",
-              "Tensão": "VCEO 60V",
-              "Corrente": "IC até 5A (8A pico)"
+              "Função": "Coletor (tab = coletor)"
             }
           },
           "3": {
@@ -2450,7 +2398,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE(on) 2,5V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -2506,18 +2453,14 @@
             "number": 1,
             "fields": {
               "Nome": "B",
-              "Função": "Base",
-              "Tensão": "VEBO 5V",
-              "Corrente": "IB até 120 mA"
+              "Função": "Base"
             }
           },
           "2": {
             "number": 2,
             "fields": {
               "Nome": "C",
-              "Função": "Coletor (tab = coletor)",
-              "Tensão": "VCEO 100V",
-              "Corrente": "IC até 5A (8A pico)"
+              "Função": "Coletor (tab = coletor)"
             }
           },
           "3": {
@@ -2525,7 +2468,6 @@
             "fields": {
               "Nome": "E",
               "Função": "Emissor",
-              "Tensão": "VBE(on) 2,5V",
               "Corrente": "IE = IC + IB"
             }
           }
@@ -2582,7 +2524,6 @@
             "fields": {
               "Nome": "G",
               "Função": "Gate",
-              "Tensão": "VGS ±20V; VGS(th) 2–4V",
               "Corrente": "IG ~0 (alta impedância)"
             }
           },
@@ -2590,18 +2531,14 @@
             "number": 2,
             "fields": {
               "Nome": "D",
-              "Função": "Drain (tab = drain)",
-              "Tensão": "VDSS 55V",
-              "Corrente": "ID até 49A (160A pico)"
+              "Função": "Drain (tab = drain)"
             }
           },
           "3": {
             "number": 3,
             "fields": {
               "Nome": "S",
-              "Função": "Source",
-              "Tensão": "—",
-              "Corrente": "IS até 49A"
+              "Função": "Source"
             }
           }
         },
@@ -2657,7 +2594,6 @@
             "fields": {
               "Nome": "G",
               "Função": "Gate",
-              "Tensão": "VGS ±20V; VGS(th) −2 a −4V",
               "Corrente": "IG ~0 (alta impedância)"
             }
           },
@@ -2665,18 +2601,14 @@
             "number": 2,
             "fields": {
               "Nome": "D",
-              "Função": "Drain (tab = drain)",
-              "Tensão": "VDSS −100V",
-              "Corrente": "ID até −23A (−76A pico)"
+              "Função": "Drain (tab = drain)"
             }
           },
           "3": {
             "number": 3,
             "fields": {
               "Nome": "S",
-              "Função": "Source",
-              "Tensão": "—",
-              "Corrente": "IS até −23A"
+              "Função": "Source"
             }
           }
         },
@@ -3003,7 +2935,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -3012,7 +2944,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1.",
-              "Tensão": "VI −0,3V a 32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
@@ -3030,7 +2962,7 @@
               "Nome": "IN2+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "6": {
@@ -3039,7 +2971,7 @@
               "Nome": "IN2-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "7": {
@@ -3128,7 +3060,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -3137,7 +3069,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1.",
-              "Tensão": "VI −0,3V a 32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
@@ -3155,7 +3087,7 @@
               "Nome": "IN2+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "6": {
@@ -3164,7 +3096,7 @@
               "Nome": "IN2-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "7": {
@@ -3258,7 +3190,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -3267,7 +3199,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
@@ -3434,7 +3366,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -3443,7 +3375,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
