@@ -1,2540 +1,2575 @@
 {
- "cis": [
-  {
-   "id": "ne555",
-   "nome": "NE555",
-   "subtitulo": "Timer de Precisão",
-   "imagem": null,
-   "pinos": [
-    "1: GND",
-    "2: TRIG",
-    "3: OUT",
-    "4: RESET",
-    "5: CONT",
-    "6: THRES",
-    "7: DISCH",
-    "8: VCC"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "NE555",
-     "funcao": "Timer de precisão — temporização de microssegundos a horas (astável e monoestável)",
-     "custom_fields": {
-      "Descrição": "Timer de precisão — temporização de microssegundos a horas, modos astável e monoestável. Níveis de disparo: TRIG ≈ ⅓ VCC, THRES ≈ ⅔ VCC.",
-      "Fabricante": "Texas Instruments (xx555)",
-      "VCC (alimentação)": "4,5V a 16V (SE555: até 18V) — operação especificada de 5V a 15V",
-      "Temperatura de operação": "NE555: 0°C a 70°C | NA555: −40°C a +105°C | SA555: −40°C a +85°C | SE555: −55°C a +125°C",
-      "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
-      "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
-      "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C | Tstg −65°C a +150°C",
-      "ESD": "HBM ±500V | CDM ±1500V",
-      "Térmica (PDIP-8)": "RθJA 98,5 °C/W",
-      "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8)"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "bottom": 0,
-     "right": 4,
-     "top": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra / referência 0V do circuito."
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "TRIG",
-       "Tipo": "Entrada",
-       "Função": "Início do ciclo de temporização. Quando TRIG cai abaixo de ⅓ de VCC, a saída vai para nível alto.",
-       "Nível": "Dispara em < ⅓ VCC",
-       "Corrente": "0,5 µA típ. (TRIG em 0V)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "OUT",
-       "Corrente": "Até ±200 mA",
-       "Função": "Saída do timer, alta corrente (sink ou source).",
-       "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
-       "Tipo": "Saída",
-       "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "RESET",
-       "Tipo": "Entrada (ativa em baixo)",
-       "Função": "Força a saída e a descarga para nível baixo. Sobrescreve todos os outros pinos.",
-       "Nível": "Reset em < 0,7V"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "CONT",
-       "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
-       "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)",
-       "Tipo": "Entrada/Saída",
-       "Extra": "Entrada de controle da tensão de referência dos comparadores internos.\nQuando não utilizada, recomenda-se capacitor de aproximadamente 10 nF para GND."
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "THRES",
-       "Tipo": "Entrada",
-       "Função": "Fim do ciclo de temporização. Quando THRES fica acima de CONT, a saída e a descarga vão para nível baixo.",
-       "Nível": "Compara com ≈ ⅔ VCC"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "DISCH",
-       "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
-       "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)",
-       "Tipo": "Saída",
-       "Extra": "Transistor NPN de descarga com coletor aberto para GND"
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "Tensão de alimentação positiva.",
-       "Tensão": "4,5V a 16V (SE555: 18V)"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm358",
-   "nome": "LM358",
-   "subtitulo": "OpAmp Duplo",
-   "imagem": null,
-   "pinos": [
-    "1: OUT1",
-    "2: IN1-",
-    "3: IN1+",
-    "4: GND",
-    "5: IN2+",
-    "6: IN2-",
-    "7: OUT2",
-    "8: VCC"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM358",
-     "funcao": "OpAmp Duplo",
-     "custom_fields": {
-      "Descrição": "Amplificador operacional duplo de baixo consumo — padrão da indústria. Opera com fonte simples ou dupla e é estável em ganho unitário.",
-      "Fabricante": "Texas Instruments (LM358 / LM358A)",
-      "Alimentação": "3V a 30V (fonte simples) ou ±1,5V a ±15V (dual)",
-      "Consumo (por amplificador)": "350 µA typ (VS=5V) | 500 µA typ / 1 mA max (VS=30V)",
-      "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C); 9 mV max (0–70°C) — LM358A: 2 mV typ / 3 mV max",
-      "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C)",
-      "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min (VS=15V, RL≥2kΩ)",
-      "GBW": "0,7 MHz typ",
-      "Slew rate": "0,3 V/µs (G=+1)",
-      "VICR (modo comum)": "(V−) a (V+)−1,5V (25°C)",
-      "Faixa de saída": "Rali baixo: até (V−)+20 mV | Rali alto: até (V+)−2V (RL≥10kΩ)",
-      "Curto-circuito de saída": "Duração ilimitada (TA=25°C, VS≤15V)",
-      "Temperatura de operação": "0°C a 70°C (LM358)",
-      "Máximos absolutos": "VS ±16V ou 32V | VID ±32V | VI −0,3V a 32V | Tj 150°C",
-      "Pacotes": "D (SOIC-8), P (PDIP-8), PW (TSSOP-8), PS (SO-8), DGK (VSSOP-8)",
-      "Datasheet": "SLOS068AB — Jun 1976, rev. Out 2024"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "bottom": 0,
-     "right": 4,
-     "top": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "OUT1",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 1.",
-       "Corrente": "Drives até 2 kΩ de carga"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "IN1-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 1.",
-       "Tensão": "VID máx ±32V"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "IN1+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 1.",
-       "Tensão": "VI −0,3V a 32V"
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação negativa (V−) ou terra em operação com fonte simples.",
-       "Tensão": "V− = 0V (simples) a −15V (dual)"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "IN2+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 2.",
-       "Tensão": "VID máx ±32V"
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "IN2-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 2.",
-       "Tensão": "VID máx ±32V"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "OUT2",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 2.",
-       "Corrente": "Drives até 2 kΩ de carga"
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação positiva (V+).",
-       "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm324",
-   "nome": "LM324",
-   "subtitulo": "OpAmp Quádruplo",
-   "imagem": null,
-   "pinos": [
-    "1: OUT1",
-    "2: IN1-",
-    "3: IN1+",
-    "4: VCC",
-    "5: IN2+",
-    "6: IN2-",
-    "7: OUT2",
-    "8: OUT3",
-    "9: IN3-",
-    "10: IN3+",
-    "11: GND",
-    "12: IN4+",
-    "13: IN4-",
-    "14: OUT4"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM324",
-     "funcao": "OpAmp Quádruplo",
-     "custom_fields": {
-      "Descrição": "Amplificador operacional quádruplo de baixo consumo — padrão da indústria. O modo comum inclui GND, ideal para operação com fonte simples.",
-      "Fabricante": "Texas Instruments (LM324 / LM324A / LM2902)",
-      "Alimentação": "3V a 30V (fonte simples) ou ±1,5V a ±15V (dual)",
-      "Consumo (4 amplificadores)": "0,7 mA typ / 1,2 mA max (VO=2,5V); 1,4 mA typ / 3 mA max @VCC máx",
-      "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C); 9 mV max (0–70°C) — LM324A: ≤3 mV max",
-      "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C); −500 nA max (full range)",
-      "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min (VS=15V, RL≥2kΩ)",
-      "GBW": "1,2 MHz typ",
-      "Slew rate": "0,5 V/µs",
-      "VICR (modo comum)": "0 a VCC−1,5V (25°C) — inclui GND",
-      "Faixa de saída": "VOH: VCC−1,5V (RL=2kΩ) | VOL: 5 mV typ / 20 mV max (RL≤10kΩ)",
-      "Curto-circuito de saída": "Duração ilimitada (TA≤25°C, VCC≤15V)",
-      "Temperatura de operação": "0°C a 70°C (LM324); LM324B: −40°C a +85°C",
-      "Máximos absolutos": "VCC 32V | VID ±32V | VI −0,3V a 32V | Tj 150°C",
-      "Pacotes": "D (SOIC-14), N (PDIP-14), PW (TSSOP-14), NS (SO-14), DB (SSOP-14)",
-      "Datasheet": "SLOS066AE — Ago 1975, rev. Set 2025"
-     }
-    },
-    "pins_per_side": {
-     "left": 7,
-     "bottom": 0,
-     "right": 7,
-     "top": 0
-    },
-    "total_pins": 14,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "OUT1",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 1 (1OUT)."
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "IN1-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
-       "Tensão": "VID máx ±32V"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "IN1+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
-       "Tensão": "VID máx ±32V"
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação positiva (VCC+).",
-       "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "IN2+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 2 (2IN+)."
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "IN2-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 2 (2IN−)."
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "OUT2",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 2 (2OUT)."
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "OUT3",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 3 (3OUT)."
-      }
-     },
-     "9": {
-      "number": 9,
-      "fields": {
-       "Nome": "IN3-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 3 (3IN−)."
-      }
-     },
-     "10": {
-      "number": 10,
-      "fields": {
-       "Nome": "IN3+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 3 (3IN+)."
-      }
-     },
-     "11": {
-      "number": 11,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação negativa (VCC−) ou terra.",
-       "Tensão": "VCC− = GND (simples) a −15V (dual)"
-      }
-     },
-     "12": {
-      "number": 12,
-      "fields": {
-       "Nome": "IN4+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+) do amplificador 4 (4IN+)."
-      }
-     },
-     "13": {
-      "number": 13,
-      "fields": {
-       "Nome": "IN4-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−) do amplificador 4 (4IN−)."
-      }
-     },
-     "14": {
-      "number": 14,
-      "fields": {
-       "Nome": "OUT4",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador 4 (4OUT)."
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "cd4017",
-   "nome": "CD4017",
-   "subtitulo": "Contador Johnson",
-   "imagem": null,
-   "pinos": [
-    "1: Q5",
-    "2: Q1",
-    "3: Q0",
-    "4: Q2",
-    "5: Q6",
-    "6: Q7",
-    "7: Q3",
-    "8: GND",
-    "9: Q8",
-    "10: Q4",
-    "11: Q9",
-    "12: CO",
-    "13: CLK",
-    "14: RST",
-    "15: EN",
-    "16: VCC"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "CD4017",
-     "funcao": "Contador Johnson",
-     "custom_fields": {
-      "Descrição": "Contador Johnson de 5 estágios (CMOS) com 10 saídas decodificadas (Q0–Q9) e carry-out (CO). Avança na borda de subida do clock; reset ativo alto; clock inhibit trava a contagem.",
-      "Fabricante": "Texas Instruments (CD4017B, origem Harris)",
-      "VCC (alimentação)": "3V a 15V (recomendado); máx. absoluto −0,5V a +20V",
-      "Temperatura de operação": "−55°C a +125°C",
-      "Tecnologia": "CMOS 'B' (JEDEC Tentative Standard 13B), saídas push-pull",
-      "Velocidade de clock": "10 MHz (típ.) @ VDD = 10V | 2,5 MHz @ VDD = 5V",
-      "Entradas": "CLOCK com Schmitt trigger (aceita pulsos com rise/fall lentos), RESET e CLOCK INHIBIT",
-      "Saídas": "Q0–Q9 decodificadas (normalmente baixas, altas por 1 ciclo de clock) + CO (1 ciclo a cada 10 clocks)",
-      "Consumo": "Estático; 100% testado para corrente quiescente a 20V",
-      "Máximos absolutos": "VDD −0,5V a +20V | VIN −0,5V a VDD+0,5V | IIN ±10 mA | Tstg −65°C a +150°C",
-      "Pacotes": "N (PDIP-16), D (SOIC-16), NS (SOP-16), PW (TSSOP-16)"
-     }
-    },
-    "pins_per_side": {
-     "left": 8,
-     "bottom": 0,
-     "right": 8,
-     "top": 0
-    },
-    "total_pins": 16,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "Q5",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 5 — alta por 1 ciclo de clock na contagem 5."
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "Q1",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 1 — alta por 1 ciclo de clock na contagem 1."
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "Q0",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 0 — alta por 1 ciclo de clock na contagem 0."
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "Q2",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 2 — alta por 1 ciclo de clock na contagem 2."
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "Q6",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 6 — alta por 1 ciclo de clock na contagem 6."
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "Q7",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 7 — alta por 1 ciclo de clock na contagem 7."
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "Q3",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 3 — alta por 1 ciclo de clock na contagem 3."
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra / referência 0V do circuito (VSS)."
-      }
-     },
-     "9": {
-      "number": 9,
-      "fields": {
-       "Nome": "Q8",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 8 — alta por 1 ciclo de clock na contagem 8."
-      }
-     },
-     "10": {
-      "number": 10,
-      "fields": {
-       "Nome": "Q4",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 4 — alta por 1 ciclo de clock na contagem 4."
-      }
-     },
-     "11": {
-      "number": 11,
-      "fields": {
-       "Nome": "Q9",
-       "Tipo": "Saída",
-       "Função": "Saída decodificada 9 — alta por 1 ciclo de clock na contagem 9."
-      }
-     },
-     "12": {
-      "number": 12,
-      "fields": {
-       "Nome": "CO",
-       "Tipo": "Saída",
-       "Função": "Carry-out — 1 ciclo alto a cada 10 clocks; ripple-clock para o próximo contador."
-      }
-     },
-     "13": {
-      "number": 13,
-      "fields": {
-       "Nome": "CLK",
-       "Tipo": "Entrada",
-       "Função": "Clock (Schmitt trigger) — contagem avança na borda de subida."
-      }
-     },
-     "14": {
-      "number": 14,
-      "fields": {
-       "Nome": "RST",
-       "Tipo": "Entrada",
-       "Função": "Reset — nível alto zera o contador."
-      }
-     },
-     "15": {
-      "number": 15,
-      "fields": {
-       "Nome": "EN",
-       "Tipo": "Entrada",
-       "Função": "Clock inhibit — nível alto trava a contagem."
-      }
-     },
-     "16": {
-      "number": 16,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "Tensão de alimentação positiva (VDD).",
-       "Tensão": "3V a 15V (máx. 20V)"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm7805",
-   "nome": "LM7805",
-   "subtitulo": "Regulador 5V",
-   "imagem": null,
-   "pinos": [
-    "1: IN",
-    "2: GND",
-    "3: OUT"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM7805",
-     "funcao": "Regulador 5V",
-     "custom_fields": {
-      "Descrição": "Regulador de tensão positiva fixo de 5V (família 78xx) — até 1,5A com proteção térmica, de curto-circuito e SOA internas.",
-      "Fabricante": "STMicroelectronics (L7805) — família 78xx, compatível com LM7805 (National/TI/ON)",
-      "Tensão de saída": "5V (versão A: tolerância 2% — 4,9V a 5,1V @25°C)",
-      "Tensão de entrada": "7V a 25V (operação tip.); máx. 35V (absoluto para VO=5V)",
-      "Corrente de saída": "até 1,5A (IO); Isc typ 0,2A (L7805A) / 0,75A (L7805C)",
-      "Quiescent current": "4,3 mA typ / 6 mA max (L7805A)",
-      "Dropout": "2V typ @IO=1A",
-      "Regulação de linha": "7 mV typ / 50 mV max (VI 7,5–25V, IO=500mA)",
-      "Regulação de carga": "25 mV typ / 100 mV max (IO 5mA–1A)",
-      "SVR": "68 dB (VI 8–18V, f=120Hz, IO=500mA)",
-      "Ruído de saída": "10 µV/VO (B=10Hz–100kHz, L7805A)",
-      "Proteções": "Térmica (thermal overload), curto-circuito e SOA de transição de saída",
-      "Temperatura de operação": "L7805AC: 0°C a 125°C | L7805AB: −40°C a 125°C",
-      "Máximos absolutos": "VI 35V (VO=5V) | Tstg −65°C a 150°C",
-      "Térmica (TO-220)": "RθJC 5°C/W | RθJA 50°C/W",
-      "Pacotes": "TO-220, TO-220FP, DPAK, D²PAK",
-      "Datasheet": "ST L78 — DocID2143 Rev 32, Mar 2014"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "bottom": 3,
-     "right": 0,
-     "top": 0
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "IN",
-       "Tipo": "Alimentação",
-       "Função": "Entrada (INPUT): tensão de alimentação do regulador.",
-       "Tensão": "7V a 25V tip.; máx 35V",
-       "Extra": "Recomenda-se capacitor de 0,33 µF na entrada"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra (GND): referência comum do circuito.",
-       "Extra": "Recomenda-se capacitor de 0,1 µF na saída"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "OUT",
-       "Tipo": "Saída",
-       "Função": "Saída (OUTPUT): 5V regulado. O tab (heatsink) também é OUTPUT.",
-       "Tensão": "5V, até 1,5A"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm317",
-   "nome": "LM317",
-   "subtitulo": "Regulador Ajustável",
-   "imagem": null,
-   "pinos": [
-    "1: ADJ",
-    "2: OUT",
-    "3: IN"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM317",
-     "funcao": "Regulador Ajustável",
-     "custom_fields": {
-      "Descrição": "Regulador positivo ajustável de 3 terminais — saída de 1,25V a 37V com até 1,5A, definida por divisor resistivo externo.",
-      "Fabricante": "Texas Instruments (LM317)",
-      "Tensão de saída": "1,25V a 37V (ajustável)",
-      "Tensão de entrada": "4,25V a 40V",
-      "Headroom (VI−VO)": "≥3V recomendado; máx 40V",
-      "Corrente de saída": "até 1,5A (IO); limite interno 1,5A min / 2,2A typ (VI−VO≤15V)",
-      "VREF": "1,25V typ entre ADJ e OUT (faixa 1,2–1,3V)",
-      "IADJ (corrente de ajuste)": "50 µA typ / 100 µA max",
-      "Regulação de linha": "0,01 %/V typ / 0,04 %/V max (25°C)",
-      "Regulação de carga": "0,1% typ / 0,5% max (25°C)",
-      "Proteções": "Limite de corrente, proteção térmica e SOA (internas)",
-      "Temperatura": "TJ 0°C a 125°C; Tstg −65°C a 150°C",
-      "Máximos absolutos": "VI−VO −0,3V a 40V | PD internamente limitada | Tj 150°C",
-      "Pacotes": "TO-220 (KCS/KCT), TO-263/D2PAK (KTT), SOT-223 (DCY)",
-      "Datasheet": "SLVS044Z — Set 1997, rev. Abr 2025"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "bottom": 3,
-     "right": 0,
-     "top": 0
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "ADJ",
-       "Tipo": "Entrada (Ajuste)",
-       "Função": "ADJUST: pino de ajuste da tensão de saída. Conectar a um divisor resistivo (R1 entre OUT e ADJ, R2 de ADJ a GND).",
-       "Tensão": "VOUT = VREF×(1+R2/R1) + IADJ×R2",
-       "Corrente": "IADJ 50 µA typ"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "OUT",
-       "Tipo": "Saída",
-       "Função": "OUTPUT: tensão de saída do regulador. O tab (heatsink) também é OUTPUT.",
-       "Tensão": "1,25V a 37V, até 1,5A"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "IN",
-       "Tipo": "Alimentação",
-       "Função": "INPUT: tensão de entrada do regulador.",
-       "Tensão": "4,25V a 40V (VI−VO ≤ 40V)",
-       "Extra": "Recomenda-se bypass na entrada"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm386",
-   "nome": "LM386",
-   "subtitulo": "Amplificador Áudio",
-   "imagem": null,
-   "pinos": [
-    "1: GAIN",
-    "2: IN-",
-    "3: IN+",
-    "4: GND",
-    "5: OUT",
-    "6: VS",
-    "7: BYP",
-    "8: GAIN"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM386",
-     "funcao": "Amplificador Áudio",
-     "custom_fields": {
-      "Descrição": "Amplificador de potência de áudio de baixa tensão — ganho ajustável de 20× (26 dB) a 200× (46 dB) via pinos 1 e 8.",
-      "Fabricante": "Texas Instruments (LM386)",
-      "Alimentação": "4V a 12V (LM386N-1/-3, LM386M-1) | 5V a 18V (LM386N-4)",
-      "Consumo (quiescente)": "4 mA typ / 8 mA max (VS=6V) — drena apenas 24 mW",
-      "Ganho": "20× (26 dB) padrão (pinos 1-8 abertos); 200× (46 dB) com cap 10µF entre pinos 1 e 8",
-      "Potência de saída (THD 10%)": "325 mW typ @6V/8Ω (N-1) | 700 mW typ @9V/8Ω (N-3) | 1 W typ @16V/32Ω (N-4)",
-      "Largura de banda": "300 kHz (VS=6V, ganho 20)",
-      "THD": "0,2% (AV=20, VS=6V, 8Ω, 125 mW, 1kHz)",
-      "Impedância de entrada": "50 kΩ typ",
-      "IBIAS": "250 nA typ (VS=6V)",
-      "Temperatura de operação": "0°C a 70°C",
-      "Máximos absolutos": "VS 15V (N-1/-3, M-1) / 22V (N-4) | PD 1,25W (PDIP), 0,73W (SOIC), 0,595W (VSSOP) | Tstg −65°C a 150°C",
-      "Pacotes": "PDIP-8 (N), SOIC-8 (M), VSSOP-8 (MM)",
-      "Datasheet": "SNAS545D — Mai 2004, rev. Ago 2023"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "bottom": 0,
-     "right": 4,
-     "top": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "GAIN",
-       "Tipo": "Entrada (Ganho)",
-       "Função": "Pino 1 de ajuste de ganho. Com os pinos 1 e 8 abertos, ganho 20×.",
-       "Extra": "Capacitor de 10 µF entre 1 e 8 → ganho 200×; rede R-C entre 1 e 8 → ganho intermediário"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "IN-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−)."
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "IN+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+)."
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra (ground reference).",
-       "Extra": "Bypass típico: cap entre pino 7 (BYP) e GND"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "OUT",
-       "Tipo": "Saída",
-       "Função": "Saída de áudio.",
-       "Extra": "Drive cargas de 4Ω a 32Ω; usar capacitor de acoplamento AC na saída"
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "VS",
-       "Tipo": "Alimentação",
-       "Função": "Tensão de alimentação (VS).",
-       "Tensão": "4V a 12V (N-1/-3) | 5V a 18V (N-4)"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "BYP",
-       "Tipo": "Alimentação (desacoplamento)",
-       "Função": "Bypass: conexão para capacitor de desacoplamento (geralmente 10 µF para GND)."
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "GAIN",
-       "Tipo": "Entrada (Ganho)",
-       "Função": "Pino 8 de ajuste de ganho."
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "lm741",
-   "nome": "LM741",
-   "subtitulo": "OpAmp",
-   "imagem": null,
-   "pinos": [
-    "1: OFFSET N1",
-    "2: IN-",
-    "3: IN+",
-    "4: V-",
-    "5: OFFSET N2",
-    "6: OUT",
-    "7: V+",
-    "8: NC"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "LM741",
-     "funcao": "OpAmp",
-     "custom_fields": {
-      "Descrição": "Amplificador operacional de propósito geral — o clássico op-amp. Opera com fonte dupla ou simples e tem proteção contra curto-circuito na saída.",
-      "Fabricante": "Texas Instruments (µA741 / LM741)",
-      "Alimentação": "VCC+ 5V a 15V | VCC− −5V a −15V (dual)",
-      "Consumo": "0,13 mA typ / 2,8 mA max (25°C)",
-      "VIO (offset de entrada)": "0,3 mV typ / 6 mV max (25°C); 7,5 mV max (0–70°C)",
-      "IIB (bias de entrada)": "0,01 nA typ / 500 nA max (25°C); 800 nA max (full)",
-      "IIO (offset de entrada)": "0,005 nA typ / 200 nA max (25°C)",
-      "AVD (ganho malha aberta)": "200 V/mV typ / 20 V/mV min (RL≥2kΩ, VO=±10V)",
-      "Slew rate": "0,5 V/µs (unity gain)",
-      "VICR (modo comum)": "±12V min / ±13V typ (25°C, VCC±15V)",
-      "Faixa de saída": "±12V min com RL≥2kΩ",
-      "Curto-circuito de saída": "Duração ilimitada",
-      "Temperatura de operação": "0°C a 70°C (µA741C)",
-      "Máximos absolutos": "VCC ±18V | VID ±15V | VI ±15V | Tj 150°C",
-      "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8)",
-      "Datasheet": "SLOS094H — Nov 1970, rev. Fev 2026"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "bottom": 0,
-     "right": 4,
-     "top": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "OFFSET N1",
-       "Tipo": "Entrada (Ajuste)",
-       "Função": "OFSSET N1: ajuste externo de tensão de offset (compensação de offset nulo) do amplificador.",
-       "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5, cursor em V−"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "IN-",
-       "Tipo": "Entrada",
-       "Função": "Entrada inversora (−)."
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "IN+",
-       "Tipo": "Entrada",
-       "Função": "Entrada não inversora (+)."
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "V-",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação negativa (VCC−).",
-       "Tensão": "−5V a −15V"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "OFFSET N2",
-       "Tipo": "Entrada (Ajuste)",
-       "Função": "OFSSET N2: ajuste externo de tensão de offset (compensação de offset nulo).",
-       "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5"
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "OUT",
-       "Tipo": "Saída",
-       "Função": "Saída do amplificador.",
-       "Tensão": "±12V min com RL≥2kΩ"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "V+",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação positiva (VCC+).",
-       "Tensão": "5V a 15V"
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "NC",
-       "Tipo": "NC",
-       "Função": "Sem conexão interna (NC)."
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "atmega328p",
-   "nome": "ATmega328P",
-   "subtitulo": "Microcontrolador (Arduino)",
-   "imagem": null,
-   "pinos": [
-    "1: PC6/RST",
-    "2: PD0/RX",
-    "3: PD1/TX",
-    "4: PD2/INT0",
-    "5: PD3/INT1",
-    "6: PD4/T0",
-    "7: VCC",
-    "8: GND",
-    "9: XTAL1",
-    "10: XTAL2",
-    "11: PD5/T1",
-    "12: PD6/AIN0",
-    "13: PD7/AIN1",
-    "14: PB0/ICP",
-    "15: PB1/OC1A",
-    "16: PB2/OC1B",
-    "17: PB3/MOSI",
-    "18: PB4/MISO",
-    "19: PB5/SCK",
-    "20: AVCC",
-    "21: AREF",
-    "22: GND",
-    "23: PC0/ADC0",
-    "24: PC1/ADC1",
-    "25: PC2/ADC2",
-    "26: PC3/ADC3",
-    "27: PC4/ADC4",
-    "28: PC5/ADC5"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "ATmega328P",
-     "funcao": "Microcontrolador (Arduino)",
-     "custom_fields": {
-      "Descrição": "Microcontrolador AVR 8-bit de baixo consumo com 32K Flash — o chip usado no Arduino Uno e Nano.",
-      "Fabricante": "Microchip Technology (Atmel)",
-      "Arquitetura": "AVR 8-bit RISC — 131 instruções, maioria executa em 1 ciclo; até 16 MIPS @16MHz",
-      "Tensão de operação": "2,7V a 5,5V (qualificação automotiva) — 0–8MHz @2,7–5,5V | 0–16MHz @4,5–5,5V",
-      "Memória": "Flash 32K (≥10.000 ciclos) | SRAM 2K | EEPROM 1K (≥100.000 ciclos)",
-      "I/O": "23 linhas de I/O programáveis com pull-ups internos; tri-state em reset",
-      "Corrente por I/O": "40 mA máx por pino (absoluto)",
-      "ADC": "10-bit, 6 canais (PDIP-28) / 8 canais (TQFP), com sensor de temperatura",
-      "Timers": "2× 8-bit (T/C0, T/C2) + 1× 16-bit (T/C1) com prescaler, compare e capture",
-      "PWM": "6 canais",
-      "Comunicação": "USART, SPI mestre/escravo, TWI (I2C)",
-      "Periféricos": "Watchdog com oscilador próprio, comparador analógico, 6 modos de sleep (incl. power-down)",
-      "Consumo": "Ativo 1,5 mA @3V/4MHz (typ) | Power-down 1 µA @3V (typ)",
-      "Máximos absolutos": "VCC 6,0V | tensão nos pinos −0,5V a VCC+0,5V | RESET até +13V",
-      "Temperatura": "−40°C a +125°C (qualificação automotiva)",
-      "Pacotes": "PDIP-28, TQFP-32, MLF-32 (QFN)",
-      "Datasheet": "7810D–AVR–01/15 — ATmega328P DATASHEET (automotivo)"
-     }
-    },
-    "pins_per_side": {
-     "left": 14,
-     "bottom": 0,
-     "right": 14,
-     "top": 0
-    },
-    "total_pins": 28,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "PC6/RST",
-       "Tipo": "I/O / Reset",
-       "Função": "Reset do microcontrolador (ativo baixo). Se o fusível RSTDISBL estiver programado, funciona como pino de I/O (PC6).",
-       "Extra": "PCINT14 (interrupt por mudança de pino)"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "PD0/RX",
-       "Tipo": "I/O / USART",
-       "Função": "PD0/RXD — entrada de dados do USART (receptor).",
-       "Extra": "PCINT16"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "PD1/TX",
-       "Tipo": "I/O / USART",
-       "Função": "PD1/TXD — saída de dados do USART (transmissor).",
-       "Extra": "PCINT17"
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "PD2/INT0",
-       "Tipo": "I/O / Interrupção",
-       "Função": "PD2/INT0 — interrupção externa 0.",
-       "Extra": "PCINT18"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "PD3/INT1",
-       "Tipo": "I/O / PWM",
-       "Função": "PD3/INT1 — interrupção externa 1; OC2B (PWM do Timer/Counter2).",
-       "Extra": "PCINT19"
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "PD4/T0",
-       "Tipo": "I/O",
-       "Função": "PD4/T0 — entrada de contagem externa do Timer/Counter0; XCK (clock externo do USART).",
-       "Extra": "PCINT20"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "Tensão de alimentação digital (VCC).",
-       "Tensão": "2,7V a 5,5V"
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra (GND)."
-      }
-     },
-     "9": {
-      "number": 9,
-      "fields": {
-       "Nome": "XTAL1",
-       "Tipo": "Clock",
-       "Função": "XTAL1 (PB6) — entrada do amplificador do oscilador de cristal / clock externo.",
-       "Extra": "PCINT6"
-      }
-     },
-     "10": {
-      "number": 10,
-      "fields": {
-       "Nome": "XTAL2",
-       "Tipo": "Clock",
-       "Função": "XTAL2 (PB7) — saída do amplificador do oscilador de cristal.",
-       "Extra": "PCINT7"
-      }
-     },
-     "11": {
-      "number": 11,
-      "fields": {
-       "Nome": "PD5/T1",
-       "Tipo": "I/O / Timer",
-       "Função": "PD5/T1 — entrada de contagem externa do Timer/Counter1; OC0B (PWM do T/C0).",
-       "Extra": "PCINT21"
-      }
-     },
-     "12": {
-      "number": 12,
-      "fields": {
-       "Nome": "PD6/AIN0",
-       "Tipo": "I/O / PWM",
-       "Função": "PD6/AIN0 — entrada positiva do comparador analógico; OC0A (PWM do T/C0).",
-       "Extra": "PCINT22"
-      }
-     },
-     "13": {
-      "number": 13,
-      "fields": {
-       "Nome": "PD7/AIN1",
-       "Tipo": "I/O",
-       "Função": "PD7/AIN1 — entrada negativa do comparador analógico.",
-       "Extra": "PCINT23"
-      }
-     },
-     "14": {
-      "number": 14,
-      "fields": {
-       "Nome": "PB0/ICP",
-       "Tipo": "I/O / Timer",
-       "Função": "PB0/ICP1 — input capture do Timer/Counter1; CLKO (saída de clock dividido).",
-       "Extra": "PCINT0"
-      }
-     },
-     "15": {
-      "number": 15,
-      "fields": {
-       "Nome": "PB1/OC1A",
-       "Tipo": "I/O / PWM",
-       "Função": "PB1/OC1A — output compare A do Timer/Counter1 (PWM).",
-       "Extra": "PCINT1"
-      }
-     },
-     "16": {
-      "number": 16,
-      "fields": {
-       "Nome": "PB2/OC1B",
-       "Tipo": "I/O / SPI",
-       "Função": "PB2/OC1B — output compare B (PWM); SS (slave select) do SPI.",
-       "Extra": "PCINT2"
-      }
-     },
-     "17": {
-      "number": 17,
-      "fields": {
-       "Nome": "PB3/MOSI",
-       "Tipo": "I/O / SPI",
-       "Função": "PB3/MOSI — SPI: mestre-saída / escravo-entrada; OC2A (PWM do T/C2).",
-       "Extra": "PCINT3"
-      }
-     },
-     "18": {
-      "number": 18,
-      "fields": {
-       "Nome": "PB4/MISO",
-       "Tipo": "I/O / SPI",
-       "Função": "PB4/MISO — SPI: mestre-entrada / escravo-saída.",
-       "Extra": "PCINT4"
-      }
-     },
-     "19": {
-      "number": 19,
-      "fields": {
-       "Nome": "PB5/SCK",
-       "Tipo": "I/O / SPI",
-       "Função": "PB5/SCK — clock do SPI.",
-       "Extra": "PCINT5"
-      }
-     },
-     "20": {
-      "number": 20,
-      "fields": {
-       "Nome": "AVCC",
-       "Tipo": "Alimentação",
-       "Função": "Alimentação do conversor A/D e de PC3:0. Deve ser conectada ao VCC (com filtro passa-baixa se usar ADC)."
-      }
-     },
-     "21": {
-      "number": 21,
-      "fields": {
-       "Nome": "AREF",
-       "Tipo": "Referência",
-       "Função": "AREF — referência analógica externa do conversor A/D.",
-       "Tensão": "0V a VCC"
-      }
-     },
-     "22": {
-      "number": 22,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra (GND)."
-      }
-     },
-     "23": {
-      "number": 23,
-      "fields": {
-       "Nome": "PC0/ADC0",
-       "Tipo": "I/O / ADC",
-       "Função": "PC0/ADC0 — canal 0 do ADC (10-bit).",
-       "Extra": "PCINT8"
-      }
-     },
-     "24": {
-      "number": 24,
-      "fields": {
-       "Nome": "PC1/ADC1",
-       "Tipo": "I/O / ADC",
-       "Função": "PC1/ADC1 — canal 1 do ADC (10-bit).",
-       "Extra": "PCINT9"
-      }
-     },
-     "25": {
-      "number": 25,
-      "fields": {
-       "Nome": "PC2/ADC2",
-       "Tipo": "I/O / ADC",
-       "Função": "PC2/ADC2 — canal 2 do ADC (10-bit).",
-       "Extra": "PCINT10"
-      }
-     },
-     "26": {
-      "number": 26,
-      "fields": {
-       "Nome": "PC3/ADC3",
-       "Tipo": "I/O / ADC",
-       "Função": "PC3/ADC3 — canal 3 do ADC (10-bit).",
-       "Extra": "PCINT11"
-      }
-     },
-     "27": {
-      "number": 27,
-      "fields": {
-       "Nome": "PC4/ADC4",
-       "Tipo": "I/O / I2C",
-       "Função": "PC4/ADC4 — canal 4 do ADC; SDA da interface 2-wire (TWI/I2C).",
-       "Extra": "PCINT12"
-      }
-     },
-     "28": {
-      "number": 28,
-      "fields": {
-       "Nome": "PC5/ADC5",
-       "Tipo": "I/O / I2C",
-       "Função": "PC5/ADC5 — canal 5 do ADC; SCL da interface 2-wire (TWI/I2C).",
-       "Extra": "PCINT13"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "esp8266",
-   "nome": "ESP8266",
-   "subtitulo": "WiFi (ESP-01)",
-   "imagem": null,
-   "pinos": [
-    "1: GND",
-    "2: GPIO2",
-    "3: GPIO0",
-    "4: RXD",
-    "5: TXD",
-    "6: CH_PD",
-    "7: RST",
-    "8: VCC"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "ESP8266",
-     "funcao": "WiFi (ESP-01)",
-     "custom_fields": {
-      "Descrição": "Módulo WiFi ESP-01 (AI-Thinker) baseado no chip ESP8266EX — 802.11 b/g/n 2,4GHz para projetos IoT. Comunicação via UART com firmware AT.",
-      "Fabricante": "AI-Thinker (módulo ESP-01) / Espressif Systems (chip ESP8266EX)",
-      "Chip": "ESP8266EX — Tensilica L106 32-bit RISC, até 160MHz",
-      "WiFi": "802.11 b/g/n (HT20) | 2,4–2,5 GHz | TX +20 dBm (b) / +17 dBm (g) / +14 dBm (n) | RX −91 dBm (11 Mbps)",
-      "Tensão de alimentação": "3,3V (chip: 2,5V a 3,6V) — NÃO usar 5V direto",
-      "Consumo": "TX 170 mA (b, +17dBm) | RX 50–56 mA | média 80 mA | Deep-sleep 20 µA",
-      "Flash": "SPI externa — ESP-01: 512 KB | ESP-01S: 1 MB (suporta até 16 MB)",
-      "GPIO do módulo": "GPIO0 e GPIO2 expostos (demais pinos são UART/controle)",
-      "ADC": "1 canal 10-bit (pino TOUT do chip — não exposto no ESP-01)",
-      "Interfaces do chip": "2× UART, SPI/HSPI, I2C (software), I2S, IR, PWM",
-      "Modos WiFi": "Station / SoftAP / Station+SoftAP",
-      "Protocolos": "TCP/IP, UDP, DHCP, DNS, HTTP (firmware AT ou SDK)",
-      "UART": "UART0 TX/RX com firmware AT — baud típico 115200",
-      "Temperatura do chip": "−40°C a +125°C",
-      "Tensão de I/O": "1,8V a 3,6V (VDDPST)",
-      "Datasheet": "ESP8266EX Datasheet v7.1 (2025) — chip NRND (not recommended for new designs)"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "bottom": 0,
-     "right": 4,
-     "top": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "notch",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "GND",
-       "Tipo": "Alimentação",
-       "Função": "Terra (GND)."
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "GPIO2",
-       "Tipo": "I/O",
-       "Função": "GPIO2 — pino de I/O de propósito geral. Deve estar em nível alto durante o boot.",
-       "Extra": "Com pull-up externo para boot correto"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "GPIO0",
-       "Tipo": "I/O",
-       "Função": "GPIO0 — pino de I/O de propósito geral e seleção de modo de boot (flash mode = nível baixo no boot).",
-       "Extra": "Pull-down para modo flash/programação; pull-up para modo normal"
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "RXD",
-       "Tipo": "UART",
-       "Função": "RXD0 (GPIO3) — recepção da UART (firmware AT).",
-       "Tensão": "Lógica 3,3V — não aplicar 5V direto"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "TXD",
-       "Tipo": "UART",
-       "Função": "TXD0 (GPIO1) — transmissão da UART (firmware AT).",
-       "Tensão": "Lógica 3,3V — não aplicar 5V direto"
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "CH_PD",
-       "Tipo": "Controle",
-       "Função": "CH_PD / CHIP_EN — habilitação do chip (ativo alto). Conectar a 3,3V para operação normal.",
-       "Extra": "Pull-up típico de 10 kΩ"
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "RST",
-       "Tipo": "Controle",
-       "Função": "RST — reset externo do módulo (ativo baixo).",
-       "Extra": "Pulso baixo reinicia o ESP-01"
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "VCC",
-       "Tipo": "Alimentação",
-       "Função": "VCC — alimentação do módulo.",
-       "Tensão": "3,3V (2,5V a 3,6V) — NÃO usar 5V direto",
-       "Corrente": "Pico de até ~300 mA durante TX"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "aoe6930",
-   "nome": "AOE6930",
-   "subtitulo": "MOSFET Dual 30V (Half-Bridge)",
-   "imagem": null,
-   "pinos": [
-    "1: G1",
-    "2: S1/D2",
-    "3: D1",
-    "4: D1",
-    "5: D2/S1",
-    "6: D2/S1",
-    "7: D2/S1",
-    "8: G2"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "AOE6930",
-     "funcao": "30V Dual Asymmetric N-Channel XSPairFET — half-bridge de potência para VRM DC/DC (Q1 high-side + Q2 low-side)",
-     "custom_fields": {
-      "Descrição": "MOSFET de potência dual assimétrico com tecnologia Bottom Source — half-bridge completo em um pacote DFN 5x6E para VRM de computadores, servidores e POL.",
-      "Fabricante": "Alpha & Omega Semiconductor (AOS)",
-      "Configuração": "Dual assimétrico — Q1 high-side + Q2 low-side (XSPairFET, bottom source S2)",
-      "VDS": "30V (Q1 e Q2)",
-      "ID (Q1)": "22A @ TC=25°C | 22A @ TA=25°C (IDSM)",
-      "ID (Q2)": "85A @ TC=25°C | 60A @ TA=25°C (IDSM)",
-      "IDM (pulsado)": "88A (Q1) | 340A (Q2)",
-      "RDS(ON) Q1": "< 4,3mΩ @VGS=10V | < 7,0mΩ @VGS=4,5V (ID=20A)",
-      "RDS(ON) Q2": "< 0,83mΩ @VGS=10V | < 1,05mΩ @VGS=4,5V (ID=30A)",
-      "VGS": "Q1 ±20V | Q2 ±12V",
-      "VGS(th)": "Q1 1,3–2,1V | Q2 1,2–1,9V",
-      "Qg(10V)": "Q1 15–25nC | Q2 95–150nC",
-      "Qg(4,5V)": "Q1 7–15nC | Q2 42–65nC",
-      "Capacitâncias (VDS=15V)": "Ciss 1075pF / Coss 480pF / Crss 55pF (Q1) | Ciss 5560pF / Coss 1670pF / Crss 200pF (Q2)",
-      "Térmica": "RθJC 4,0°C/W (Q1) | 1,25°C/W (Q2) | RθJA 30°C/W / 25°C/W (t≤10s)",
-      "Tj": "−55°C a +150°C",
-      "Pacote": "DFN 5x6E (Power DFN5x6) — 8 pinos + 2 pads expostos no fundo: S2 (fonte do Q2 / GND) e D1 (dreno do Q1)",
-      "Qualificações": "100% UIS Tested | 100% Rg Tested | RoHS 2.0 / Halogen-Free",
-      "Datasheet": "Rev 2.1 — Agosto 2023 (aosmd.com)"
-     }
-    },
-    "pins_per_side": {
-     "left": 4,
-     "right": 4,
-     "top": 0,
-     "bottom": 0
-    },
-    "total_pins": 8,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "G1",
-       "Tipo": "Entrada (Gate)",
-       "Função": "Gate do Q1 (high-side) — comutação do MOSFET superior do half-bridge.",
-       "Tensão": "VGS ±20V",
-       "Extra": "VGS(th) 1,3–2,1V (VDS=VGS, ID=250mA)"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "S1/D2",
-       "Tipo": "Potência",
-       "Função": "Nó de fase (PHASE) — source de Q1 e drain de Q2 conectados internamente. Ponto de comutação do half-bridge.",
-       "Extra": "Mesmo nó dos pinos 5, 6 e 7. Conexão de alta di/dt — manter indutância baixa."
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "D1",
-       "Tipo": "Potência",
-       "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
-       "Corrente": "ID 22A (Q1, TC=25°C)"
-      }
-     },
-     "4": {
-      "number": 4,
-      "fields": {
-       "Nome": "D1",
-       "Tipo": "Potência",
-       "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
-       "Corrente": "ID 22A (Q1, TC=25°C)"
-      }
-     },
-     "5": {
-      "number": 5,
-      "fields": {
-       "Nome": "D2/S1",
-       "Tipo": "Potência",
-       "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente. Ponto de comutação do half-bridge.",
-       "Extra": "Mesmo nó dos pinos 2, 6 e 7."
-      }
-     },
-     "6": {
-      "number": 6,
-      "fields": {
-       "Nome": "D2/S1",
-       "Tipo": "Potência",
-       "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
-       "Extra": "Mesmo nó dos pinos 2, 5 e 7."
-      }
-     },
-     "7": {
-      "number": 7,
-      "fields": {
-       "Nome": "D2/S1",
-       "Tipo": "Potência",
-       "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
-       "Extra": "Mesmo nó dos pinos 2, 5 e 6."
-      }
-     },
-     "8": {
-      "number": 8,
-      "fields": {
-       "Nome": "G2",
-       "Tipo": "Entrada (Gate)",
-       "Função": "Gate do Q2 (low-side / síncrono) — comutação do MOSFET inferior do half-bridge.",
-       "Tensão": "VGS ±12V",
-       "Extra": "VGS(th) 1,2–1,9V (VDS=VGS, ID=250mA)"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "bc547",
-   "nome": "BC547",
-   "subtitulo": "Transistor NPN de uso geral",
-   "imagem": null,
-   "pinos": [
-    "1: C",
-    "2: B",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "BC547",
-     "funcao": "Transistor NPN de uso geral",
-     "custom_fields": {
-      "Descrição": "Transistor NPN epitaxial de silício para chaveamento e amplificação. Um dos mais usados em projetos hobbistas.",
-      "Fabricante": "onsemi / Fairchild (série BC546–BC550)",
-      "Polaridade": "NPN",
-      "Complemento": "BC557 (PNP)",
-      "VCBO / VCEO / VEBO": "50V / 45V / 6V",
-      "IC contínuo": "100 mA (max)",
-      "Potência total": "500 mW (PD)",
-      "VCE(sat)": "90 mV typ / 250 mV max @IC=10mA; 250/600 mV @100mA",
-      "VBE(on)": "580 a 700 mV (typ 660 mV @2mA)",
-      "hFE": "110–800 @IC=2mA (classes: A 110–220, B 200–450, C 420–800)",
-      "fT": "300 MHz typ",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-92 (CASE 135)",
-      "Datasheet": "onsemi BC546/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor",
-       "Tensão": "VCBO 50V, VCEO 45V",
-       "Corrente": "IC até 100 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 6V",
-       "Corrente": "IB (controla IC via hFE)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE ~0,66V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "bc557",
-   "nome": "BC557",
-   "subtitulo": "Transistor PNP de uso geral",
-   "imagem": null,
-   "pinos": [
-    "1: C",
-    "2: B",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "BC557",
-     "funcao": "Transistor PNP de uso geral",
-     "custom_fields": {
-      "Descrição": "Transistor PNP epitaxial de silício para chaveamento e amplificação. Complemento do BC547.",
-      "Fabricante": "onsemi / Fairchild (série BC556–BC560)",
-      "Polaridade": "PNP",
-      "Complemento": "BC547 (NPN)",
-      "VCBO / VCEO / VEBO": "−50V / −45V / −5V",
-      "IC contínuo": "−100 mA (max); ICP −200 mA (pulso)",
-      "Potência total": "500 mW (PD)",
-      "VCE(sat)": "−90 mV typ / −300 mV max @IC=10mA; −250/−650 mV @100mA",
-      "VBE(on)": "−600 a −750 mV (typ −660 mV @2mA)",
-      "hFE": "110–800 @IC=2mA (classes: A 110–220, B 200–450, C 420–800)",
-      "fT": "150 MHz typ",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-92",
-      "Datasheet": "onsemi BC556/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor",
-       "Tensão": "VCBO −50V, VCEO −45V",
-       "Corrente": "IC até −100 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO −5V",
-       "Corrente": "IB (controla IC via hFE)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE ~−0,66V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "2n2222",
-   "nome": "2N2222A",
-   "subtitulo": "Transistor NPN de uso geral",
-   "imagem": null,
-   "pinos": [
-    "1: C",
-    "2: B",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "2N2222A",
-     "funcao": "Transistor NPN de uso geral",
-     "custom_fields": {
-      "Descrição": "Transistor NPN amplificador de silício de baixa potência, para chaveamento e amplificação (clássico 2N2222 em TO-92).",
-      "Fabricante": "onsemi / Fairchild (P2N2222A)",
-      "Polaridade": "NPN",
-      "VCBO / VCEO / VEBO": "75V / 40V / 6V",
-      "IC contínuo": "600 mA (max)",
-      "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
-      "VCE(sat)": "0,3V max @150mA; 1,0V max @500mA",
-      "VBE(sat)": "0,6 a 1,2V @150mA",
-      "hFE": "100–300 @IC=150mA, VCE=10V",
-      "fT": "300 MHz min",
-      "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
-      "Pacote": "TO-92 (CASE 29, STYLE 17)",
-      "Datasheet": "onsemi P2N2222A/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor",
-       "Tensão": "VCBO 75V, VCEO 40V",
-       "Corrente": "IC até 600 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 6V",
-       "Corrente": "IB (controla IC via hFE)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE ~0,7V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "2n3904",
-   "nome": "2N3904",
-   "subtitulo": "Transistor NPN de uso geral",
-   "imagem": null,
-   "pinos": [
-    "1: E",
-    "2: B",
-    "3: C"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "2N3904",
-     "funcao": "Transistor NPN de uso geral",
-     "custom_fields": {
-      "Descrição": "Transistor NPN de silício de uso geral para chaveamento e amplificação. Um dos mais populares em projetos com Arduino.",
-      "Fabricante": "onsemi / Fairchild (série 2N3903/2N3904)",
-      "Polaridade": "NPN",
-      "VCBO / VCEO / VEBO": "60V / 40V / 6V",
-      "IC contínuo": "200 mA (max)",
-      "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
-      "VCE(sat)": "0,2V max @10mA; 0,3V max @50mA",
-      "VBE(sat)": "0,65 a 0,85V @10mA",
-      "hFE": "100–300 @IC=10mA, VCE=1V",
-      "fT": "300 MHz min",
-      "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
-      "Pacote": "TO-92 (CASE 29, STYLE 1)",
-      "Datasheet": "onsemi 2N3903/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE ~0,7V",
-       "Corrente": "IE = IC + IB"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 6V",
-       "Corrente": "IB (controla IC via hFE)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor",
-       "Tensão": "VCBO 60V, VCEO 40V",
-       "Corrente": "IC até 200 mA"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "2n3906",
-   "nome": "2N3906",
-   "subtitulo": "Transistor PNP de uso geral",
-   "imagem": null,
-   "pinos": [
-    "1: E",
-    "2: B",
-    "3: C"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "2N3906",
-     "funcao": "Transistor PNP de uso geral",
-     "custom_fields": {
-      "Descrição": "Transistor PNP de silício de uso geral para chaveamento e amplificação. Complemento do 2N3904.",
-      "Fabricante": "onsemi / Fairchild (série 2N3905/2N3906)",
-      "Polaridade": "PNP",
-      "VCBO / VCEO / VEBO": "40V / 40V / 5V",
-      "IC contínuo": "200 mA (max)",
-      "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
-      "VCE(sat)": "0,25V max @10mA; 0,4V max @50mA",
-      "VBE(sat)": "0,65 a 0,85V @10mA",
-      "hFE": "100–300 @IC=10mA, VCE=1V",
-      "fT": "250 MHz min",
-      "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
-      "Pacote": "TO-92 (CASE 29, STYLE 1)",
-      "Datasheet": "onsemi 2N3906/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE ~−0,7V",
-       "Corrente": "IE = IC + IB"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 5V",
-       "Corrente": "IB (controla IC via hFE)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor",
-       "Tensão": "VCBO 40V, VCEO 40V",
-       "Corrente": "IC até 200 mA"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "2n7000",
-   "nome": "2N7000",
-   "subtitulo": "MOSFET N-canal de sinal",
-   "imagem": null,
-   "pinos": [
-    "1: S",
-    "2: G",
-    "3: D"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "2N7000",
-     "funcao": "MOSFET N-canal de sinal",
-     "custom_fields": {
-      "Descrição": "MOSFET de canal N de sinal pequeno, para chaveamento lógico (nível compatível com 5V/3,3V).",
-      "Fabricante": "onsemi / Fairchild (série 2N7000/2N7002)",
-      "Polaridade": "N-canal (enhancement)",
-      "VDSS / VGS": "60V / ±20V (pico ±40V, tp≤50ms)",
-      "ID contínuo": "200 mA (max); IDM 500 mA (pulso)",
-      "Potência total": "350 mW (PD @TC=25°C)",
-      "RDS(on)": "5Ω max @VGS=10V; 6Ω max @VGS=4,5V",
-      "VGS(th)": "0,8 a 3,0V",
-      "gfs": "100 mS min",
-      "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
-      "Pacote": "TO-92 (CASE 29, STYLE 22)",
-      "Datasheet": "onsemi 2N7000/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "rect",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "S",
-       "Função": "Source",
-       "Tensão": "—",
-       "Corrente": "IS até 200 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "G",
-       "Função": "Gate",
-       "Tensão": "VGS ±20V; VGS(th) 0,8–3,0V",
-       "Corrente": "IG ~0 (alta impedância)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "D",
-       "Função": "Drain",
-       "Tensão": "VDSS 60V",
-       "Corrente": "ID até 200 mA"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "tip31c",
-   "nome": "TIP31C",
-   "subtitulo": "Transistor NPN de potência 3A",
-   "imagem": null,
-   "pinos": [
-    "1: B",
-    "2: C",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "TIP31C",
-     "funcao": "Transistor NPN de potência 3A",
-     "custom_fields": {
-      "Descrição": "Transistor NPN de potência de silício complementar (TO-220), para amplificadores e chaveamento de média potência.",
-      "Fabricante": "onsemi / ST (TIP31, TIP31A, TIP31B, TIP31C)",
-      "Polaridade": "NPN",
-      "Complemento": "TIP32C (PNP)",
-      "VCEO / VCBO / VEBO": "100V / 100V / 5V",
-      "IC contínuo": "3A (max); ICM 5A (pico); IB 1A",
-      "Potência total": "40W (PD @TC=25°C); 2W @TA",
-      "VCE(sat)": "1,2V max @IC=3A, IB=375mA",
-      "VBE(on)": "1,8V max @IC=3A, VCE=4V",
-      "hFE": "25 min @IC=1A; 10–50 @3A",
-      "fT": "3 MHz",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-      "Datasheet": "onsemi TIP31A/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 5V",
-       "Corrente": "IB até 1A"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor (tab = coletor)",
-       "Tensão": "VCEO 100V",
-       "Corrente": "IC até 3A (5A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE(on) 1,8V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "tip32c",
-   "nome": "TIP32C",
-   "subtitulo": "Transistor PNP de potência 3A",
-   "imagem": null,
-   "pinos": [
-    "1: B",
-    "2: C",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "TIP32C",
-     "funcao": "Transistor PNP de potência 3A",
-     "custom_fields": {
-      "Descrição": "Transistor PNP de potência de silício complementar (TO-220), para amplificadores e chaveamento de média potência.",
-      "Fabricante": "onsemi / ST (TIP32, TIP32A, TIP32B, TIP32C)",
-      "Polaridade": "PNP",
-      "Complemento": "TIP31C (NPN)",
-      "VCEO / VCBO / VEBO": "100V / 100V / 5V",
-      "IC contínuo": "3A (max); ICM 5A (pico); IB 1A",
-      "Potência total": "40W (PD @TC=25°C); 2W @TA",
-      "VCE(sat)": "1,2V max @IC=3A, IB=375mA",
-      "VBE(on)": "1,8V max @IC=3A, VCE=4V",
-      "hFE": "25 min @IC=1A; 10–50 @3A",
-      "fT": "3 MHz",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-      "Datasheet": "onsemi TIP31A/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 5V",
-       "Corrente": "IB até 1A"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor (tab = coletor)",
-       "Tensão": "VCEO 100V",
-       "Corrente": "IC até 3A (5A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE(on) 1,8V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "tip120",
-   "nome": "TIP120",
-   "subtitulo": "Transistor Darlington NPN 5A",
-   "imagem": null,
-   "pinos": [
-    "1: B",
-    "2: C",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "TIP120",
-     "funcao": "Transistor Darlington NPN 5A",
-     "custom_fields": {
-      "Descrição": "Transistor Darlington NPN de potência média (TO-220) com resistores shunt base-emissor, para amplificação e chaveamento.",
-      "Fabricante": "onsemi / Fairchild (TIP120/121/122)",
-      "Polaridade": "NPN (Darlington)",
-      "Complemento": "TIP125 (PNP)",
-      "VCEO / VCBO / VEBO": "60V / 60V / 5V",
-      "IC contínuo": "5A (max); ICM 8A (pico); IB 120mA",
-      "Potência total": "65W (PD @TC=25°C); 2W @TA",
-      "VCE(sat)": "2V max @IC=3A, IB=12mA; 4V max @5A",
-      "VBE(on)": "2,5V max @IC=3A, VCE=3V",
-      "hFE": "1000 min @IC=0,5A e 3A",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-      "Datasheet": "onsemi TIP120/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 5V",
-       "Corrente": "IB até 120 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor (tab = coletor)",
-       "Tensão": "VCEO 60V",
-       "Corrente": "IC até 5A (8A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE(on) 2,5V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "tip127",
-   "nome": "TIP127",
-   "subtitulo": "Transistor Darlington PNP 5A",
-   "imagem": null,
-   "pinos": [
-    "1: B",
-    "2: C",
-    "3: E"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "TIP127",
-     "funcao": "Transistor Darlington PNP 5A",
-     "custom_fields": {
-      "Descrição": "Transistor Darlington PNP de potência média (TO-220) com resistores shunt base-emissor, para amplificação e chaveamento.",
-      "Fabricante": "onsemi / Fairchild (TIP125/126/127)",
-      "Polaridade": "PNP (Darlington)",
-      "Complemento": "TIP122 (NPN)",
-      "VCEO / VCBO / VEBO": "100V / 100V / 5V",
-      "IC contínuo": "5A (max); ICM 8A (pico); IB 120mA",
-      "Potência total": "65W (PD @TC=25°C); 2W @TA",
-      "VCE(sat)": "2V max @IC=3A, IB=12mA; 4V max @5A",
-      "VBE(on)": "2,5V max @IC=3A, VCE=3V",
-      "hFE": "1000 min @IC=0,5A e 3A",
-      "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
-      "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-      "Datasheet": "onsemi TIP120/D"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "B",
-       "Função": "Base",
-       "Tensão": "VEBO 5V",
-       "Corrente": "IB até 120 mA"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "C",
-       "Função": "Coletor (tab = coletor)",
-       "Tensão": "VCEO 100V",
-       "Corrente": "IC até 5A (8A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "E",
-       "Função": "Emissor",
-       "Tensão": "VBE(on) 2,5V",
-       "Corrente": "IE = IC + IB"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "irfz44n",
-   "nome": "IRFZ44N",
-   "subtitulo": "MOSFET N-canal 49A",
-   "imagem": null,
-   "pinos": [
-    "1: G",
-    "2: D",
-    "3: S"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "IRFZ44N",
-     "funcao": "MOSFET N-canal 49A",
-     "custom_fields": {
-      "Descrição": "MOSFET de potência HEXFET N-canal (TO-220), RDS(on) ultrabaixo, para chaveamento de alta corrente (drivers de motor, fontes).",
-      "Fabricante": "International Rectifier / Infineon (IRFZ44NPbF); Vishay (IRFZ44)",
-      "Polaridade": "N-canal (enhancement)",
-      "VDSS / VGS": "55V / ±20V",
-      "VGS(th)": "2,0 a 4,0V",
-      "ID contínuo": "49A @TC=25°C (VGS=10V); 35A @100°C; IDM 160A (pulso)",
-      "Potência total": "94W (PD @TC=25°C)",
-      "RDS(on)": "17,5 mΩ max @VGS=10V, ID=25A (typ 16 mΩ)",
-      "Qg": "63 nC max (Qgs 14, Qgd 23 nC)",
-      "Ciss / Coss / Crss": "1470 / 360 / 88 pF",
-      "Temperatura": "TJ 175°C; Tstg −55 a +175°C",
-      "Pacote": "TO-220AB — tab = drain",
-      "Datasheet": "IRF IRFZ44NPbF"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "G",
-       "Função": "Gate",
-       "Tensão": "VGS ±20V; VGS(th) 2–4V",
-       "Corrente": "IG ~0 (alta impedância)"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "D",
-       "Função": "Drain (tab = drain)",
-       "Tensão": "VDSS 55V",
-       "Corrente": "ID até 49A (160A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "S",
-       "Função": "Source",
-       "Tensão": "—",
-       "Corrente": "IS até 49A"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  },
-  {
-   "id": "irf9540",
-   "nome": "IRF9540N",
-   "subtitulo": "MOSFET P-canal 23A",
-   "imagem": null,
-   "pinos": [
-    "1: G",
-    "2: D",
-    "3: S"
-   ],
-   "svg": {
-    "version": 4,
-    "component": {
-     "name": "IRF9540N",
-     "funcao": "MOSFET P-canal 23A",
-     "custom_fields": {
-      "Descrição": "MOSFET de potência HEXFET P-canal (TO-220), para chaveamento de alta corrente no lado alto (high-side).",
-      "Fabricante": "International Rectifier / Infineon (IRF9540NPbF)",
-      "Polaridade": "P-canal (enhancement)",
-      "VDSS / VGS": "−100V / ±20V",
-      "VGS(th)": "−2,0 a −4,0V",
-      "ID contínuo": "−23A @TC=25°C (VGS=−10V); −16A @100°C; IDM −76A (pulso)",
-      "Potência total": "140W (PD @TC=25°C)",
-      "RDS(on)": "0,117 Ω max @VGS=−10V, ID=−11A",
-      "Qg": "97 nC max @VGS=−10V",
-      "Ciss / Coss / Crss": "1300 / — / — pF (típ)",
-      "Temperatura": "TJ 175°C; Tstg −55 a +175°C",
-      "Pacote": "TO-220AB — tab = drain",
-      "Datasheet": "IRF IRF9540NPbF"
-     }
-    },
-    "pins_per_side": {
-     "left": 0,
-     "right": 0,
-     "top": 0,
-     "bottom": 3
-    },
-    "total_pins": 3,
-    "body_style": "tab",
-    "marker_style": "dot",
-    "pins": {
-     "1": {
-      "number": 1,
-      "fields": {
-       "Nome": "G",
-       "Função": "Gate",
-       "Tensão": "VGS ±20V; VGS(th) −2 a −4V",
-       "Corrente": "IG ~0 (alta impedância)"
-      }
-     },
-     "2": {
-      "number": 2,
-      "fields": {
-       "Nome": "D",
-       "Função": "Drain (tab = drain)",
-       "Tensão": "VDSS −100V",
-       "Corrente": "ID até −23A (−76A pico)"
-      }
-     },
-     "3": {
-      "number": 3,
-      "fields": {
-       "Nome": "S",
-       "Função": "Source",
-       "Tensão": "—",
-       "Corrente": "IS até −23A"
-      }
-     }
-    },
-    "bga_grid": null,
-    "exposed_pad": false
-   }
-  }
- ],
- "infos": [
-  {
-   "id": "dip",
-   "nome": "DIP (Dual In-line Package)",
-   "descricao": "Encapsulamento tradicional para CI's com dois lados de pinos",
-   "imagem": "ic_dip_package",
-   "detalhes": [
-    "Pinos: 4 a 64, espaçamento 2.54mm",
-    "Uso: CI's lógicos, OpAmps, microcontroladores",
-    "Montagem: through-hole, ideal para protoboards"
-   ],
-   "categoria": "encapsulamento",
-   "svg": null
-  },
-  {
-   "id": "to220",
-   "nome": "TO-220",
-   "descricao": "Encapsulamento de potência com 3 terminais e aba metálica",
-   "imagem": "ic_to220",
-   "detalhes": [
-    "Pinos: 3 (entrada, saída, referência)",
-    "Uso: Reguladores de tensão (7805, LM317), transistores de potência",
-    "Dissipação: até ~20W com dissipador",
-    "A aba metálica é conectada ao pino do meio"
-   ],
-   "categoria": "encapsulamento",
-   "svg": null
-  },
-  {
-   "id": "to92",
-   "nome": "TO-92",
-   "descricao": "Pequeno encapsulamento de 3 pinos para semicondutores de baixa potência",
-   "imagem": "ic_to92",
-   "detalhes": [
-    "Pinos: 3, espaçamento 1.27mm",
-    "Uso: Transistores pequenos (BC547, 2N2222), sensores (LM35)",
-    "Corrente: tipicamente até 500mA"
-   ],
-   "categoria": "encapsulamento",
-   "svg": null
-  },
-  {
-   "id": "radial_axial",
-   "nome": "Axial vs Radial",
-   "descricao": "Formatos de componentes discretos (resistores, capacitores, diodos)",
-   "imagem": "radial_axial",
-   "detalhes": [
-    "Axial: terminais saem nas extremidades (ex: resistores de carbono).",
-    "Radial: terminais saem no mesmo lado (ex: capacitores eletrolíticos)."
-   ],
-   "categoria": "encapsulamento",
-   "svg": null
-  },
-  {
-   "id": "pth_smd",
-   "nome": "PTH vs SMD",
-   "descricao": "Formatos de componentes discretos (resistores,capacitores,diodos)",
-   "imagem": "pth_smd",
-   "detalhes": [
-    "PTH - Pin Through-Hole (ou Plated Through-Hole)- Fabricação em que os terminais dos componentes eletrônicos passam por furos metalizados na placa de circuito impresso (PCI) e são soldados no lado oposto.",
-    "SMD- Surface Mount Device os componentes são soldados diretamente na parte de cima da placa de circuito sem precisar de furos."
-   ],
-   "categoria": "encapsulamento",
-   "svg": null
-  }
- ]
+  "cis": [
+    {
+      "id": "ne555",
+      "nome": "NE555",
+      "subtitulo": "Timer de Precisão",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: TRIG",
+        "3: OUT",
+        "4: RESET",
+        "5: CONT",
+        "6: THRES",
+        "7: DISCH",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "NE555",
+          "funcao": "Timer de precisão — temporização de microssegundos a horas (astável e monoestável)",
+          "custom_fields": {
+            "Descrição": "Timer de precisão — temporização de microssegundos a horas, modos astável e monoestável. Níveis de disparo: TRIG ≈ ⅓ VCC, THRES ≈ ⅔ VCC.",
+            "Fabricante": "Texas Instruments (xx555)",
+            "VCC (alimentação)": "4,5V a 16V (SE555: até 18V) — operação especificada de 5V a 15V",
+            "Temperatura de operação": "NE555: 0°C a 70°C | NA555: −40°C a +105°C | SA555: −40°C a +85°C | SE555: −55°C a +125°C",
+            "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
+            "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
+            "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C | Tstg −65°C a +150°C",
+            "ESD": "HBM ±500V | CDM ±1500V",
+            "Térmica (PDIP-8)": "RθJA 98,5 °C/W",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "TRIG",
+              "Tipo": "Entrada",
+              "Função": "Início do ciclo de temporização. Quando TRIG cai abaixo de ⅓ de VCC, a saída vai para nível alto.",
+              "Nível": "Dispara em < ⅓ VCC",
+              "Corrente": "0,5 µA típ. (TRIG em 0V)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT",
+              "Corrente": "Até ±200 mA",
+              "Função": "Saída do timer, alta corrente (sink ou source).",
+              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
+              "Tipo": "Saída",
+              "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RESET",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "Força a saída e a descarga para nível baixo. Sobrescreve todos os outros pinos.",
+              "Nível": "Reset em < 0,7V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "CONT",
+              "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
+              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)",
+              "Tipo": "Entrada/Saída",
+              "Extra": "Entrada de controle da tensão de referência dos comparadores internos.\nQuando não utilizada, recomenda-se capacitor de aproximadamente 10 nF para GND."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "THRES",
+              "Tipo": "Entrada",
+              "Função": "Fim do ciclo de temporização. Quando THRES fica acima de CONT, a saída e a descarga vão para nível baixo.",
+              "Nível": "Compara com ≈ ⅔ VCC"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "DISCH",
+              "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
+              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)",
+              "Tipo": "Saída",
+              "Extra": "Transistor NPN de descarga com coletor aberto para GND"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva.",
+              "Tensão": "4,5V a 16V (SE555: 18V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm358",
+      "nome": "LM358",
+      "subtitulo": "OpAmp Duplo",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: GND",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM358",
+          "funcao": "OpAmp Duplo",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional duplo de baixo consumo — padrão da indústria. Opera com fonte simples ou dupla e é estável em ganho unitário.",
+            "Fabricante": "Texas Instruments (LM358 / LM358A)",
+            "Alimentação": "3V a 30V (fonte simples) ou ±1,5V a ±15V (dual)",
+            "Consumo (por amplificador)": "350 µA typ (VS=5V) | 500 µA typ / 1 mA max (VS=30V)",
+            "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C); 9 mV max (0–70°C) — LM358A: 2 mV typ / 3 mV max",
+            "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C)",
+            "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min (VS=15V, RL≥2kΩ)",
+            "GBW": "0,7 MHz typ",
+            "Slew rate": "0,3 V/µs (G=+1)",
+            "VICR (modo comum)": "(V−) a (V+)−1,5V (25°C)",
+            "Faixa de saída": "Rali baixo: até (V−)+20 mV | Rali alto: até (V+)−2V (RL≥10kΩ)",
+            "Curto-circuito de saída": "Duração ilimitada (TA=25°C, VS≤15V)",
+            "Temperatura de operação": "0°C a 70°C (LM358)",
+            "Máximos absolutos": "VS ±16V ou 32V | VID ±32V | VI −0,3V a 32V | Tj 150°C",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PW (TSSOP-8), PS (SO-8), DGK (VSSOP-8)",
+            "Datasheet": "SLOS068AB — Jun 1976, rev. Out 2024"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1.",
+              "Tensão": "VI −0,3V a 32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (V−) ou terra em operação com fonte simples.",
+              "Tensão": "V− = 0V (simples) a −15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (V+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm324",
+      "nome": "LM324",
+      "subtitulo": "OpAmp Quádruplo",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: VCC",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: OUT3",
+        "9: IN3-",
+        "10: IN3+",
+        "11: GND",
+        "12: IN4+",
+        "13: IN4-",
+        "14: OUT4"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM324",
+          "funcao": "OpAmp Quádruplo",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional quádruplo de baixo consumo — padrão da indústria. O modo comum inclui GND, ideal para operação com fonte simples.",
+            "Fabricante": "Texas Instruments (LM324 / LM324A / LM2902)",
+            "Alimentação": "3V a 30V (fonte simples) ou ±1,5V a ±15V (dual)",
+            "Consumo (4 amplificadores)": "0,7 mA typ / 1,2 mA max (VO=2,5V); 1,4 mA typ / 3 mA max @VCC máx",
+            "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C); 9 mV max (0–70°C) — LM324A: ≤3 mV max",
+            "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C); −500 nA max (full range)",
+            "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min (VS=15V, RL≥2kΩ)",
+            "GBW": "1,2 MHz typ",
+            "Slew rate": "0,5 V/µs",
+            "VICR (modo comum)": "0 a VCC−1,5V (25°C) — inclui GND",
+            "Faixa de saída": "VOH: VCC−1,5V (RL=2kΩ) | VOL: 5 mV typ / 20 mV max (RL≤10kΩ)",
+            "Curto-circuito de saída": "Duração ilimitada (TA≤25°C, VCC≤15V)",
+            "Temperatura de operação": "0°C a 70°C (LM324); LM324B: −40°C a +85°C",
+            "Máximos absolutos": "VCC 32V | VID ±32V | VI −0,3V a 32V | Tj 150°C",
+            "Pacotes": "D (SOIC-14), N (PDIP-14), PW (TSSOP-14), NS (SO-14), DB (SSOP-14)",
+            "Datasheet": "SLOS066AE — Ago 1975, rev. Set 2025"
+          }
+        },
+        "pins_per_side": {
+          "left": 7,
+          "bottom": 0,
+          "right": 7,
+          "top": 0
+        },
+        "total_pins": 14,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1 (1OUT)."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2 (2IN+)."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2 (2IN−)."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2 (2OUT)."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "OUT3",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 3 (3OUT)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "IN3-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 3 (3IN−)."
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "IN3+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 3 (3IN+)."
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−) ou terra.",
+              "Tensão": "VCC− = GND (simples) a −15V (dual)"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "IN4+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 4 (4IN+)."
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "IN4-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 4 (4IN−)."
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "OUT4",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 4 (4OUT)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "cd4017",
+      "nome": "CD4017",
+      "subtitulo": "Contador Johnson",
+      "imagem": null,
+      "pinos": [
+        "1: Q5",
+        "2: Q1",
+        "3: Q0",
+        "4: Q2",
+        "5: Q6",
+        "6: Q7",
+        "7: Q3",
+        "8: GND",
+        "9: Q8",
+        "10: Q4",
+        "11: Q9",
+        "12: CO",
+        "13: CLK",
+        "14: RST",
+        "15: EN",
+        "16: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "CD4017",
+          "funcao": "Contador Johnson",
+          "custom_fields": {
+            "Descrição": "Contador Johnson de 5 estágios (CMOS) com 10 saídas decodificadas (Q0–Q9) e carry-out (CO). Avança na borda de subida do clock; reset ativo alto; clock inhibit trava a contagem.",
+            "Fabricante": "Texas Instruments (CD4017B, origem Harris)",
+            "VCC (alimentação)": "3V a 15V (recomendado); máx. absoluto −0,5V a +20V",
+            "Temperatura de operação": "−55°C a +125°C",
+            "Tecnologia": "CMOS 'B' (JEDEC Tentative Standard 13B), saídas push-pull",
+            "Velocidade de clock": "10 MHz (típ.) @ VDD = 10V | 2,5 MHz @ VDD = 5V",
+            "Entradas": "CLOCK com Schmitt trigger (aceita pulsos com rise/fall lentos), RESET e CLOCK INHIBIT",
+            "Saídas": "Q0–Q9 decodificadas (normalmente baixas, altas por 1 ciclo de clock) + CO (1 ciclo a cada 10 clocks)",
+            "Consumo": "Estático; 100% testado para corrente quiescente a 20V",
+            "Máximos absolutos": "VDD −0,5V a +20V | VIN −0,5V a VDD+0,5V | IIN ±10 mA | Tstg −65°C a +150°C",
+            "Pacotes": "N (PDIP-16), D (SOIC-16), NS (SOP-16), PW (TSSOP-16)"
+          }
+        },
+        "pins_per_side": {
+          "left": 8,
+          "bottom": 0,
+          "right": 8,
+          "top": 0
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "Q5",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 5 — alta por 1 ciclo de clock na contagem 5."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "Q1",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 1 — alta por 1 ciclo de clock na contagem 1."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "Q0",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 0 — alta por 1 ciclo de clock na contagem 0."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "Q2",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 2 — alta por 1 ciclo de clock na contagem 2."
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "Q6",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 6 — alta por 1 ciclo de clock na contagem 6."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "Q7",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 7 — alta por 1 ciclo de clock na contagem 7."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "Q3",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 3 — alta por 1 ciclo de clock na contagem 3."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito (VSS)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "Q8",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 8 — alta por 1 ciclo de clock na contagem 8."
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "Q4",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 4 — alta por 1 ciclo de clock na contagem 4."
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "Q9",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 9 — alta por 1 ciclo de clock na contagem 9."
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "CO",
+              "Tipo": "Saída",
+              "Função": "Carry-out — 1 ciclo alto a cada 10 clocks; ripple-clock para o próximo contador."
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "CLK",
+              "Tipo": "Entrada",
+              "Função": "Clock (Schmitt trigger) — contagem avança na borda de subida."
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "RST",
+              "Tipo": "Entrada",
+              "Função": "Reset — nível alto zera o contador."
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "EN",
+              "Tipo": "Entrada",
+              "Função": "Clock inhibit — nível alto trava a contagem."
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva (VDD).",
+              "Tensão": "3V a 15V (máx. 20V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm7805",
+      "nome": "LM7805",
+      "subtitulo": "Regulador 5V",
+      "imagem": null,
+      "pinos": [
+        "1: IN",
+        "2: GND",
+        "3: OUT"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM7805",
+          "funcao": "Regulador 5V",
+          "custom_fields": {
+            "Descrição": "Regulador de tensão positiva fixo de 5V (família 78xx) — até 1,5A com proteção térmica, de curto-circuito e SOA internas.",
+            "Fabricante": "STMicroelectronics (L7805) — família 78xx, compatível com LM7805 (National/TI/ON)",
+            "Tensão de saída": "5V (versão A: tolerância 2% — 4,9V a 5,1V @25°C)",
+            "Tensão de entrada": "7V a 25V (operação tip.); máx. 35V (absoluto para VO=5V)",
+            "Corrente de saída": "até 1,5A (IO); Isc typ 0,2A (L7805A) / 0,75A (L7805C)",
+            "Quiescent current": "4,3 mA typ / 6 mA max (L7805A)",
+            "Dropout": "2V typ @IO=1A",
+            "Regulação de linha": "7 mV typ / 50 mV max (VI 7,5–25V, IO=500mA)",
+            "Regulação de carga": "25 mV typ / 100 mV max (IO 5mA–1A)",
+            "SVR": "68 dB (VI 8–18V, f=120Hz, IO=500mA)",
+            "Ruído de saída": "10 µV/VO (B=10Hz–100kHz, L7805A)",
+            "Proteções": "Térmica (thermal overload), curto-circuito e SOA de transição de saída",
+            "Temperatura de operação": "L7805AC: 0°C a 125°C | L7805AB: −40°C a 125°C",
+            "Máximos absolutos": "VI 35V (VO=5V) | Tstg −65°C a 150°C",
+            "Térmica (TO-220)": "RθJC 5°C/W | RθJA 50°C/W",
+            "Pacotes": "TO-220, TO-220FP, DPAK, D²PAK",
+            "Datasheet": "ST L78 — DocID2143 Rev 32, Mar 2014"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "Entrada (INPUT): tensão de alimentação do regulador.",
+              "Tensão": "7V a 25V tip.; máx 35V",
+              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND): referência comum do circuito.",
+              "Extra": "Recomenda-se capacitor de 0,1 µF na saída"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída (OUTPUT): 5V regulado. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "5V, até 1,5A"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm317",
+      "nome": "LM317",
+      "subtitulo": "Regulador Ajustável",
+      "imagem": null,
+      "pinos": [
+        "1: ADJ",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM317",
+          "funcao": "Regulador Ajustável",
+          "custom_fields": {
+            "Descrição": "Regulador positivo ajustável de 3 terminais — saída de 1,25V a 37V com até 1,5A, definida por divisor resistivo externo.",
+            "Fabricante": "Texas Instruments (LM317)",
+            "Tensão de saída": "1,25V a 37V (ajustável)",
+            "Tensão de entrada": "4,25V a 40V",
+            "Headroom (VI−VO)": "≥3V recomendado; máx 40V",
+            "Corrente de saída": "até 1,5A (IO); limite interno 1,5A min / 2,2A typ (VI−VO≤15V)",
+            "VREF": "1,25V typ entre ADJ e OUT (faixa 1,2–1,3V)",
+            "IADJ (corrente de ajuste)": "50 µA typ / 100 µA max",
+            "Regulação de linha": "0,01 %/V typ / 0,04 %/V max (25°C)",
+            "Regulação de carga": "0,1% typ / 0,5% max (25°C)",
+            "Proteções": "Limite de corrente, proteção térmica e SOA (internas)",
+            "Temperatura": "TJ 0°C a 125°C; Tstg −65°C a 150°C",
+            "Máximos absolutos": "VI−VO −0,3V a 40V | PD internamente limitada | Tj 150°C",
+            "Pacotes": "TO-220 (KCS/KCT), TO-263/D2PAK (KTT), SOT-223 (DCY)",
+            "Datasheet": "SLVS044Z — Set 1997, rev. Abr 2025"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ADJ",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "ADJUST: pino de ajuste da tensão de saída. Conectar a um divisor resistivo (R1 entre OUT e ADJ, R2 de ADJ a GND).",
+              "Tensão": "VOUT = VREF×(1+R2/R1) + IADJ×R2",
+              "Corrente": "IADJ 50 µA typ"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "OUTPUT: tensão de saída do regulador. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "1,25V a 37V, até 1,5A"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "INPUT: tensão de entrada do regulador.",
+              "Tensão": "4,25V a 40V (VI−VO ≤ 40V)",
+              "Extra": "Recomenda-se bypass na entrada"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm386",
+      "nome": "LM386",
+      "subtitulo": "Amplificador Áudio",
+      "imagem": null,
+      "pinos": [
+        "1: GAIN",
+        "2: IN-",
+        "3: IN+",
+        "4: GND",
+        "5: OUT",
+        "6: VS",
+        "7: BYP",
+        "8: GAIN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM386",
+          "funcao": "Amplificador Áudio",
+          "custom_fields": {
+            "Descrição": "Amplificador de potência de áudio de baixa tensão — ganho ajustável de 20× (26 dB) a 200× (46 dB) via pinos 1 e 8.",
+            "Fabricante": "Texas Instruments (LM386)",
+            "Alimentação": "4V a 12V (LM386N-1/-3, LM386M-1) | 5V a 18V (LM386N-4)",
+            "Consumo (quiescente)": "4 mA typ / 8 mA max (VS=6V) — drena apenas 24 mW",
+            "Ganho": "20× (26 dB) padrão (pinos 1-8 abertos); 200× (46 dB) com cap 10µF entre pinos 1 e 8",
+            "Potência de saída (THD 10%)": "325 mW typ @6V/8Ω (N-1) | 700 mW typ @9V/8Ω (N-3) | 1 W typ @16V/32Ω (N-4)",
+            "Largura de banda": "300 kHz (VS=6V, ganho 20)",
+            "THD": "0,2% (AV=20, VS=6V, 8Ω, 125 mW, 1kHz)",
+            "Impedância de entrada": "50 kΩ typ",
+            "IBIAS": "250 nA typ (VS=6V)",
+            "Temperatura de operação": "0°C a 70°C",
+            "Máximos absolutos": "VS 15V (N-1/-3, M-1) / 22V (N-4) | PD 1,25W (PDIP), 0,73W (SOIC), 0,595W (VSSOP) | Tstg −65°C a 150°C",
+            "Pacotes": "PDIP-8 (N), SOIC-8 (M), VSSOP-8 (MM)",
+            "Datasheet": "SNAS545D — Mai 2004, rev. Ago 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GAIN",
+              "Tipo": "Entrada (Ganho)",
+              "Função": "Pino 1 de ajuste de ganho. Com os pinos 1 e 8 abertos, ganho 20×.",
+              "Extra": "Capacitor de 10 µF entre 1 e 8 → ganho 200×; rede R-C entre 1 e 8 → ganho intermediário"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+)."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (ground reference).",
+              "Extra": "Bypass típico: cap entre pino 7 (BYP) e GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída de áudio.",
+              "Extra": "Drive cargas de 4Ω a 32Ω; usar capacitor de acoplamento AC na saída"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "VS",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação (VS).",
+              "Tensão": "4V a 12V (N-1/-3) | 5V a 18V (N-4)"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "BYP",
+              "Tipo": "Alimentação (desacoplamento)",
+              "Função": "Bypass: conexão para capacitor de desacoplamento (geralmente 10 µF para GND)."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GAIN",
+              "Tipo": "Entrada (Ganho)",
+              "Função": "Pino 8 de ajuste de ganho."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "lm741",
+      "nome": "LM741",
+      "subtitulo": "OpAmp",
+      "imagem": null,
+      "pinos": [
+        "1: OFFSET N1",
+        "2: IN-",
+        "3: IN+",
+        "4: V-",
+        "5: OFFSET N2",
+        "6: OUT",
+        "7: V+",
+        "8: NC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM741",
+          "funcao": "OpAmp",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional de propósito geral — o clássico op-amp. Opera com fonte dupla ou simples e tem proteção contra curto-circuito na saída.",
+            "Fabricante": "Texas Instruments (µA741 / LM741)",
+            "Alimentação": "VCC+ 5V a 15V | VCC− −5V a −15V (dual)",
+            "Consumo": "0,13 mA typ / 2,8 mA max (25°C)",
+            "VIO (offset de entrada)": "0,3 mV typ / 6 mV max (25°C); 7,5 mV max (0–70°C)",
+            "IIB (bias de entrada)": "0,01 nA typ / 500 nA max (25°C); 800 nA max (full)",
+            "IIO (offset de entrada)": "0,005 nA typ / 200 nA max (25°C)",
+            "AVD (ganho malha aberta)": "200 V/mV typ / 20 V/mV min (RL≥2kΩ, VO=±10V)",
+            "Slew rate": "0,5 V/µs (unity gain)",
+            "VICR (modo comum)": "±12V min / ±13V typ (25°C, VCC±15V)",
+            "Faixa de saída": "±12V min com RL≥2kΩ",
+            "Curto-circuito de saída": "Duração ilimitada",
+            "Temperatura de operação": "0°C a 70°C (µA741C)",
+            "Máximos absolutos": "VCC ±18V | VID ±15V | VI ±15V | Tj 150°C",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8)",
+            "Datasheet": "SLOS094H — Nov 1970, rev. Fev 2026"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OFFSET N1",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N1: ajuste externo de tensão de offset (compensação de offset nulo) do amplificador.",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5, cursor em V−"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+)."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "V-",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−).",
+              "Tensão": "−5V a −15V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OFFSET N2",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N2: ajuste externo de tensão de offset (compensação de offset nulo).",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador.",
+              "Tensão": "±12V min com RL≥2kΩ"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "V+",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "5V a 15V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "NC",
+              "Tipo": "Não conectado",
+              "Função": "Sem conexão interna (NC)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "atmega328p",
+      "nome": "ATmega328P",
+      "subtitulo": "Microcontrolador (Arduino)",
+      "imagem": null,
+      "pinos": [
+        "1: PC6/RST",
+        "2: PD0/RX",
+        "3: PD1/TX",
+        "4: PD2/INT0",
+        "5: PD3/INT1",
+        "6: PD4/T0",
+        "7: VCC",
+        "8: GND",
+        "9: XTAL1",
+        "10: XTAL2",
+        "11: PD5/T1",
+        "12: PD6/AIN0",
+        "13: PD7/AIN1",
+        "14: PB0/ICP",
+        "15: PB1/OC1A",
+        "16: PB2/OC1B",
+        "17: PB3/MOSI",
+        "18: PB4/MISO",
+        "19: PB5/SCK",
+        "20: AVCC",
+        "21: AREF",
+        "22: GND",
+        "23: PC0/ADC0",
+        "24: PC1/ADC1",
+        "25: PC2/ADC2",
+        "26: PC3/ADC3",
+        "27: PC4/ADC4",
+        "28: PC5/ADC5"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ATmega328P",
+          "funcao": "Microcontrolador (Arduino)",
+          "custom_fields": {
+            "Descrição": "Microcontrolador AVR 8-bit de baixo consumo com 32K Flash — o chip usado no Arduino Uno e Nano.",
+            "Fabricante": "Microchip Technology (Atmel)",
+            "Arquitetura": "AVR 8-bit RISC — 131 instruções, maioria executa em 1 ciclo; até 16 MIPS @16MHz",
+            "Tensão de operação": "2,7V a 5,5V (qualificação automotiva) — 0–8MHz @2,7–5,5V | 0–16MHz @4,5–5,5V",
+            "Memória": "Flash 32K (≥10.000 ciclos) | SRAM 2K | EEPROM 1K (≥100.000 ciclos)",
+            "I/O": "23 linhas de I/O programáveis com pull-ups internos; tri-state em reset",
+            "Corrente por I/O": "40 mA máx por pino (absoluto)",
+            "ADC": "10-bit, 6 canais (PDIP-28) / 8 canais (TQFP), com sensor de temperatura",
+            "Timers": "2× 8-bit (T/C0, T/C2) + 1× 16-bit (T/C1) com prescaler, compare e capture",
+            "PWM": "6 canais",
+            "Comunicação": "USART, SPI mestre/escravo, TWI (I2C)",
+            "Periféricos": "Watchdog com oscilador próprio, comparador analógico, 6 modos de sleep (incl. power-down)",
+            "Consumo": "Ativo 1,5 mA @3V/4MHz (typ) | Power-down 1 µA @3V (typ)",
+            "Máximos absolutos": "VCC 6,0V | tensão nos pinos −0,5V a VCC+0,5V | RESET até +13V",
+            "Temperatura": "−40°C a +125°C (qualificação automotiva)",
+            "Pacotes": "PDIP-28, TQFP-32, MLF-32 (QFN)",
+            "Datasheet": "7810D–AVR–01/15 — ATmega328P DATASHEET (automotivo)"
+          }
+        },
+        "pins_per_side": {
+          "left": 14,
+          "bottom": 0,
+          "right": 14,
+          "top": 0
+        },
+        "total_pins": 28,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "PC6/RST",
+              "Tipo": "I/O / Reset",
+              "Função": "Reset do microcontrolador (ativo baixo). Se o fusível RSTDISBL estiver programado, funciona como pino de I/O (PC6).",
+              "Extra": "PCINT14 (interrupt por mudança de pino)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "PD0/RX",
+              "Tipo": "I/O / USART",
+              "Função": "PD0/RXD — entrada de dados do USART (receptor).",
+              "Extra": "PCINT16"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "PD1/TX",
+              "Tipo": "I/O / USART",
+              "Função": "PD1/TXD — saída de dados do USART (transmissor).",
+              "Extra": "PCINT17"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "PD2/INT0",
+              "Tipo": "I/O / Interrupção",
+              "Função": "PD2/INT0 — interrupção externa 0.",
+              "Extra": "PCINT18"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "PD3/INT1",
+              "Tipo": "I/O / PWM",
+              "Função": "PD3/INT1 — interrupção externa 1; OC2B (PWM do Timer/Counter2).",
+              "Extra": "PCINT19"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "PD4/T0",
+              "Tipo": "I/O",
+              "Função": "PD4/T0 — entrada de contagem externa do Timer/Counter0; XCK (clock externo do USART).",
+              "Extra": "PCINT20"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação digital (VCC).",
+              "Tensão": "2,7V a 5,5V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "XTAL1",
+              "Tipo": "Clock",
+              "Função": "XTAL1 (PB6) — entrada do amplificador do oscilador de cristal / clock externo.",
+              "Extra": "PCINT6"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "XTAL2",
+              "Tipo": "Clock",
+              "Função": "XTAL2 (PB7) — saída do amplificador do oscilador de cristal.",
+              "Extra": "PCINT7"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "PD5/T1",
+              "Tipo": "I/O / Timer",
+              "Função": "PD5/T1 — entrada de contagem externa do Timer/Counter1; OC0B (PWM do T/C0).",
+              "Extra": "PCINT21"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "PD6/AIN0",
+              "Tipo": "I/O / PWM",
+              "Função": "PD6/AIN0 — entrada positiva do comparador analógico; OC0A (PWM do T/C0).",
+              "Extra": "PCINT22"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "PD7/AIN1",
+              "Tipo": "I/O",
+              "Função": "PD7/AIN1 — entrada negativa do comparador analógico.",
+              "Extra": "PCINT23"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "PB0/ICP",
+              "Tipo": "I/O / Timer",
+              "Função": "PB0/ICP1 — input capture do Timer/Counter1; CLKO (saída de clock dividido).",
+              "Extra": "PCINT0"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "PB1/OC1A",
+              "Tipo": "I/O / PWM",
+              "Função": "PB1/OC1A — output compare A do Timer/Counter1 (PWM).",
+              "Extra": "PCINT1"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "PB2/OC1B",
+              "Tipo": "I/O / SPI",
+              "Função": "PB2/OC1B — output compare B (PWM); SS (slave select) do SPI.",
+              "Extra": "PCINT2"
+            }
+          },
+          "17": {
+            "number": 17,
+            "fields": {
+              "Nome": "PB3/MOSI",
+              "Tipo": "I/O / SPI",
+              "Função": "PB3/MOSI — SPI: mestre-saída / escravo-entrada; OC2A (PWM do T/C2).",
+              "Extra": "PCINT3"
+            }
+          },
+          "18": {
+            "number": 18,
+            "fields": {
+              "Nome": "PB4/MISO",
+              "Tipo": "I/O / SPI",
+              "Função": "PB4/MISO — SPI: mestre-entrada / escravo-saída.",
+              "Extra": "PCINT4"
+            }
+          },
+          "19": {
+            "number": 19,
+            "fields": {
+              "Nome": "PB5/SCK",
+              "Tipo": "I/O / SPI",
+              "Função": "PB5/SCK — clock do SPI.",
+              "Extra": "PCINT5"
+            }
+          },
+          "20": {
+            "number": 20,
+            "fields": {
+              "Nome": "AVCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação do conversor A/D e de PC3:0. Deve ser conectada ao VCC (com filtro passa-baixa se usar ADC)."
+            }
+          },
+          "21": {
+            "number": 21,
+            "fields": {
+              "Nome": "AREF",
+              "Tipo": "Referência",
+              "Função": "AREF — referência analógica externa do conversor A/D.",
+              "Tensão": "0V a VCC"
+            }
+          },
+          "22": {
+            "number": 22,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND)."
+            }
+          },
+          "23": {
+            "number": 23,
+            "fields": {
+              "Nome": "PC0/ADC0",
+              "Tipo": "I/O / ADC",
+              "Função": "PC0/ADC0 — canal 0 do ADC (10-bit).",
+              "Extra": "PCINT8"
+            }
+          },
+          "24": {
+            "number": 24,
+            "fields": {
+              "Nome": "PC1/ADC1",
+              "Tipo": "I/O / ADC",
+              "Função": "PC1/ADC1 — canal 1 do ADC (10-bit).",
+              "Extra": "PCINT9"
+            }
+          },
+          "25": {
+            "number": 25,
+            "fields": {
+              "Nome": "PC2/ADC2",
+              "Tipo": "I/O / ADC",
+              "Função": "PC2/ADC2 — canal 2 do ADC (10-bit).",
+              "Extra": "PCINT10"
+            }
+          },
+          "26": {
+            "number": 26,
+            "fields": {
+              "Nome": "PC3/ADC3",
+              "Tipo": "I/O / ADC",
+              "Função": "PC3/ADC3 — canal 3 do ADC (10-bit).",
+              "Extra": "PCINT11"
+            }
+          },
+          "27": {
+            "number": 27,
+            "fields": {
+              "Nome": "PC4/ADC4",
+              "Tipo": "I/O / I2C",
+              "Função": "PC4/ADC4 — canal 4 do ADC; SDA da interface 2-wire (TWI/I2C).",
+              "Extra": "PCINT12"
+            }
+          },
+          "28": {
+            "number": 28,
+            "fields": {
+              "Nome": "PC5/ADC5",
+              "Tipo": "I/O / I2C",
+              "Função": "PC5/ADC5 — canal 5 do ADC; SCL da interface 2-wire (TWI/I2C).",
+              "Extra": "PCINT13"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "esp8266",
+      "nome": "ESP8266",
+      "subtitulo": "WiFi (ESP-01)",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: GPIO2",
+        "3: GPIO0",
+        "4: RXD",
+        "5: TXD",
+        "6: CH_PD",
+        "7: RST",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ESP8266",
+          "funcao": "WiFi (ESP-01)",
+          "custom_fields": {
+            "Descrição": "Módulo WiFi ESP-01 (AI-Thinker) baseado no chip ESP8266EX — 802.11 b/g/n 2,4GHz para projetos IoT. Comunicação via UART com firmware AT.",
+            "Fabricante": "AI-Thinker (módulo ESP-01) / Espressif Systems (chip ESP8266EX)",
+            "Chip": "ESP8266EX — Tensilica L106 32-bit RISC, até 160MHz",
+            "WiFi": "802.11 b/g/n (HT20) | 2,4–2,5 GHz | TX +20 dBm (b) / +17 dBm (g) / +14 dBm (n) | RX −91 dBm (11 Mbps)",
+            "Tensão de alimentação": "3,3V (chip: 2,5V a 3,6V) — NÃO usar 5V direto",
+            "Consumo": "TX 170 mA (b, +17dBm) | RX 50–56 mA | média 80 mA | Deep-sleep 20 µA",
+            "Flash": "SPI externa — ESP-01: 512 KB | ESP-01S: 1 MB (suporta até 16 MB)",
+            "GPIO do módulo": "GPIO0 e GPIO2 expostos (demais pinos são UART/controle)",
+            "ADC": "1 canal 10-bit (pino TOUT do chip — não exposto no ESP-01)",
+            "Interfaces do chip": "2× UART, SPI/HSPI, I2C (software), I2S, IR, PWM",
+            "Modos WiFi": "Station / SoftAP / Station+SoftAP",
+            "Protocolos": "TCP/IP, UDP, DHCP, DNS, HTTP (firmware AT ou SDK)",
+            "UART": "UART0 TX/RX com firmware AT — baud típico 115200",
+            "Temperatura do chip": "−40°C a +125°C",
+            "Tensão de I/O": "1,8V a 3,6V (VDDPST)",
+            "Datasheet": "ESP8266EX Datasheet v7.1 (2025) — chip NRND (not recommended for new designs)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND)."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GPIO2",
+              "Tipo": "I/O",
+              "Função": "GPIO2 — pino de I/O de propósito geral. Deve estar em nível alto durante o boot.",
+              "Extra": "Com pull-up externo para boot correto"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "GPIO0",
+              "Tipo": "I/O",
+              "Função": "GPIO0 — pino de I/O de propósito geral e seleção de modo de boot (flash mode = nível baixo no boot).",
+              "Extra": "Pull-down para modo flash/programação; pull-up para modo normal"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RXD",
+              "Tipo": "UART",
+              "Função": "RXD0 (GPIO3) — recepção da UART (firmware AT).",
+              "Tensão": "Lógica 3,3V — não aplicar 5V direto"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "TXD",
+              "Tipo": "UART",
+              "Função": "TXD0 (GPIO1) — transmissão da UART (firmware AT).",
+              "Tensão": "Lógica 3,3V — não aplicar 5V direto"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "CH_PD",
+              "Tipo": "Controle",
+              "Função": "CH_PD / CHIP_EN — habilitação do chip (ativo alto). Conectar a 3,3V para operação normal.",
+              "Extra": "Pull-up típico de 10 kΩ"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "RST",
+              "Tipo": "Controle",
+              "Função": "RST — reset externo do módulo (ativo baixo).",
+              "Extra": "Pulso baixo reinicia o ESP-01"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "VCC — alimentação do módulo.",
+              "Tensão": "3,3V (2,5V a 3,6V) — NÃO usar 5V direto",
+              "Corrente": "Pico de até ~300 mA durante TX"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "aoe6930",
+      "nome": "AOE6930",
+      "subtitulo": "MOSFET Dual 30V (Half-Bridge)",
+      "imagem": null,
+      "pinos": [
+        "1: G1",
+        "2: S1/D2",
+        "3: D1",
+        "4: D1",
+        "5: D2/S1",
+        "6: D2/S1",
+        "7: D2/S1",
+        "8: G2"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "AOE6930",
+          "funcao": "30V Dual Asymmetric N-Channel XSPairFET — half-bridge de potência para VRM DC/DC (Q1 high-side + Q2 low-side)",
+          "custom_fields": {
+            "Descrição": "MOSFET de potência dual assimétrico com tecnologia Bottom Source — half-bridge completo em um pacote DFN 5x6E para VRM de computadores, servidores e POL.",
+            "Fabricante": "Alpha & Omega Semiconductor (AOS)",
+            "Configuração": "Dual assimétrico — Q1 high-side + Q2 low-side (XSPairFET, bottom source S2)",
+            "VDS": "30V (Q1 e Q2)",
+            "ID (Q1)": "22A @ TC=25°C | 22A @ TA=25°C (IDSM)",
+            "ID (Q2)": "85A @ TC=25°C | 60A @ TA=25°C (IDSM)",
+            "IDM (pulsado)": "88A (Q1) | 340A (Q2)",
+            "RDS(ON) Q1": "< 4,3mΩ @VGS=10V | < 7,0mΩ @VGS=4,5V (ID=20A)",
+            "RDS(ON) Q2": "< 0,83mΩ @VGS=10V | < 1,05mΩ @VGS=4,5V (ID=30A)",
+            "VGS": "Q1 ±20V | Q2 ±12V",
+            "VGS(th)": "Q1 1,3–2,1V | Q2 1,2–1,9V",
+            "Qg(10V)": "Q1 15–25nC | Q2 95–150nC",
+            "Qg(4,5V)": "Q1 7–15nC | Q2 42–65nC",
+            "Capacitâncias (VDS=15V)": "Ciss 1075pF / Coss 480pF / Crss 55pF (Q1) | Ciss 5560pF / Coss 1670pF / Crss 200pF (Q2)",
+            "Térmica": "RθJC 4,0°C/W (Q1) | 1,25°C/W (Q2) | RθJA 30°C/W / 25°C/W (t≤10s)",
+            "Tj": "−55°C a +150°C",
+            "Pacote": "DFN 5x6E (Power DFN5x6) — 8 pinos + 2 pads expostos no fundo: S2 (fonte do Q2 / GND) e D1 (dreno do Q1)",
+            "Qualificações": "100% UIS Tested | 100% Rg Tested | RoHS 2.0 / Halogen-Free",
+            "Datasheet": "Rev 2.1 — Agosto 2023 (aosmd.com)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "right": 4,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "G1",
+              "Tipo": "Entrada (Gate)",
+              "Função": "Gate do Q1 (high-side) — comutação do MOSFET superior do half-bridge.",
+              "Tensão": "VGS ±20V",
+              "Extra": "VGS(th) 1,3–2,1V (VDS=VGS, ID=250mA)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "S1/D2",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — source de Q1 e drain de Q2 conectados internamente. Ponto de comutação do half-bridge.",
+              "Extra": "Mesmo nó dos pinos 5, 6 e 7. Conexão de alta di/dt — manter indutância baixa."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "D1",
+              "Tipo": "Potência",
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
+              "Corrente": "ID 22A (Q1, TC=25°C)"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "D1",
+              "Tipo": "Potência",
+              "Função": "Dreno de Q1 (high-side) — conexão ao trilho de alimentação (input rail).",
+              "Corrente": "ID 22A (Q1, TC=25°C)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente. Ponto de comutação do half-bridge.",
+              "Extra": "Mesmo nó dos pinos 2, 6 e 7."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
+              "Extra": "Mesmo nó dos pinos 2, 5 e 7."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "D2/S1",
+              "Tipo": "Potência",
+              "Função": "Nó de fase (PHASE) — drain de Q2 e source de Q1 conectados internamente.",
+              "Extra": "Mesmo nó dos pinos 2, 5 e 6."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "G2",
+              "Tipo": "Entrada (Gate)",
+              "Função": "Gate do Q2 (low-side / síncrono) — comutação do MOSFET inferior do half-bridge.",
+              "Tensão": "VGS ±12V",
+              "Extra": "VGS(th) 1,2–1,9V (VDS=VGS, ID=250mA)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "bc547",
+      "nome": "BC547",
+      "subtitulo": "Transistor NPN de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: C",
+        "2: B",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "BC547",
+          "funcao": "Transistor NPN de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor NPN epitaxial de silício para chaveamento e amplificação. Um dos mais usados em projetos hobbistas.",
+            "Fabricante": "onsemi / Fairchild (série BC546–BC550)",
+            "Polaridade": "NPN",
+            "Complemento": "BC557 (PNP)",
+            "VCBO / VCEO / VEBO": "50V / 45V / 6V",
+            "IC contínuo": "100 mA (max)",
+            "Potência total": "500 mW (PD)",
+            "VCE(sat)": "90 mV typ / 250 mV max @IC=10mA; 250/600 mV @100mA",
+            "VBE(on)": "580 a 700 mV (typ 660 mV @2mA)",
+            "hFE": "110–800 @IC=2mA (classes: A 110–220, B 200–450, C 420–800)",
+            "fT": "300 MHz typ",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-92 (CASE 135)",
+            "Datasheet": "onsemi BC546/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO 50V, VCEO 45V",
+              "Corrente": "IC até 100 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 6V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~0,66V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "bc557",
+      "substitutos": [
+        "2n3904",
+        "2n2222"
+      ]
+    },
+    {
+      "id": "bc557",
+      "nome": "BC557",
+      "subtitulo": "Transistor PNP de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: C",
+        "2: B",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "BC557",
+          "funcao": "Transistor PNP de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor PNP epitaxial de silício para chaveamento e amplificação. Complemento do BC547.",
+            "Fabricante": "onsemi / Fairchild (série BC556–BC560)",
+            "Polaridade": "PNP",
+            "Complemento": "BC547 (NPN)",
+            "VCBO / VCEO / VEBO": "−50V / −45V / −5V",
+            "IC contínuo": "−100 mA (max); ICP −200 mA (pulso)",
+            "Potência total": "500 mW (PD)",
+            "VCE(sat)": "−90 mV typ / −300 mV max @IC=10mA; −250/−650 mV @100mA",
+            "VBE(on)": "−600 a −750 mV (typ −660 mV @2mA)",
+            "hFE": "110–800 @IC=2mA (classes: A 110–220, B 200–450, C 420–800)",
+            "fT": "150 MHz typ",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-92",
+            "Datasheet": "onsemi BC556/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO −50V, VCEO −45V",
+              "Corrente": "IC até −100 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO −5V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~−0,66V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "bc547",
+      "substitutos": [
+        "2n3906"
+      ]
+    },
+    {
+      "id": "2n2222",
+      "nome": "2N2222A",
+      "subtitulo": "Transistor NPN de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: C",
+        "2: B",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "2N2222A",
+          "funcao": "Transistor NPN de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor NPN amplificador de silício de baixa potência, para chaveamento e amplificação (clássico 2N2222 em TO-92).",
+            "Fabricante": "onsemi / Fairchild (P2N2222A)",
+            "Polaridade": "NPN",
+            "VCBO / VCEO / VEBO": "75V / 40V / 6V",
+            "IC contínuo": "600 mA (max)",
+            "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
+            "VCE(sat)": "0,3V max @150mA; 1,0V max @500mA",
+            "VBE(sat)": "0,6 a 1,2V @150mA",
+            "hFE": "100–300 @IC=150mA, VCE=10V",
+            "fT": "300 MHz min",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92 (CASE 29, STYLE 17)",
+            "Datasheet": "onsemi P2N2222A/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO 75V, VCEO 40V",
+              "Corrente": "IC até 600 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 6V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~0,7V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "bc547",
+        "2n3904"
+      ]
+    },
+    {
+      "id": "2n3904",
+      "nome": "2N3904",
+      "subtitulo": "Transistor NPN de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: E",
+        "2: B",
+        "3: C"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "2N3904",
+          "funcao": "Transistor NPN de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor NPN de silício de uso geral para chaveamento e amplificação. Um dos mais populares em projetos com Arduino.",
+            "Fabricante": "onsemi / Fairchild (série 2N3903/2N3904)",
+            "Polaridade": "NPN",
+            "VCBO / VCEO / VEBO": "60V / 40V / 6V",
+            "IC contínuo": "200 mA (max)",
+            "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
+            "VCE(sat)": "0,2V max @10mA; 0,3V max @50mA",
+            "VBE(sat)": "0,65 a 0,85V @10mA",
+            "hFE": "100–300 @IC=10mA, VCE=1V",
+            "fT": "300 MHz min",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92 (CASE 29, STYLE 1)",
+            "Datasheet": "onsemi 2N3903/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~0,7V",
+              "Corrente": "IE = IC + IB"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 6V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO 60V, VCEO 40V",
+              "Corrente": "IC até 200 mA"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "2n3906",
+      "substitutos": [
+        "bc547",
+        "2n2222"
+      ]
+    },
+    {
+      "id": "2n3906",
+      "nome": "2N3906",
+      "subtitulo": "Transistor PNP de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: E",
+        "2: B",
+        "3: C"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "2N3906",
+          "funcao": "Transistor PNP de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor PNP de silício de uso geral para chaveamento e amplificação. Complemento do 2N3904.",
+            "Fabricante": "onsemi / Fairchild (série 2N3905/2N3906)",
+            "Polaridade": "PNP",
+            "VCBO / VCEO / VEBO": "40V / 40V / 5V",
+            "IC contínuo": "200 mA (max)",
+            "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
+            "VCE(sat)": "0,25V max @10mA; 0,4V max @50mA",
+            "VBE(sat)": "0,65 a 0,85V @10mA",
+            "hFE": "100–300 @IC=10mA, VCE=1V",
+            "fT": "250 MHz min",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92 (CASE 29, STYLE 1)",
+            "Datasheet": "onsemi 2N3906/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~−0,7V",
+              "Corrente": "IE = IC + IB"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO 40V, VCEO 40V",
+              "Corrente": "IC até 200 mA"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "2n3904",
+      "substitutos": [
+        "bc557"
+      ]
+    },
+    {
+      "id": "2n7000",
+      "nome": "2N7000",
+      "subtitulo": "MOSFET N-canal de sinal",
+      "imagem": null,
+      "pinos": [
+        "1: S",
+        "2: G",
+        "3: D"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "2N7000",
+          "funcao": "MOSFET N-canal de sinal",
+          "custom_fields": {
+            "Descrição": "MOSFET de canal N de sinal pequeno, para chaveamento lógico (nível compatível com 5V/3,3V).",
+            "Fabricante": "onsemi / Fairchild (série 2N7000/2N7002)",
+            "Polaridade": "N-canal (enhancement)",
+            "VDSS / VGS": "60V / ±20V (pico ±40V, tp≤50ms)",
+            "ID contínuo": "200 mA (max); IDM 500 mA (pulso)",
+            "Potência total": "350 mW (PD @TC=25°C)",
+            "RDS(on)": "5Ω max @VGS=10V; 6Ω max @VGS=4,5V",
+            "VGS(th)": "0,8 a 3,0V",
+            "gfs": "100 mS min",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92 (CASE 29, STYLE 22)",
+            "Datasheet": "onsemi 2N7000/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "S",
+              "Função": "Source",
+              "Tensão": "—",
+              "Corrente": "IS até 200 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "G",
+              "Função": "Gate",
+              "Tensão": "VGS ±20V; VGS(th) 0,8–3,0V",
+              "Corrente": "IG ~0 (alta impedância)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "D",
+              "Função": "Drain",
+              "Tensão": "VDSS 60V",
+              "Corrente": "ID até 200 mA"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      }
+    },
+    {
+      "id": "tip31c",
+      "nome": "TIP31C",
+      "subtitulo": "Transistor NPN de potência 3A",
+      "imagem": null,
+      "pinos": [
+        "1: B",
+        "2: C",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TIP31C",
+          "funcao": "Transistor NPN de potência 3A",
+          "custom_fields": {
+            "Descrição": "Transistor NPN de potência de silício complementar (TO-220), para amplificadores e chaveamento de média potência.",
+            "Fabricante": "onsemi / ST (TIP31, TIP31A, TIP31B, TIP31C)",
+            "Polaridade": "NPN",
+            "Complemento": "TIP32C (PNP)",
+            "VCEO / VCBO / VEBO": "100V / 100V / 5V",
+            "IC contínuo": "3A (max); ICM 5A (pico); IB 1A",
+            "Potência total": "40W (PD @TC=25°C); 2W @TA",
+            "VCE(sat)": "1,2V max @IC=3A, IB=375mA",
+            "VBE(on)": "1,8V max @IC=3A, VCE=4V",
+            "hFE": "25 min @IC=1A; 10–50 @3A",
+            "fT": "3 MHz",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
+            "Datasheet": "onsemi TIP31A/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB até 1A"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor (tab = coletor)",
+              "Tensão": "VCEO 100V",
+              "Corrente": "IC até 3A (5A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE(on) 1,8V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "tip32c",
+      "substitutos": []
+    },
+    {
+      "id": "tip32c",
+      "nome": "TIP32C",
+      "subtitulo": "Transistor PNP de potência 3A",
+      "imagem": null,
+      "pinos": [
+        "1: B",
+        "2: C",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TIP32C",
+          "funcao": "Transistor PNP de potência 3A",
+          "custom_fields": {
+            "Descrição": "Transistor PNP de potência de silício complementar (TO-220), para amplificadores e chaveamento de média potência.",
+            "Fabricante": "onsemi / ST (TIP32, TIP32A, TIP32B, TIP32C)",
+            "Polaridade": "PNP",
+            "Complemento": "TIP31C (NPN)",
+            "VCEO / VCBO / VEBO": "100V / 100V / 5V",
+            "IC contínuo": "3A (max); ICM 5A (pico); IB 1A",
+            "Potência total": "40W (PD @TC=25°C); 2W @TA",
+            "VCE(sat)": "1,2V max @IC=3A, IB=375mA",
+            "VBE(on)": "1,8V max @IC=3A, VCE=4V",
+            "hFE": "25 min @IC=1A; 10–50 @3A",
+            "fT": "3 MHz",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
+            "Datasheet": "onsemi TIP31A/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB até 1A"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor (tab = coletor)",
+              "Tensão": "VCEO 100V",
+              "Corrente": "IC até 3A (5A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE(on) 1,8V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "tip31c",
+      "substitutos": []
+    },
+    {
+      "id": "tip120",
+      "nome": "TIP120",
+      "subtitulo": "Transistor Darlington NPN 5A",
+      "imagem": null,
+      "pinos": [
+        "1: B",
+        "2: C",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TIP120",
+          "funcao": "Transistor Darlington NPN 5A",
+          "custom_fields": {
+            "Descrição": "Transistor Darlington NPN de potência média (TO-220) com resistores shunt base-emissor, para amplificação e chaveamento.",
+            "Fabricante": "onsemi / Fairchild (TIP120/121/122)",
+            "Polaridade": "NPN (Darlington)",
+            "Complemento": "TIP125 (PNP)",
+            "VCEO / VCBO / VEBO": "60V / 60V / 5V",
+            "IC contínuo": "5A (max); ICM 8A (pico); IB 120mA",
+            "Potência total": "65W (PD @TC=25°C); 2W @TA",
+            "VCE(sat)": "2V max @IC=3A, IB=12mA; 4V max @5A",
+            "VBE(on)": "2,5V max @IC=3A, VCE=3V",
+            "hFE": "1000 min @IC=0,5A e 3A",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
+            "Datasheet": "onsemi TIP120/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB até 120 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor (tab = coletor)",
+              "Tensão": "VCEO 60V",
+              "Corrente": "IC até 5A (8A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE(on) 2,5V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "tip127",
+      "substitutos": []
+    },
+    {
+      "id": "tip127",
+      "nome": "TIP127",
+      "subtitulo": "Transistor Darlington PNP 5A",
+      "imagem": null,
+      "pinos": [
+        "1: B",
+        "2: C",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TIP127",
+          "funcao": "Transistor Darlington PNP 5A",
+          "custom_fields": {
+            "Descrição": "Transistor Darlington PNP de potência média (TO-220) com resistores shunt base-emissor, para amplificação e chaveamento.",
+            "Fabricante": "onsemi / Fairchild (TIP125/126/127)",
+            "Polaridade": "PNP (Darlington)",
+            "Complemento": "TIP122 (NPN)",
+            "VCEO / VCBO / VEBO": "100V / 100V / 5V",
+            "IC contínuo": "5A (max); ICM 8A (pico); IB 120mA",
+            "Potência total": "65W (PD @TC=25°C); 2W @TA",
+            "VCE(sat)": "2V max @IC=3A, IB=12mA; 4V max @5A",
+            "VBE(on)": "2,5V max @IC=3A, VCE=3V",
+            "hFE": "1000 min @IC=0,5A e 3A",
+            "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
+            "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
+            "Datasheet": "onsemi TIP120/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB até 120 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor (tab = coletor)",
+              "Tensão": "VCEO 100V",
+              "Corrente": "IC até 5A (8A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE(on) 2,5V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "tip120",
+      "substitutos": []
+    },
+    {
+      "id": "irfz44n",
+      "nome": "IRFZ44N",
+      "subtitulo": "MOSFET N-canal 49A",
+      "imagem": null,
+      "pinos": [
+        "1: G",
+        "2: D",
+        "3: S"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "IRFZ44N",
+          "funcao": "MOSFET N-canal 49A",
+          "custom_fields": {
+            "Descrição": "MOSFET de potência HEXFET N-canal (TO-220), RDS(on) ultrabaixo, para chaveamento de alta corrente (drivers de motor, fontes).",
+            "Fabricante": "International Rectifier / Infineon (IRFZ44NPbF); Vishay (IRFZ44)",
+            "Polaridade": "N-canal (enhancement)",
+            "VDSS / VGS": "55V / ±20V",
+            "VGS(th)": "2,0 a 4,0V",
+            "ID contínuo": "49A @TC=25°C (VGS=10V); 35A @100°C; IDM 160A (pulso)",
+            "Potência total": "94W (PD @TC=25°C)",
+            "RDS(on)": "17,5 mΩ max @VGS=10V, ID=25A (typ 16 mΩ)",
+            "Qg": "63 nC max (Qgs 14, Qgd 23 nC)",
+            "Ciss / Coss / Crss": "1470 / 360 / 88 pF",
+            "Temperatura": "TJ 175°C; Tstg −55 a +175°C",
+            "Pacote": "TO-220AB — tab = drain",
+            "Datasheet": "IRF IRFZ44NPbF"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "G",
+              "Função": "Gate",
+              "Tensão": "VGS ±20V; VGS(th) 2–4V",
+              "Corrente": "IG ~0 (alta impedância)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "D",
+              "Função": "Drain (tab = drain)",
+              "Tensão": "VDSS 55V",
+              "Corrente": "ID até 49A (160A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "S",
+              "Função": "Source",
+              "Tensão": "—",
+              "Corrente": "IS até 49A"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "irf9540",
+      "substitutos": []
+    },
+    {
+      "id": "irf9540",
+      "nome": "IRF9540N",
+      "subtitulo": "MOSFET P-canal 23A",
+      "imagem": null,
+      "pinos": [
+        "1: G",
+        "2: D",
+        "3: S"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "IRF9540N",
+          "funcao": "MOSFET P-canal 23A",
+          "custom_fields": {
+            "Descrição": "MOSFET de potência HEXFET P-canal (TO-220), para chaveamento de alta corrente no lado alto (high-side).",
+            "Fabricante": "International Rectifier / Infineon (IRF9540NPbF)",
+            "Polaridade": "P-canal (enhancement)",
+            "VDSS / VGS": "−100V / ±20V",
+            "VGS(th)": "−2,0 a −4,0V",
+            "ID contínuo": "−23A @TC=25°C (VGS=−10V); −16A @100°C; IDM −76A (pulso)",
+            "Potência total": "140W (PD @TC=25°C)",
+            "RDS(on)": "0,117 Ω max @VGS=−10V, ID=−11A",
+            "Qg": "97 nC max @VGS=−10V",
+            "Ciss / Coss / Crss": "1300 / — / — pF (típ)",
+            "Temperatura": "TJ 175°C; Tstg −55 a +175°C",
+            "Pacote": "TO-220AB — tab = drain",
+            "Datasheet": "IRF IRF9540NPbF"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "G",
+              "Função": "Gate",
+              "Tensão": "VGS ±20V; VGS(th) −2 a −4V",
+              "Corrente": "IG ~0 (alta impedância)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "D",
+              "Função": "Drain (tab = drain)",
+              "Tensão": "VDSS −100V",
+              "Corrente": "ID até −23A (−76A pico)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "S",
+              "Função": "Source",
+              "Tensão": "—",
+              "Corrente": "IS até −23A"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": "irfz44n",
+      "substitutos": []
+    }
+  ],
+  "infos": [
+    {
+      "id": "dip",
+      "nome": "DIP (Dual In-line Package)",
+      "descricao": "Encapsulamento tradicional para CI's com dois lados de pinos",
+      "imagem": "ic_dip_package",
+      "detalhes": [
+        "Pinos: 4 a 64, espaçamento 2.54mm",
+        "Uso: CI's lógicos, OpAmps, microcontroladores",
+        "Montagem: through-hole, ideal para protoboards"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "to220",
+      "nome": "TO-220",
+      "descricao": "Encapsulamento de potência com 3 terminais e aba metálica",
+      "imagem": "ic_to220",
+      "detalhes": [
+        "Pinos: 3 (entrada, saída, referência)",
+        "Uso: Reguladores de tensão (7805, LM317), transistores de potência",
+        "Dissipação: até ~20W com dissipador",
+        "A aba metálica é conectada ao pino do meio"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "to92",
+      "nome": "TO-92",
+      "descricao": "Pequeno encapsulamento de 3 pinos para semicondutores de baixa potência",
+      "imagem": "ic_to92",
+      "detalhes": [
+        "Pinos: 3, espaçamento 1.27mm",
+        "Uso: Transistores pequenos (BC547, 2N2222), sensores (LM35)",
+        "Corrente: tipicamente até 500mA"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "radial_axial",
+      "nome": "Axial vs Radial",
+      "descricao": "Formatos de componentes discretos (resistores, capacitores, diodos)",
+      "imagem": "radial_axial",
+      "detalhes": [
+        "Axial: terminais saem nas extremidades (ex: resistores de carbono).",
+        "Radial: terminais saem no mesmo lado (ex: capacitores eletrolíticos)."
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "pth_smd",
+      "nome": "PTH vs SMD",
+      "descricao": "Formatos de componentes discretos (resistores,capacitores,diodos)",
+      "imagem": "pth_smd",
+      "detalhes": [
+        "PTH - Pin Through-Hole (ou Plated Through-Hole)- Fabricação em que os terminais dos componentes eletrônicos passam por furos metalizados na placa de circuito impresso (PCI) e são soldados no lado oposto.",
+        "SMD- Surface Mount Device os componentes são soldados diretamente na parte de cima da placa de circuito sem precisar de furos."
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    }
+  ]
 }
