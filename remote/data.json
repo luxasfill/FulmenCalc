@@ -2842,9 +2842,9 @@
             "VCC (alimentação)": "2V a 15V",
             "Temperatura de operação": "0°C a 70°C (TLC555C) | −40°C a +85°C (TLC555I) | −40°C a +125°C (TLC555Q)",
             "Corrente de saída": "Sink até 100 mA máx | Source até 10 mA (típ.)",
-            "Consumo": "≈ 110 µA típ. (VCC=5V) — versus 2 a 6 mA do 555 bipolar",
+            "Consumo": "≈ 0,18 mA typ (1 mW @ VCC=5V) — versus 2 a 6 mA do 555 bipolar",
             "Frequência máxima": "até 2,1 MHz",
-            "Máximos absolutos": "VCC ≤ 16V",
+            "Máximos absolutos": "VDD −0,3V a 18V",
             "Pacotes": "PDIP-8, SOIC-8, TSSOP-8",
             "Datasheet": "SLFS029H — Ago 1986, rev. Abr 2023"
           }
@@ -3583,7 +3583,7 @@
             "VCC (alimentação)": "3V a 20V (recomendado 3V a 15V)",
             "Temperatura de operação": "−55°C a +125°C",
             "Tecnologia": "CMOS (série 4000)",
-            "Velocidade de clock": "típ. 5,5 MHz @ VDD=10V | 2 MHz @ VDD=5V",
+            "Velocidade de clock": "típ. 2,5 MHz @ VDD=5V | 5 MHz @ VDD=10V | 5,5 MHz @ VDD=15V",
             "Saídas": "Q0–Q9 decodificadas + CO (carry-out)",
             "Entradas": "CLOCK, RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Pacotes": "PDIP-16, SO-16",
@@ -4046,7 +4046,7 @@
             "VICR (modo comum)": "±12V min / ±13V typ (VCC=±15V)",
             "Curto-circuito de saída": "Duração ilimitada",
             "Temperatura de operação": "0°C a 70°C (UA741C)",
-            "Máximos absolutos": "VCC ±18V | VID ±30V | Tj 150°C",
+            "Máximos absolutos": "VCC ±18V | VID ±15V | VI ±15V | Tj 150°C",
             "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8)",
             "Datasheet": "SLOS094 — Nov 1970, rev. Fev 2026"
           }
@@ -4313,9 +4313,9 @@
             "Timers": "2× 8-bit (T/C0, T/C2) + 1× 16-bit (T/C1) com prescaler e compare",
             "PWM": "6 canais",
             "Comunicação": "USART, SPI mestre/escravo, TWI (I2C)",
-            "Consumo": "Ativo 1,5 mA @3V/4MHz (typ) | Power-down < 1 µA",
+            "Consumo": "Ativo 0,2 mA @1MHz/1,8V (typ) | Power-down 0,1 µA (typ)",
             "Máximos absolutos": "VCC 6,0V | tensão nos pinos −0,5V a VCC+0,5V",
-            "Temperatura": "−40°C a +125°C (qualificação automotiva)",
+            "Temperatura": "−40°C a +105°C (versões AN/MN) | −40°C a +85°C (industrial)",
             "Pacotes": "PDIP-28, TQFP-32, MLF-32 (QFN)",
             "Datasheet": "7810D–AVR–01/15 — ATmega328/328P datasheet"
           }
