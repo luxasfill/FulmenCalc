@@ -725,7 +725,7 @@
             "Descrição": "Regulador positivo ajustável de 3 terminais — saída de 1,25V a 37V com até 1,5A, definida por divisor resistivo externo.",
             "Fabricante": "Texas Instruments (LM317)",
             "Tensão de saída": "1,25V a 37V (ajustável)",
-            "Tensão de entrada": "4,25V a 40V",
+            "Tensão de entrada": "mín. ≈4,25V (VO=1,25V + 3V headroom); VI−VO máx. 40V",
             "Headroom (VI−VO)": "≥3V recomendado; máx 40V",
             "Corrente de saída": "até 1,5A (IO); limite interno 1,5A min / 2,2A typ (VI−VO≤15V)",
             "VREF": "1,25V typ entre ADJ e OUT (faixa 1,2–1,3V)",
@@ -1793,7 +1793,7 @@
           "name": "2N2222A",
           "funcao": "Transistor NPN de uso geral",
           "custom_fields": {
-            "Descrição": "Transistor NPN amplificador de silício de baixa potência, para chaveamento e amplificação (clássico 2N2222 em TO-92).",
+            "Descrição": "Transistor NPN amplificador de silício de baixa potência, para chaveamento e amplificação (clássico 2N2222 em TO-92). ATENÇÃO: o PN2222A (Fairchild/onsemi) tem pinagem E-B-C (1=emissor), diferente do P2N2222A (1=coletor) — confira o encapsulado.",
             "Fabricante": "onsemi / Fairchild (P2N2222A)",
             "Polaridade": "NPN",
             "VCBO / VCEO / VEBO": "75V / 40V / 6V",
@@ -1872,7 +1872,7 @@
           "name": "2N2907",
           "funcao": "Transistor PNP de uso geral",
           "custom_fields": {
-            "Descrição": "Transistor PNP de silício de baixa potência, para chaveamento e amplificação. Complemento do 2N2222.",
+            "Descrição": "Transistor PNP de silício de baixa potência, para chaveamento e amplificação. Complemento do 2N2222. ATENÇÃO: no P2N2907A (onsemi) a pinagem é C-B-E (1=coletor); alguns fornecedores usam E-B-C — confira o encapsulado.",
             "Fabricante": "onsemi / Fairchild (PN2907A)",
             "Polaridade": "PNP",
             "Complemento": "2N2222 (NPN)",
@@ -2339,7 +2339,7 @@
             "fT": "3 MHz",
             "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
             "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-            "Datasheet": "onsemi TIP31A/D"
+            "Datasheet": "onsemi TIP32A/D"
           }
         },
         "pins_per_side": {
@@ -2489,7 +2489,7 @@
             "hFE": "1000 min @IC=0,5A e 3A",
             "Temperatura": "TJ 150°C; Tstg −65 a +150°C",
             "Pacote": "TO-220 (CASE 221A, STYLE 1) — tab = coletor",
-            "Datasheet": "onsemi TIP120/D"
+            "Datasheet": "onsemi TIP125/D"
           }
         },
         "pins_per_side": {
@@ -2636,7 +2636,7 @@
             "Potência total": "140W (PD @TC=25°C)",
             "RDS(on)": "0,117 Ω max @VGS=−10V, ID=−11A",
             "Qg": "97 nC max @VGS=−10V",
-            "Ciss / Coss / Crss": "1300 / — / — pF (típ)",
+            "Ciss / Coss / Crss": "1300 / 400 / 240 pF (típ) @VDS=−25V",
             "Temperatura": "TJ 175°C; Tstg −55 a +175°C",
             "Pacote": "TO-220AB — tab = drain",
             "Datasheet": "IRF IRF9540NPbF"
