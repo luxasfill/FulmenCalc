@@ -122,7 +122,11 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "lm555",
+        "tlc555"
+      ]
     },
     {
       "id": "lm358",
@@ -248,7 +252,11 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "lm2904",
+        "ne5532"
+      ]
     },
     {
       "id": "lm324",
@@ -424,7 +432,11 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "lm2902",
+        "tl084"
+      ]
     },
     {
       "id": "cd4017",
@@ -610,7 +622,10 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "hcf4017"
+      ]
     },
     {
       "id": "lm7805",
@@ -688,7 +703,10 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "78m05"
+      ]
     },
     {
       "id": "lm317",
@@ -765,7 +783,10 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "lm350"
+      ]
     },
     {
       "id": "lm386",
@@ -885,7 +906,10 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "njm386"
+      ]
     },
     {
       "id": "lm741",
@@ -1008,7 +1032,11 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "ua741",
+        "tl081"
+      ]
     },
     {
       "id": "atmega328p",
@@ -1332,7 +1360,10 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "substitutos": [
+        "atmega328"
+      ]
     },
     {
       "id": "esp8266",
@@ -2656,6 +2687,1906 @@
       },
       "complementar": "irfz44n",
       "substitutos": []
+    },
+    {
+      "id": "lm555",
+      "nome": "LM555",
+      "subtitulo": "Timer de Precisão (555)",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: TRIG",
+        "3: OUT",
+        "4: RESET",
+        "5: CONT",
+        "6: THRES",
+        "7: DISCH",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM555",
+          "funcao": "Timer de precisão — temporização de microssegundos a horas (astável e monoestável)",
+          "custom_fields": {
+            "Descrição": "Timer de precisão 555 em tecnologia bipolar — versão de 8 pinos com pinagem idêntica ao NE555 (drop-in).",
+            "Fabricante": "Texas Instruments (LM555)",
+            "VCC (alimentação)": "4,5V a 16V",
+            "Temperatura de operação": "0°C a 70°C (LM555C) | −40°C a +85°C (LM555)",
+            "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
+            "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
+            "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C",
+            "Pacotes": "P (PDIP-8), D (SOIC-8)",
+            "Datasheet": "SNAS548 — Set 1994, rev. Mai 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "TRIG",
+              "Tipo": "Entrada",
+              "Função": "Início do ciclo de temporização. Quando TRIG cai abaixo de ⅓ de VCC, a saída vai para nível alto.",
+              "Nível": "Dispara em < ⅓ VCC",
+              "Corrente": "0,5 µA típ. (TRIG em 0V)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT",
+              "Corrente": "Até ±200 mA",
+              "Função": "Saída do timer, alta corrente (sink ou source).",
+              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
+              "Tipo": "Saída",
+              "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RESET",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "Força a saída e a descarga para nível baixo. Sobrescreve todos os outros pinos.",
+              "Nível": "Reset em < 0,7V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "CONT",
+              "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
+              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)",
+              "Tipo": "Entrada/Saída",
+              "Extra": "Entrada de controle da tensão de referência dos comparadores internos.\nQuando não utilizada, recomenda-se capacitor de aproximadamente 10 nF para GND."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "THRES",
+              "Tipo": "Entrada",
+              "Função": "Fim do ciclo de temporização. Quando THRES fica acima de CONT, a saída e a descarga vão para nível baixo.",
+              "Nível": "Compara com ≈ ⅔ VCC"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "DISCH",
+              "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
+              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)",
+              "Tipo": "Saída",
+              "Extra": "Transistor NPN de descarga com coletor aberto para GND"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva.",
+              "Tensão": "4,5V a 16V (SE555: 18V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "ne555",
+        "tlc555"
+      ]
+    },
+    {
+      "id": "tlc555",
+      "nome": "TLC555",
+      "subtitulo": "Timer CMOS Baixo Consumo",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: TRIG",
+        "3: OUT",
+        "4: RESET",
+        "5: CONT",
+        "6: THRES",
+        "7: DISCH",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TLC555",
+          "funcao": "Timer 555 em CMOS — consumo ultrabaixo",
+          "custom_fields": {
+            "Descrição": "Timer 555 em tecnologia CMOS — consumo ultrabaixo, pinagem idêntica ao NE555 (drop-in), com maior faixa de alimentação e entradas de alta impedância.",
+            "Fabricante": "Texas Instruments (TLC555 / TLC555-Q1)",
+            "VCC (alimentação)": "2V a 15V",
+            "Temperatura de operação": "0°C a 70°C (TLC555C) | −40°C a +85°C (TLC555I) | −40°C a +125°C (TLC555Q)",
+            "Corrente de saída": "Sink até 100 mA máx | Source até 10 mA (típ.)",
+            "Consumo": "≈ 110 µA típ. (VCC=5V) — versus 2 a 6 mA do 555 bipolar",
+            "Frequência máxima": "até 2,1 MHz",
+            "Máximos absolutos": "VCC ≤ 16V",
+            "Pacotes": "PDIP-8, SOIC-8, TSSOP-8",
+            "Datasheet": "SLFS029H — Ago 1986, rev. Abr 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "TRIG",
+              "Tipo": "Entrada",
+              "Função": "Início do ciclo de temporização. Quando TRIG cai abaixo de ⅓ de VCC, a saída vai para nível alto.",
+              "Nível": "Dispara em < ⅓ VCC",
+              "Corrente": "0,5 µA típ. (TRIG em 0V)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT",
+              "Corrente": "Até ±200 mA",
+              "Função": "Saída do timer, alta corrente (sink ou source).",
+              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
+              "Tipo": "Saída",
+              "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "RESET",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "Força a saída e a descarga para nível baixo. Sobrescreve todos os outros pinos.",
+              "Nível": "Reset em < 0,7V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "CONT",
+              "Função": "Controle dos comparadores internos (≈ ⅔ VCC). Permite conectar capacitor de bypass para estabilizar o limiar.",
+              "Tensão": "≈ ⅔ VCC (10V típ. com VCC=15V)",
+              "Tipo": "Entrada/Saída",
+              "Extra": "Entrada de controle da tensão de referência dos comparadores internos.\nQuando não utilizada, recomenda-se capacitor de aproximadamente 10 nF para GND."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "THRES",
+              "Tipo": "Entrada",
+              "Função": "Fim do ciclo de temporização. Quando THRES fica acima de CONT, a saída e a descarga vão para nível baixo.",
+              "Nível": "Compara com ≈ ⅔ VCC"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "DISCH",
+              "Função": "Descarrega o capacitor de temporização enquanto a saída está baixa.",
+              "Tensão": "Vce(sat) ≈ 0,15V típ. (VCC=5V, 8mA)",
+              "Tipo": "Saída",
+              "Extra": "Transistor NPN de descarga com coletor aberto para GND"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva.",
+              "Tensão": "4,5V a 16V (SE555: 18V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "ne555",
+        "lm555"
+      ]
+    },
+    {
+      "id": "lm2904",
+      "nome": "LM2904",
+      "subtitulo": "OpAmp Duplo (Industrial)",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: GND",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM2904",
+          "funcao": "Amplificador operacional duplo — versão industrial",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional duplo — versão de temperatura industrial do LM358, mesma pinagem e características elétricas (drop-in).",
+            "Fabricante": "Texas Instruments (LM2904 / LM2904A / LM2904B)",
+            "Alimentação": "3V a 26V (fonte simples) ou ±1,5V a ±13V (dual)",
+            "Consumo (por amplificador)": "250 µA typ (VS=5V) | 500 µA typ / 1,2 mA max (VS=26V)",
+            "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C) | 10 mV max (−40°C a +125°C)",
+            "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C)",
+            "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min",
+            "GBW": "0,7 MHz typ",
+            "Slew rate": "0,3 V/µs",
+            "Temperatura de operação": "−40°C a +125°C",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PW (TSSOP-8), PS (SO-8)",
+            "Datasheet": "SLOS468 — Nov 1994, rev. Abr 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1.",
+              "Tensão": "VI −0,3V a 32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (V−) ou terra em operação com fonte simples.",
+              "Tensão": "V− = 0V (simples) a −15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (V+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm358"
+      ]
+    },
+    {
+      "id": "ne5532",
+      "nome": "NE5532",
+      "subtitulo": "OpAmp Duplo Baixo Ruído",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: GND",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "NE5532",
+          "funcao": "Amplificador operacional duplo de baixo ruído",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional duplo de baixo ruído e alta performance — pinagem igual ao LM358, porém requer alimentação de maior tensão (tip. ±15V). Bom substituto em aplicações de áudio e precisão.",
+            "Fabricante": "Texas Instruments (NE5532 / NE5532A)",
+            "Alimentação": "±3V a ±20V (dual) — tip. ±15V",
+            "Consumo (por amplificador)": "8 mA typ",
+            "GBW": "10 MHz typ",
+            "Slew rate": "9 V/µs",
+            "Ruído de entrada": "5 nV/√Hz typ",
+            "IIB (bias de entrada)": "200 nA typ / 800 nA max",
+            "Temperatura de operação": "0°C a 70°C (NE5532) | −40°C a +85°C (NE5532A)",
+            "Pacotes": "P (PDIP-8), D (SOIC-8), PS (SO-8)",
+            "Datasheet": "SLOS075 — Jan 1979, rev. Mar 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1.",
+              "Tensão": "VI −0,3V a 32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (V−) ou terra em operação com fonte simples.",
+              "Tensão": "V− = 0V (simples) a −15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2.",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2.",
+              "Corrente": "Drives até 2 kΩ de carga"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (V+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm358"
+      ]
+    },
+    {
+      "id": "lm2902",
+      "nome": "LM2902",
+      "subtitulo": "OpAmp Quádruplo (Industrial)",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: VCC",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: OUT3",
+        "9: IN3-",
+        "10: IN3+",
+        "11: GND",
+        "12: IN4+",
+        "13: IN4-",
+        "14: OUT4"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM2902",
+          "funcao": "Amplificador operacional quádruplo — versão industrial",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional quádruplo — versão de temperatura industrial do LM324, mesma pinagem e características elétricas (drop-in).",
+            "Fabricante": "Texas Instruments (LM2902 / LM2902K / LM2902LV)",
+            "Alimentação": "3V a 26V (fonte simples) ou ±1,5V a ±13V (dual)",
+            "Consumo (4 amplificadores)": "0,7 mA typ / 1,2 mA max (VO=2,5V)",
+            "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C) | 10 mV max (−40°C a +125°C)",
+            "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C)",
+            "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min",
+            "GBW": "1,2 MHz typ",
+            "Slew rate": "0,5 V/µs",
+            "VICR (modo comum)": "0 a VCC−1,5V — inclui GND",
+            "Temperatura de operação": "−40°C a +125°C",
+            "Pacotes": "N (PDIP-14), D (SOIC-14), PW (TSSOP-14), NS (SO-14)",
+            "Datasheet": "SLOS045 — Mai 1975, rev. Fev 2024"
+          }
+        },
+        "pins_per_side": {
+          "left": 7,
+          "bottom": 0,
+          "right": 7,
+          "top": 0
+        },
+        "total_pins": 14,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1 (1OUT)."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2 (2IN+)."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2 (2IN−)."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2 (2OUT)."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "OUT3",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 3 (3OUT)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "IN3-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 3 (3IN−)."
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "IN3+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 3 (3IN+)."
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−) ou terra.",
+              "Tensão": "VCC− = GND (simples) a −15V (dual)"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "IN4+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 4 (4IN+)."
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "IN4-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 4 (4IN−)."
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "OUT4",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 4 (4OUT)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm324"
+      ]
+    },
+    {
+      "id": "tl084",
+      "nome": "TL084",
+      "subtitulo": "OpAmp Quádruplo JFET",
+      "imagem": null,
+      "pinos": [
+        "1: OUT1",
+        "2: IN1-",
+        "3: IN1+",
+        "4: VCC",
+        "5: IN2+",
+        "6: IN2-",
+        "7: OUT2",
+        "8: OUT3",
+        "9: IN3-",
+        "10: IN3+",
+        "11: GND",
+        "12: IN4+",
+        "13: IN4-",
+        "14: OUT4"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TL084",
+          "funcao": "Amplificador operacional quádruplo com entrada JFET",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional quádruplo com entrada JFET — alta impedância de entrada e maior largura de banda, pinagem padrão (drop-in do LM324 em circuitos com fonte adequada).",
+            "Fabricante": "Texas Instruments (TL084 / TL084A / TL084B)",
+            "Alimentação": "±3,5V a ±18V (dual) ou 7V a 36V (fonte simples)",
+            "Consumo (por amplificador)": "1,4 mA typ",
+            "GBW": "3 MHz typ",
+            "Slew rate": "13 V/µs",
+            "IIB (bias de entrada)": "30 pA typ (entrada JFET)",
+            "Impedância de entrada": "10¹² Ω",
+            "VIO (offset de entrada)": "3 mV typ / 15 mV max (25°C)",
+            "Temperatura de operação": "0°C a 70°C (TL084C) | −40°C a +85°C (TL084I) | −40°C a +125°C (TL084Q)",
+            "Pacotes": "N (PDIP-14), D (SOIC-14), PW (TSSOP-14)",
+            "Datasheet": "SLOS081 — Mar 1976, rev. Abr 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 7,
+          "bottom": 0,
+          "right": 7,
+          "top": 0
+        },
+        "total_pins": 14,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OUT1",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 1 (1OUT)."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN1-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 1 (1IN−).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN1+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 1 (1IN+).",
+              "Tensão": "VID máx ±32V"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "3V a 30V (simples) ou +1,5V a +15V (dual)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "IN2+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 2 (2IN+)."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "IN2-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 2 (2IN−)."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "OUT2",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 2 (2OUT)."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "OUT3",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 3 (3OUT)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "IN3-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 3 (3IN−)."
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "IN3+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 3 (3IN+)."
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−) ou terra.",
+              "Tensão": "VCC− = GND (simples) a −15V (dual)"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "IN4+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+) do amplificador 4 (4IN+)."
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "IN4-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−) do amplificador 4 (4IN−)."
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "OUT4",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador 4 (4OUT)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm324"
+      ]
+    },
+    {
+      "id": "hcf4017",
+      "nome": "HCF4017",
+      "subtitulo": "Contador Johnson (CMOS)",
+      "imagem": null,
+      "pinos": [
+        "1: Q5",
+        "2: Q1",
+        "3: Q0",
+        "4: Q2",
+        "5: Q6",
+        "6: Q7",
+        "7: Q3",
+        "8: GND",
+        "9: Q8",
+        "10: Q4",
+        "11: Q9",
+        "12: CO",
+        "13: CLK",
+        "14: RST",
+        "15: EN",
+        "16: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "HCF4017",
+          "funcao": "Contador Johnson de 5 estágios — versão ST",
+          "custom_fields": {
+            "Descrição": "Contador Johnson de 5 estágios CMOS com 10 saídas decodificadas (Q0–Q9) e carry-out — versão ST (HCF4017B), drop-in do CD4017.",
+            "Fabricante": "STMicroelectronics (HCF4017B / HCF4017BE)",
+            "VCC (alimentação)": "3V a 20V (recomendado 3V a 15V)",
+            "Temperatura de operação": "−55°C a +125°C",
+            "Tecnologia": "CMOS (série 4000)",
+            "Velocidade de clock": "típ. 5,5 MHz @ VDD=10V | 2 MHz @ VDD=5V",
+            "Saídas": "Q0–Q9 decodificadas + CO (carry-out)",
+            "Entradas": "CLOCK, RESET (ativo alto) e CLOCK INHIBIT (EN)",
+            "Pacotes": "PDIP-16, SO-16",
+            "Datasheet": "ST HCF4017B — Rev 4, Mar 2013"
+          }
+        },
+        "pins_per_side": {
+          "left": 8,
+          "bottom": 0,
+          "right": 8,
+          "top": 0
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "Q5",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 5 — alta por 1 ciclo de clock na contagem 5."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "Q1",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 1 — alta por 1 ciclo de clock na contagem 1."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "Q0",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 0 — alta por 1 ciclo de clock na contagem 0."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "Q2",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 2 — alta por 1 ciclo de clock na contagem 2."
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "Q6",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 6 — alta por 1 ciclo de clock na contagem 6."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "Q7",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 7 — alta por 1 ciclo de clock na contagem 7."
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "Q3",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 3 — alta por 1 ciclo de clock na contagem 3."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra / referência 0V do circuito (VSS)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "Q8",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 8 — alta por 1 ciclo de clock na contagem 8."
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "Q4",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 4 — alta por 1 ciclo de clock na contagem 4."
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "Q9",
+              "Tipo": "Saída",
+              "Função": "Saída decodificada 9 — alta por 1 ciclo de clock na contagem 9."
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "CO",
+              "Tipo": "Saída",
+              "Função": "Carry-out — 1 ciclo alto a cada 10 clocks; ripple-clock para o próximo contador."
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "CLK",
+              "Tipo": "Entrada",
+              "Função": "Clock (Schmitt trigger) — contagem avança na borda de subida."
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "RST",
+              "Tipo": "Entrada",
+              "Função": "Reset — nível alto zera o contador."
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "EN",
+              "Tipo": "Entrada",
+              "Função": "Clock inhibit — nível alto trava a contagem."
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação positiva (VDD).",
+              "Tensão": "3V a 15V (máx. 20V)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "cd4017"
+      ]
+    },
+    {
+      "id": "78m05",
+      "nome": "78M05",
+      "subtitulo": "Regulador 5V 500mA",
+      "imagem": null,
+      "pinos": [
+        "1: IN",
+        "2: GND",
+        "3: OUT"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "78M05",
+          "funcao": "Regulador de tensão fixo de 5V — 500 mA",
+          "custom_fields": {
+            "Descrição": "Regulador de tensão positivo fixo de 5V — versão de 500 mA da família 78xx, pinagem idêntica ao LM7805 (drop-in para cargas até 500 mA).",
+            "Fabricante": "STMicroelectronics (L78M05) — família 78Mxx",
+            "Tensão de saída": "5V (tolerância 4% | versão AB: 2%)",
+            "Tensão de entrada": "7V a 25V (típ.); máx. 35V (absoluto para VO=5V)",
+            "Corrente de saída": "até 500 mA (IO); curto-circuito típ. 1,4A (L78M05AC)",
+            "Quiescent current": "5,5 mA typ / 8 mA max",
+            "Dropout": "2V typ @IO=350mA",
+            "Proteções": "Térmica, curto-circuito e SOA (internas)",
+            "Temperatura de operação": "L78M05AC: 0°C a 125°C | L78M05AB: −40°C a 125°C",
+            "Pacotes": "TO-220, DPAK, SO-8",
+            "Datasheet": "ST L78M — DocID 2146 Rev 29, Set 2017"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "Entrada (INPUT): tensão de alimentação do regulador.",
+              "Tensão": "7V a 25V tip.; máx 35V",
+              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND): referência comum do circuito.",
+              "Extra": "Recomenda-se capacitor de 0,1 µF na saída"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída (OUTPUT): 5V regulado. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "5V, até 1,5A"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm7805"
+      ]
+    },
+    {
+      "id": "lm350",
+      "nome": "LM350",
+      "subtitulo": "Regulador Ajustável 3A",
+      "imagem": null,
+      "pinos": [
+        "1: ADJ",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM350",
+          "funcao": "Regulador positivo ajustável de 3 terminais — 3A",
+          "custom_fields": {
+            "Descrição": "Regulador positivo ajustável de 3 terminais — versão de 3A do LM317, mesma pinagem e tensão de referência (drop-in).",
+            "Fabricante": "Texas Instruments (LM350 / LM350A)",
+            "Tensão de saída": "1,2V a 33V (ajustável)",
+            "Tensão de entrada": "até 35V",
+            "Corrente de saída": "até 3A (IO); limite interno 3A min / 4,2A typ (VI−VO ≤ 15V)",
+            "VREF": "1,25V typ entre ADJ e OUT",
+            "IADJ (corrente de ajuste)": "50 µA typ / 100 µA max",
+            "Regulação de linha": "0,02 %/V typ / 0,05 %/V max (25°C)",
+            "Regulação de carga": "0,3% typ / 1% max (25°C)",
+            "Proteções": "Limite de corrente, proteção térmica e SOA (internas)",
+            "Temperatura": "0°C a 125°C (TJ); Tstg −65°C a 150°C",
+            "Máximos absolutos": "VI−VO 35V | PD internamente limitada | Tj 150°C",
+            "Pacotes": "TO-220 (KCS/KCT), TO-263/D2PAK (KTT)",
+            "Datasheet": "SLVS014 — Jun 1986, rev. Mai 2022"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ADJ",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "ADJUST: pino de ajuste da tensão de saída. Conectar a um divisor resistivo (R1 entre OUT e ADJ, R2 de ADJ a GND).",
+              "Tensão": "VOUT = VREF×(1+R2/R1) + IADJ×R2",
+              "Corrente": "IADJ 50 µA typ"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "OUTPUT: tensão de saída do regulador. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "1,25V a 37V, até 1,5A"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "INPUT: tensão de entrada do regulador.",
+              "Tensão": "4,25V a 40V (VI−VO ≤ 40V)",
+              "Extra": "Recomenda-se bypass na entrada"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm317"
+      ]
+    },
+    {
+      "id": "njm386",
+      "nome": "NJM386",
+      "subtitulo": "Amplificador Áudio",
+      "imagem": null,
+      "pinos": [
+        "1: GAIN",
+        "2: IN-",
+        "3: IN+",
+        "4: GND",
+        "5: OUT",
+        "6: VS",
+        "7: BYP",
+        "8: GAIN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "NJM386",
+          "funcao": "Amplificador de potência de áudio de baixa tensão",
+          "custom_fields": {
+            "Descrição": "Amplificador de potência de áudio de baixa tensão — versão da NJR compatível com o LM386, mesma pinagem e ganho ajustável (drop-in).",
+            "Fabricante": "New Japan Radio (NJR / NJM386)",
+            "Alimentação": "4V a 12V",
+            "Ganho": "20× (26 dB) a 200× (46 dB) via pinos 1 e 8",
+            "Potência de saída": "≈ 700 mW típ. @ 6V/8Ω",
+            "Consumo (quiescente)": "≈ 4 mA typ @ 6V",
+            "Impedância de entrada": "50 kΩ typ",
+            "Temperatura de operação": "−20°C a +70°C (típ.)",
+            "Pacotes": "DIP-8, SIP-8",
+            "Datasheet": "NJM386 datasheet (NJR)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GAIN",
+              "Tipo": "Entrada (Ganho)",
+              "Função": "Pino 1 de ajuste de ganho. Com os pinos 1 e 8 abertos, ganho 20×.",
+              "Extra": "Capacitor de 10 µF entre 1 e 8 → ganho 200×; rede R-C entre 1 e 8 → ganho intermediário"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+)."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (ground reference).",
+              "Extra": "Bypass típico: cap entre pino 7 (BYP) e GND"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída de áudio.",
+              "Extra": "Drive cargas de 4Ω a 32Ω; usar capacitor de acoplamento AC na saída"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "VS",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação (VS).",
+              "Tensão": "4V a 12V (N-1/-3) | 5V a 18V (N-4)"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "BYP",
+              "Tipo": "Alimentação (desacoplamento)",
+              "Função": "Bypass: conexão para capacitor de desacoplamento (geralmente 10 µF para GND)."
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GAIN",
+              "Tipo": "Entrada (Ganho)",
+              "Função": "Pino 8 de ajuste de ganho."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm386"
+      ]
+    },
+    {
+      "id": "ua741",
+      "nome": "UA741",
+      "subtitulo": "OpAmp Clássico",
+      "imagem": null,
+      "pinos": [
+        "1: OFFSET N1",
+        "2: IN-",
+        "3: IN+",
+        "4: V-",
+        "5: OFFSET N2",
+        "6: OUT",
+        "7: V+",
+        "8: NC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "UA741",
+          "funcao": "Amplificador operacional de propósito geral",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional de propósito geral — o clássico µA741, compatível com o LM741 e pinagem idêntica (drop-in).",
+            "Fabricante": "Texas Instruments (µA741 / UA741) — origem Fairchild",
+            "Alimentação": "±5V a ±15V (dual); tensão total até 30V",
+            "Consumo": "1,7 mA typ",
+            "VIO (offset de entrada)": "1 mV typ / 6 mV max (25°C)",
+            "IIB (bias de entrada)": "80 nA typ / 500 nA max",
+            "AVD (ganho malha aberta)": "200 V/mV typ / 20 V/mV min",
+            "Slew rate": "0,5 V/µs",
+            "VICR (modo comum)": "±12V min / ±13V typ (VCC=±15V)",
+            "Curto-circuito de saída": "Duração ilimitada",
+            "Temperatura de operação": "0°C a 70°C (UA741C)",
+            "Máximos absolutos": "VCC ±18V | VID ±30V | Tj 150°C",
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8)",
+            "Datasheet": "SLOS094 — Nov 1970, rev. Fev 2026"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OFFSET N1",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N1: ajuste externo de tensão de offset (compensação de offset nulo) do amplificador.",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5, cursor em V−"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+)."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "V-",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−).",
+              "Tensão": "−5V a −15V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OFFSET N2",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N2: ajuste externo de tensão de offset (compensação de offset nulo).",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador.",
+              "Tensão": "±12V min com RL≥2kΩ"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "V+",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "5V a 15V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "NC",
+              "Tipo": "Não conectado",
+              "Função": "Sem conexão interna (NC)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm741"
+      ]
+    },
+    {
+      "id": "tl081",
+      "nome": "TL081",
+      "subtitulo": "OpAmp JFET",
+      "imagem": null,
+      "pinos": [
+        "1: OFFSET N1",
+        "2: IN-",
+        "3: IN+",
+        "4: V-",
+        "5: OFFSET N2",
+        "6: OUT",
+        "7: V+",
+        "8: NC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TL081",
+          "funcao": "Amplificador operacional de entrada JFET",
+          "custom_fields": {
+            "Descrição": "Amplificador operacional de entrada JFET — alta impedância e largura de banda, pinagem compatível com o LM741 (pinos de offset presentes). Requer alimentação de maior tensão (tip. ±15V).",
+            "Fabricante": "Texas Instruments (TL081 / TL081A / TL081B)",
+            "Alimentação": "±3,5V a ±18V (dual) ou 7V a 36V (fonte simples)",
+            "Consumo": "1,4 mA typ",
+            "GBW": "3 MHz typ",
+            "Slew rate": "13 V/µs",
+            "IIB (bias de entrada)": "30 pA typ (entrada JFET)",
+            "Impedância de entrada": "10¹² Ω",
+            "VIO (offset de entrada)": "3 mV typ / 15 mV max (25°C)",
+            "Temperatura de operação": "0°C a 70°C (TL081C) | −40°C a +85°C (TL081I) | −40°C a +125°C (TL081Q)",
+            "Pacotes": "P (PDIP-8), D (SOIC-8), PS (SO-8)",
+            "Datasheet": "SLOS081 — Mar 1976, rev. Abr 2023"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "bottom": 0,
+          "right": 4,
+          "top": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "OFFSET N1",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N1: ajuste externo de tensão de offset (compensação de offset nulo) do amplificador.",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5, cursor em V−"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "IN-",
+              "Tipo": "Entrada",
+              "Função": "Entrada inversora (−)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN+",
+              "Tipo": "Entrada",
+              "Função": "Entrada não inversora (+)."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "V-",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação negativa (VCC−).",
+              "Tensão": "−5V a −15V"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "OFFSET N2",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "OFSSET N2: ajuste externo de tensão de offset (compensação de offset nulo).",
+              "Extra": "Potenciômetro típico de 10 kΩ entre os pinos 1 e 5"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "Saída do amplificador.",
+              "Tensão": "±12V min com RL≥2kΩ"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "V+",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação positiva (VCC+).",
+              "Tensão": "5V a 15V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "NC",
+              "Tipo": "Não conectado",
+              "Função": "Sem conexão interna (NC)."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm741"
+      ]
+    },
+    {
+      "id": "atmega328",
+      "nome": "ATmega328",
+      "subtitulo": "Microcontrolador (Arduino)",
+      "imagem": null,
+      "pinos": [
+        "1: PC6/RST",
+        "2: PD0/RX",
+        "3: PD1/TX",
+        "4: PD2/INT0",
+        "5: PD3/INT1",
+        "6: PD4/T0",
+        "7: VCC",
+        "8: GND",
+        "9: XTAL1",
+        "10: XTAL2",
+        "11: PD5/T1",
+        "12: PD6/AIN0",
+        "13: PD7/AIN1",
+        "14: PB0/ICP",
+        "15: PB1/OC1A",
+        "16: PB2/OC1B",
+        "17: PB3/MOSI",
+        "18: PB4/MISO",
+        "19: PB5/SCK",
+        "20: AVCC",
+        "21: AREF",
+        "22: GND",
+        "23: PC0/ADC0",
+        "24: PC1/ADC1",
+        "25: PC2/ADC2",
+        "26: PC3/ADC3",
+        "27: PC4/ADC4",
+        "28: PC5/ADC5"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ATmega328",
+          "funcao": "Microcontrolador AVR 8-bit com 32K Flash",
+          "custom_fields": {
+            "Descrição": "Microcontrolador AVR 8-bit com 32K Flash — versão sem o sufixo 'P' (Picopower) do ATmega328P, mesma pinagem e conjunto de instruções (drop-in).",
+            "Fabricante": "Microchip Technology (Atmel)",
+            "Arquitetura": "AVR 8-bit RISC — 131 instruções, até 20 MIPS @20MHz",
+            "Tensão de operação": "1,8V a 5,5V — 0–4MHz @1,8–5,5V | 0–10MHz @2,7–5,5V | 0–20MHz @4,5–5,5V",
+            "Memória": "Flash 32K | SRAM 2K | EEPROM 1K",
+            "I/O": "23 linhas de I/O programáveis com pull-ups internos",
+            "ADC": "10-bit, até 8 canais (TQFP), com sensor de temperatura",
+            "Timers": "2× 8-bit (T/C0, T/C2) + 1× 16-bit (T/C1) com prescaler e compare",
+            "PWM": "6 canais",
+            "Comunicação": "USART, SPI mestre/escravo, TWI (I2C)",
+            "Consumo": "Ativo 1,5 mA @3V/4MHz (typ) | Power-down < 1 µA",
+            "Máximos absolutos": "VCC 6,0V | tensão nos pinos −0,5V a VCC+0,5V",
+            "Temperatura": "−40°C a +125°C (qualificação automotiva)",
+            "Pacotes": "PDIP-28, TQFP-32, MLF-32 (QFN)",
+            "Datasheet": "7810D–AVR–01/15 — ATmega328/328P datasheet"
+          }
+        },
+        "pins_per_side": {
+          "left": 14,
+          "bottom": 0,
+          "right": 14,
+          "top": 0
+        },
+        "total_pins": 28,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "PC6/RST",
+              "Tipo": "I/O / Reset",
+              "Função": "Reset do microcontrolador (ativo baixo). Se o fusível RSTDISBL estiver programado, funciona como pino de I/O (PC6).",
+              "Extra": "PCINT14 (interrupt por mudança de pino)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "PD0/RX",
+              "Tipo": "I/O / USART",
+              "Função": "PD0/RXD — entrada de dados do USART (receptor).",
+              "Extra": "PCINT16"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "PD1/TX",
+              "Tipo": "I/O / USART",
+              "Função": "PD1/TXD — saída de dados do USART (transmissor).",
+              "Extra": "PCINT17"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "PD2/INT0",
+              "Tipo": "I/O / Interrupção",
+              "Função": "PD2/INT0 — interrupção externa 0.",
+              "Extra": "PCINT18"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "PD3/INT1",
+              "Tipo": "I/O / PWM",
+              "Função": "PD3/INT1 — interrupção externa 1; OC2B (PWM do Timer/Counter2).",
+              "Extra": "PCINT19"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "PD4/T0",
+              "Tipo": "I/O",
+              "Função": "PD4/T0 — entrada de contagem externa do Timer/Counter0; XCK (clock externo do USART).",
+              "Extra": "PCINT20"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "Tensão de alimentação digital (VCC).",
+              "Tensão": "2,7V a 5,5V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND)."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "XTAL1",
+              "Tipo": "Clock",
+              "Função": "XTAL1 (PB6) — entrada do amplificador do oscilador de cristal / clock externo.",
+              "Extra": "PCINT6"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "XTAL2",
+              "Tipo": "Clock",
+              "Função": "XTAL2 (PB7) — saída do amplificador do oscilador de cristal.",
+              "Extra": "PCINT7"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "PD5/T1",
+              "Tipo": "I/O / Timer",
+              "Função": "PD5/T1 — entrada de contagem externa do Timer/Counter1; OC0B (PWM do T/C0).",
+              "Extra": "PCINT21"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "PD6/AIN0",
+              "Tipo": "I/O / PWM",
+              "Função": "PD6/AIN0 — entrada positiva do comparador analógico; OC0A (PWM do T/C0).",
+              "Extra": "PCINT22"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "PD7/AIN1",
+              "Tipo": "I/O",
+              "Função": "PD7/AIN1 — entrada negativa do comparador analógico.",
+              "Extra": "PCINT23"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "PB0/ICP",
+              "Tipo": "I/O / Timer",
+              "Função": "PB0/ICP1 — input capture do Timer/Counter1; CLKO (saída de clock dividido).",
+              "Extra": "PCINT0"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "PB1/OC1A",
+              "Tipo": "I/O / PWM",
+              "Função": "PB1/OC1A — output compare A do Timer/Counter1 (PWM).",
+              "Extra": "PCINT1"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "PB2/OC1B",
+              "Tipo": "I/O / SPI",
+              "Função": "PB2/OC1B — output compare B (PWM); SS (slave select) do SPI.",
+              "Extra": "PCINT2"
+            }
+          },
+          "17": {
+            "number": 17,
+            "fields": {
+              "Nome": "PB3/MOSI",
+              "Tipo": "I/O / SPI",
+              "Função": "PB3/MOSI — SPI: mestre-saída / escravo-entrada; OC2A (PWM do T/C2).",
+              "Extra": "PCINT3"
+            }
+          },
+          "18": {
+            "number": 18,
+            "fields": {
+              "Nome": "PB4/MISO",
+              "Tipo": "I/O / SPI",
+              "Função": "PB4/MISO — SPI: mestre-entrada / escravo-saída.",
+              "Extra": "PCINT4"
+            }
+          },
+          "19": {
+            "number": 19,
+            "fields": {
+              "Nome": "PB5/SCK",
+              "Tipo": "I/O / SPI",
+              "Função": "PB5/SCK — clock do SPI.",
+              "Extra": "PCINT5"
+            }
+          },
+          "20": {
+            "number": 20,
+            "fields": {
+              "Nome": "AVCC",
+              "Tipo": "Alimentação",
+              "Função": "Alimentação do conversor A/D e de PC3:0. Deve ser conectada ao VCC (com filtro passa-baixa se usar ADC)."
+            }
+          },
+          "21": {
+            "number": 21,
+            "fields": {
+              "Nome": "AREF",
+              "Tipo": "Referência",
+              "Função": "AREF — referência analógica externa do conversor A/D.",
+              "Tensão": "0V a VCC"
+            }
+          },
+          "22": {
+            "number": 22,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "Terra (GND)."
+            }
+          },
+          "23": {
+            "number": 23,
+            "fields": {
+              "Nome": "PC0/ADC0",
+              "Tipo": "I/O / ADC",
+              "Função": "PC0/ADC0 — canal 0 do ADC (10-bit).",
+              "Extra": "PCINT8"
+            }
+          },
+          "24": {
+            "number": 24,
+            "fields": {
+              "Nome": "PC1/ADC1",
+              "Tipo": "I/O / ADC",
+              "Função": "PC1/ADC1 — canal 1 do ADC (10-bit).",
+              "Extra": "PCINT9"
+            }
+          },
+          "25": {
+            "number": 25,
+            "fields": {
+              "Nome": "PC2/ADC2",
+              "Tipo": "I/O / ADC",
+              "Função": "PC2/ADC2 — canal 2 do ADC (10-bit).",
+              "Extra": "PCINT10"
+            }
+          },
+          "26": {
+            "number": 26,
+            "fields": {
+              "Nome": "PC3/ADC3",
+              "Tipo": "I/O / ADC",
+              "Função": "PC3/ADC3 — canal 3 do ADC (10-bit).",
+              "Extra": "PCINT11"
+            }
+          },
+          "27": {
+            "number": 27,
+            "fields": {
+              "Nome": "PC4/ADC4",
+              "Tipo": "I/O / I2C",
+              "Função": "PC4/ADC4 — canal 4 do ADC; SDA da interface 2-wire (TWI/I2C).",
+              "Extra": "PCINT12"
+            }
+          },
+          "28": {
+            "number": 28,
+            "fields": {
+              "Nome": "PC5/ADC5",
+              "Tipo": "I/O / I2C",
+              "Função": "PC5/ADC5 — canal 5 do ADC; SCL da interface 2-wire (TWI/I2C).",
+              "Extra": "PCINT13"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "atmega328p"
+      ]
     }
   ],
   "infos": [
