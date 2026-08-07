@@ -472,7 +472,7 @@
             "Temperatura de operação": "−55°C a +125°C",
             "Tecnologia": "CMOS 'B' (JEDEC Tentative Standard 13B), saídas push-pull",
             "Velocidade de clock": "10 MHz (típ.) @ VDD = 10V | 2,5 MHz @ VDD = 5V",
-            "Entradas": "CLOCK (com Schmitt trigger interno — permite pulsos com subida/descida ilimitadas), RESET (ativo alto) e CLOCK INHIBIT (EN)",
+            "Entradas": "CLOCK (com Schmitt trigger interno — permite tempos de subida/descida ilimitados do pulso), RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Saídas": "Q0–Q9 decodificadas (normalmente baixas, altas por 1 ciclo de clock) + CO (1 ciclo a cada 10 clocks)",
             "Consumo": "Estático; 100% testado para corrente quiescente a 20V",
             "Máximos absolutos": "VDD −0,5V a +20V | VIN −0,5V a VDD+0,5V | IIN ±10 mA | Tstg −65°C a +150°C",
@@ -3513,7 +3513,7 @@
             "Tecnologia": "CMOS (série 4000)",
             "Velocidade de clock": "típ. 2,5 MHz @ VDD=5V | 5 MHz @ VDD=10V | 5,5 MHz @ VDD=15V",
             "Saídas": "Q0–Q9 decodificadas + CO (carry-out)",
-            "Entradas": "CLOCK (com Schmitt trigger interno — permite pulsos com subida/descida ilimitadas), RESET (ativo alto) e CLOCK INHIBIT (EN)",
+            "Entradas": "CLOCK (com Schmitt trigger interno — permite tempos de subida/descida ilimitados do pulso), RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Pacotes": "PDIP-16, SO-16",
             "Datasheet": "ST HCF4017B — Rev 4, Mar 2013"
           }
