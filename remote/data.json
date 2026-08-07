@@ -30,7 +30,8 @@
             "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C | Tstg −65°C a +150°C",
             "ESD": "HBM ±500V | CDM ±1500V",
             "Térmica (PDIP-8)": "RθJA 98,5 °C/W",
-            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8)"
+            "Pacotes": "D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8)",
+            "Datasheet": "SNAS548 — Set 1994, rev. Mai 2023"
           }
         },
         "pins_per_side": {
@@ -471,11 +472,12 @@
             "Temperatura de operação": "−55°C a +125°C",
             "Tecnologia": "CMOS 'B' (JEDEC Tentative Standard 13B), saídas push-pull",
             "Velocidade de clock": "10 MHz (típ.) @ VDD = 10V | 2,5 MHz @ VDD = 5V",
-            "Entradas": "CLOCK (entrada CMOS comum, sem Schmitt trigger), RESET (ativo alto) e CLOCK INHIBIT (EN)",
+            "Entradas": "CLOCK (com Schmitt trigger interno — permite pulsos com subida/descida ilimitadas), RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Saídas": "Q0–Q9 decodificadas (normalmente baixas, altas por 1 ciclo de clock) + CO (1 ciclo a cada 10 clocks)",
             "Consumo": "Estático; 100% testado para corrente quiescente a 20V",
             "Máximos absolutos": "VDD −0,5V a +20V | VIN −0,5V a VDD+0,5V | IIN ±10 mA | Tstg −65°C a +150°C",
-            "Pacotes": "N (PDIP-16), D (SOIC-16), NS (SOP-16), PW (TSSOP-16)"
+            "Pacotes": "N (PDIP-16), D (SOIC-16), NS (SOP-16), PW (TSSOP-16)",
+            "Datasheet": "SCHS027C — CD4017B, CD4022B TYPES (TI, orig. Harris) — Fev 2004"
           }
         },
         "pins_per_side": {
@@ -3511,7 +3513,7 @@
             "Tecnologia": "CMOS (série 4000)",
             "Velocidade de clock": "típ. 2,5 MHz @ VDD=5V | 5 MHz @ VDD=10V | 5,5 MHz @ VDD=15V",
             "Saídas": "Q0–Q9 decodificadas + CO (carry-out)",
-            "Entradas": "CLOCK, RESET (ativo alto) e CLOCK INHIBIT (EN)",
+            "Entradas": "CLOCK (com Schmitt trigger interno — permite pulsos com subida/descida ilimitadas), RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Pacotes": "PDIP-16, SO-16",
             "Datasheet": "ST HCF4017B — Rev 4, Mar 2013"
           }
@@ -3850,7 +3852,7 @@
             "Impedância de entrada": "50 kΩ typ",
             "Temperatura de operação": "−20°C a +70°C (típ.)",
             "Pacotes": "DIP-8, SIP-8",
-            "Datasheet": "NJM386 datasheet (NJR)"
+            "Datasheet": "NJR NJM386 — LOW VOLTAGE AUDIO POWER AMPLIFIER (JRC/NJR)"
           }
         },
         "pins_per_side": {
@@ -4243,7 +4245,7 @@
             "Máximos absolutos": "VCC 6,0V | tensão nos pinos −0,5V a VCC+0,5V",
             "Temperatura": "−40°C a +105°C (versões AN/MN) | −40°C a +85°C (industrial)",
             "Pacotes": "PDIP-28, TQFP-32, MLF-32 (QFN)",
-            "Datasheet": "7810D–AVR–01/15 — ATmega328/328P datasheet"
+            "Datasheet": "Atmel-42735 — ATmega328/328P (Jun 2016)"
           }
         },
         "pins_per_side": {
