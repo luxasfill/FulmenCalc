@@ -1776,7 +1776,8 @@
             "fT": "300 MHz min",
             "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
             "Pacote": "TO-92 (CASE 29, STYLE 17)",
-            "Datasheet": "onsemi P2N2222A/D"
+            "Datasheet": "onsemi P2N2222A/D",
+            "Complemento": "2N2907 (PNP)"
           }
         },
         "pins_per_side": {
@@ -1820,10 +1821,87 @@
         "bga_grid": null,
         "exposed_pad": false
       },
-      "complementar": null,
+      "complementar": "2n2907",
       "substitutos": [
         "bc547",
         "2n3904"
+      ]
+    },
+    {
+      "id": "2n2907",
+      "nome": "2N2907",
+      "subtitulo": "Transistor PNP de uso geral",
+      "imagem": null,
+      "pinos": [
+        "1: C",
+        "2: B",
+        "3: E"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "2N2907",
+          "funcao": "Transistor PNP de uso geral",
+          "custom_fields": {
+            "Descrição": "Transistor PNP de silício de baixa potência, para chaveamento e amplificação. Complemento do 2N2222.",
+            "Fabricante": "onsemi / Fairchild (PN2907A)",
+            "Polaridade": "PNP",
+            "Complemento": "2N2222 (NPN)",
+            "VCBO / VCEO / VEBO": "60V / 60V / 5V",
+            "IC contínuo": "600 mA (max)",
+            "Potência total": "625 mW (PD @TA=25°C); 1,5W @TC",
+            "VCE(sat)": "0,4V max @150mA; 1,6V max @500mA",
+            "VBE(sat)": "0,65 a 1,3V @150mA",
+            "hFE": "100–300 @IC=150mA, VCE=10V",
+            "fT": "200 MHz min",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92 (CASE 135, STYLE 17)",
+            "Datasheet": "onsemi PN2907A/D"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "C",
+              "Função": "Coletor",
+              "Tensão": "VCBO 60V, VCEO 60V",
+              "Corrente": "IC até 600 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "B",
+              "Função": "Base",
+              "Tensão": "VEBO 5V",
+              "Corrente": "IB (controla IC via hFE)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "E",
+              "Função": "Emissor",
+              "Tensão": "VBE ~0,7V",
+              "Corrente": "IE = IC + IB"
+            }
+          }
+        }
+      },
+      "complementar": "2n2222",
+      "substitutos": [
+        "2n3906",
+        "bc557"
       ]
     },
     {
@@ -2008,7 +2086,8 @@
             "gfs": "100 mS min",
             "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
             "Pacote": "TO-92 (CASE 29, STYLE 22)",
-            "Datasheet": "onsemi 2N7000/D"
+            "Datasheet": "onsemi 2N7000/D",
+            "Complemento": "BS250 (P-canal)"
           }
         },
         "pins_per_side": {
@@ -2051,7 +2130,80 @@
         },
         "bga_grid": null,
         "exposed_pad": false
-      }
+      },
+      "complementar": "bs250"
+    },
+    {
+      "id": "bs250",
+      "nome": "BS250",
+      "subtitulo": "MOSFET P-canal de sinal",
+      "imagem": null,
+      "pinos": [
+        "1: S",
+        "2: G",
+        "3: D"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "BS250",
+          "funcao": "MOSFET P-canal de sinal",
+          "custom_fields": {
+            "Descrição": "MOSFET de canal P de sinal pequeno, para chaveamento lógico (nível compatível com 5V/3,3V). Complemento do 2N7000.",
+            "Fabricante": "Diodes Incorporated (BS250P)",
+            "Polaridade": "P-canal (enhancement)",
+            "Complemento": "2N7000 (N-canal)",
+            "VDSS / VGS": "−45V / ±20V",
+            "ID contínuo": "230 mA (max); IDM 3 A (pulso)",
+            "Potência total": "700 mW (PD @TA=25°C)",
+            "RDS(on)": "14Ω max @VGS=−10V, ID=−200mA",
+            "VGS(th)": "−1,0 a −3,5V",
+            "Temperatura": "TJ 150°C; Tstg −55 a +150°C",
+            "Pacote": "TO-92",
+            "Datasheet": "Diodes BS250P"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "S",
+              "Função": "Source",
+              "Tensão": "VGS ±20V; VGS(th) −1,0 a −3,5V",
+              "Corrente": "IS até 230 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "G",
+              "Função": "Gate",
+              "Tensão": "VGS ±20V",
+              "Corrente": "IG ~0 (alta impedância)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "D",
+              "Função": "Drain",
+              "Tensão": "VDSS −45V",
+              "Corrente": "ID até 230 mA"
+            }
+          }
+        }
+      },
+      "complementar": "2n7000",
+      "substitutos": []
     },
     {
       "id": "tip31c",
