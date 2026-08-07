@@ -25,8 +25,8 @@
             "Fabricante": "Texas Instruments (xx555)",
             "VCC (alimentação)": "4,5V a 16V (SE555: até 18V) — operação especificada de 5V a 15V",
             "Temperatura de operação": "NE555: 0°C a 70°C | NA555: −40°C a +105°C | SA555: −40°C a +85°C | SE555: −55°C a +125°C",
-            "Corrente de saída": "Sink/source até ±200 mA; saída compatível com TTL a 5V",
-            "Consumo": "2 a 6 mA (VCC=5V, sem carga)",
+            "Corrente de saída": "Sink/source 200 mA (limite absoluto funcional); recomendado ≈100 mA p/ operação contínua; saída compatível com TTL a 5V",
+            "Consumo": "3 mA típ. @5V | 10 mA típ. @15V",
             "Máximos absolutos": "VCC ≤ 18V | Tj ≤ 150°C | Tstg −65°C a +150°C",
             "ESD": "HBM ±500V | CDM ±1500V",
             "Térmica (PDIP-8)": "RθJA 98,5 °C/W",
@@ -67,7 +67,7 @@
               "Nome": "OUT",
               "Corrente": "Até ±200 mA",
               "Função": "Saída do timer, alta corrente (sink ou source).",
-              "Tensão": "Nível alto ≈ VCC−1,7V (IOH −200mA); nível baixo ≈ 0,4V (IOL 50mA)",
+              "Tensão": "VOH depende da corrente de carga; com cargas leves aproxima-se de VCC (ex.: VCC−1,7V a IOH −200mA); VOL ≈ 0,4V (IOL 50mA)",
               "Tipo": "Saída",
               "Extra": "VOH e VOL dependem da corrente de carga; pode fornecer ou absorver até cerca de 200 mA."
             }
@@ -192,7 +192,7 @@
               "Nome": "IN1-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 1.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "3": {
@@ -201,7 +201,7 @@
               "Nome": "IN1+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 1.",
-              "Tensão": "VI −0,3V a 32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "4": {
@@ -219,7 +219,7 @@
               "Nome": "IN2+",
               "Tipo": "Entrada",
               "Função": "Entrada não inversora (+) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "6": {
@@ -228,7 +228,7 @@
               "Nome": "IN2-",
               "Tipo": "Entrada",
               "Função": "Entrada inversora (−) do amplificador 2.",
-              "Tensão": "VID máx ±32V"
+              "Tensão": "Faixa absoluta: −0,3V a 32V (VI)"
             }
           },
           "7": {
@@ -254,8 +254,7 @@
         "exposed_pad": false
       },
       "substitutos": [
-        "lm2904",
-        "ne5532"
+        "lm2904"
       ]
     },
     {
@@ -292,7 +291,7 @@
             "VIO (offset de entrada)": "3 mV typ / 7 mV max (25°C); 9 mV max (0–70°C) — LM324A: ≤3 mV max",
             "IIB (bias de entrada)": "−20 nA typ / −250 nA max (25°C); −500 nA max (full range)",
             "AVD (ganho malha aberta)": "100 V/mV typ / 25 V/mV min (VS=15V, RL≥2kΩ)",
-            "GBW": "1,2 MHz typ",
+            "GBW": "1 MHz typ (LM324) | 1,2 MHz (LM324B)",
             "Slew rate": "0,5 V/µs",
             "VICR (modo comum)": "0 a VCC−1,5V (25°C) — inclui GND",
             "Faixa de saída": "VOH: VCC−1,5V (RL=2kΩ) | VOL: 5 mV typ / 20 mV max (RL≤10kΩ)",
@@ -434,8 +433,7 @@
         "exposed_pad": false
       },
       "substitutos": [
-        "lm2902",
-        "tl084"
+        "lm2902"
       ]
     },
     {
@@ -473,7 +471,7 @@
             "Temperatura de operação": "−55°C a +125°C",
             "Tecnologia": "CMOS 'B' (JEDEC Tentative Standard 13B), saídas push-pull",
             "Velocidade de clock": "10 MHz (típ.) @ VDD = 10V | 2,5 MHz @ VDD = 5V",
-            "Entradas": "CLOCK com Schmitt trigger (aceita pulsos com rise/fall lentos), RESET e CLOCK INHIBIT",
+            "Entradas": "CLOCK (entrada CMOS comum, sem Schmitt trigger), RESET (ativo alto) e CLOCK INHIBIT (EN)",
             "Saídas": "Q0–Q9 decodificadas (normalmente baixas, altas por 1 ciclo de clock) + CO (1 ciclo a cada 10 clocks)",
             "Consumo": "Estático; 100% testado para corrente quiescente a 20V",
             "Máximos absolutos": "VDD −0,5V a +20V | VIN −0,5V a VDD+0,5V | IIN ±10 mA | Tstg −65°C a +150°C",
@@ -591,7 +589,7 @@
             "fields": {
               "Nome": "CLK",
               "Tipo": "Entrada",
-              "Função": "Clock (Schmitt trigger) — contagem avança na borda de subida."
+              "Função": "Clock (entrada CMOS comum) — contagem avança na borda de subida."
             }
           },
           "14": {
@@ -649,7 +647,7 @@
             "Tensão de entrada": "7V a 25V (operação tip.); máx. 35V (absoluto para VO=5V)",
             "Corrente de saída": "até 1,5A (IO); Isc typ 0,2A (L7805A) / 0,75A (L7805C)",
             "Quiescent current": "4,3 mA typ / 6 mA max (L7805A)",
-            "Dropout": "2V typ @IO=1A",
+            "Dropout": "Não é LDO: necessita ≈2V acima da saída (VI mín ≈7V) para manter a regulação",
             "Regulação de linha": "7 mV typ / 50 mV max (VI 7,5–25V, IO=500mA)",
             "Regulação de carga": "25 mV typ / 100 mV max (IO 5mA–1A)",
             "SVR": "68 dB (VI 8–18V, f=120Hz, IO=500mA)",
@@ -679,7 +677,7 @@
               "Tipo": "Alimentação",
               "Função": "Entrada (INPUT): tensão de alimentação do regulador.",
               "Tensão": "7V a 25V tip.; máx 35V",
-              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada"
+              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada (entre IN e GND)"
             }
           },
           "2": {
@@ -687,8 +685,7 @@
             "fields": {
               "Nome": "GND",
               "Tipo": "Alimentação",
-              "Função": "Terra (GND): referência comum do circuito.",
-              "Extra": "Recomenda-se capacitor de 0,1 µF na saída"
+              "Função": "Terra (GND): referência comum do circuito."
             }
           },
           "3": {
@@ -697,7 +694,8 @@
               "Nome": "OUT",
               "Tipo": "Saída",
               "Função": "Saída (OUTPUT): 5V regulado. O tab (heatsink) também é OUTPUT.",
-              "Tensão": "5V, até 1,5A"
+              "Tensão": "5V, até 1,5A",
+              "Extra": "Recomenda-se capacitor de 0,1 µF entre OUT e GND"
             }
           }
         },
@@ -3192,9 +3190,7 @@
         "exposed_pad": false
       },
       "complementar": null,
-      "substitutos": [
-        "lm358"
-      ]
+      "substitutos": []
     },
     {
       "id": "lm2902",
@@ -3545,9 +3541,7 @@
         "exposed_pad": false
       },
       "complementar": null,
-      "substitutos": [
-        "lm324"
-      ]
+      "substitutos": []
     },
     {
       "id": "hcf4017",
@@ -3701,7 +3695,7 @@
             "fields": {
               "Nome": "CLK",
               "Tipo": "Entrada",
-              "Função": "Clock (Schmitt trigger) — contagem avança na borda de subida."
+              "Função": "Clock (entrada CMOS comum) — contagem avança na borda de subida."
             }
           },
           "14": {
@@ -3784,7 +3778,7 @@
               "Tipo": "Alimentação",
               "Função": "Entrada (INPUT): tensão de alimentação do regulador.",
               "Tensão": "7V a 25V tip.; máx 35V",
-              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada"
+              "Extra": "Recomenda-se capacitor de 0,33 µF na entrada (entre IN e GND)"
             }
           },
           "2": {
@@ -3792,8 +3786,7 @@
             "fields": {
               "Nome": "GND",
               "Tipo": "Alimentação",
-              "Função": "Terra (GND): referência comum do circuito.",
-              "Extra": "Recomenda-se capacitor de 0,1 µF na saída"
+              "Função": "Terra (GND): referência comum do circuito."
             }
           },
           "3": {
@@ -3802,7 +3795,8 @@
               "Nome": "OUT",
               "Tipo": "Saída",
               "Função": "Saída (OUTPUT): 5V regulado. O tab (heatsink) também é OUTPUT.",
-              "Tensão": "5V, até 1,5A"
+              "Tensão": "5V, até 1,5A",
+              "Extra": "Recomenda-se capacitor de 0,1 µF entre OUT e GND"
             }
           }
         },
