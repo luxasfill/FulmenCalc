@@ -1,0 +1,44 @@
+# Build outputs
+build/
+app/build/
+.gradle/
+local.properties
+*.apk
+
+# IDE
+.idea/
+*.iml
+
+# Signing (NUNA subir)
+fulmencalc.jks
+keystore.properties
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.bak
+
+# Instruções locais do opencode
+AGENTS.md
+
+# Código fonte e ferramentas (mantidos apenas localmente)
+app/
+datasheets/
+tools/
+gradle/
+gradlew
+gradlew.bat
+gradle.properties
+gradle-wrapper.jar
+build.gradle.kts
+settings.gradle.kts
+build.sh
+icon.txt
