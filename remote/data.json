@@ -4595,7 +4595,9 @@
         "exposed_pad": false
       },
       "complementar": null,
-      "substitutos": []
+      "substitutos": [
+        "tl432"
+      ]
     },
     {
       "id": "moc3021",
@@ -4708,8 +4710,901 @@
       },
       "complementar": null,
       "substitutos": [
-        "moc3022",
         "moc3023"
+      ]
+    },
+    {
+      "id": "tl432",
+      "nome": "TL432",
+      "subtitulo": "Referência de Tensão Programável",
+      "imagem": null,
+      "pinos": [
+        "1: REF",
+        "2: CATHODE",
+        "3: ANODE"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TL432",
+          "funcao": "Referência de Tensão Programável",
+          "custom_fields": {
+            "Descrição": "Referência de tensão programável de precisão (shunt regulator), mesma família do TL431 (datasheet TI conjunto). Difere na pinagem por pacote.",
+            "Fabricante": "Texas Instruments",
+            "Vref": "2495 mV típ. (2440 a 2550 mV) @ VKA=Vref, IKA=10mA",
+            "VKA (tensão de catodo)": "Vref a 36V (máx. absoluto 37V)",
+            "IKA (corrente de catodo)": "1 mA a 100 mA (máx. absoluto −100 a +150 mA)",
+            "Imin (regulação)": "0,4 mA típ. / 1 mA máx.",
+            "Ioff (off-state)": "0,1 µA típ. / 1 µA máx. @ VKA=36V",
+            "Iref (corrente de referência)": "2 µA típ. / 4 µA máx.",
+            "|ZKA| (impedância dinâmica)": "0,2 Ω típ. / 0,5 Ω máx. (IKA 1–100mA, f ≤ 1kHz)",
+            "Precisão": "B: 0,5% | A: 1% | (sem sufixo): 2%",
+            "Temperatura de operação": "C: 0°C a 70°C | I: −40°C a 85°C | Q: −40°C a 125°C",
+            "Máximos absolutos": "VKA ≤ 37V | IKA −100 a +150 mA | II(ref) −0,05 a 10 mA | Tj ≤ 150°C",
+            "ESD": "HBM ±2000V | CDM ±1000V",
+            "Térmica (SOT-23-3)": "RθJA 206 °C/W | RθJC(top) 76 °C/W",
+            "Pacotes": "DBZ (SOT-23-3) modelado | também: DBV (SOT-23-5), PK (SOT-89)",
+            "Datasheet": "SLVS543S — Ago 2004, rev. Mai 2024"
+          }
+        },
+        "pins_per_side": {
+          "left": 1,
+          "right": 2,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "REF",
+              "Tipo": "Entrada",
+              "Função": "REF: limiar de referência relativo ao anodo. Comparado internamente com a referência de precisão interna.",
+              "Tensão": "Vref ≈ 2,5V (2495 mV típ., 2440 a 2550 mV @ IKA 10mA)",
+              "Corrente": "Iref 2 µA típ. / 4 µA máx."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "CATHODE",
+              "Tipo": "Entrada (Shunt)",
+              "Função": "CATHODE: entrada de corrente/tensão shunt. Terminal que desvia corrente para o anodo, controlando a regulação.",
+              "Tensão": "VKA de Vref até 36V (máx. absoluto 37V)",
+              "Corrente": "IKA 1 mA a 100 mA (máx. absoluto −100 a +150 mA)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "ANODE",
+              "Tipo": "Comum/GND",
+              "Função": "ANODE: pino comum, normalmente conectado ao terra. Todas as tensões são referenciadas ao anodo.",
+              "Tensão": "Referência de terra do circuito",
+              "Corrente": "IKA 1 mA a 100 mA"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "tl431"
+      ]
+    },
+    {
+      "id": "moc3023",
+      "nome": "MOC3023",
+      "subtitulo": "Acionador de TRIAC (Optoisolador 400V)",
+      "imagem": null,
+      "pinos": [
+        "1: ANODE",
+        "2: CATHODE",
+        "3: NC",
+        "4: MT1",
+        "5: SUBSTRATE",
+        "6: MT2"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "MOC3023",
+          "funcao": "Acionador de TRIAC (Optoisolador 400V)",
+          "custom_fields": {
+            "Descrição": "Optoacoplador com LED infravermelho de entrada e fotodetectores em ponte funcionando como TRIAC na saída. Mesma família do MOC3021 (400V), com disparo ainda mais sensível: IFT 5 mA máx.",
+            "Fabricante": "Fairchild / onsemi (série MOC301xM/MOC302xM)",
+            "VDRM (tensão de bloqueio)": "400V (MOC302x); série MOC301x: 250V",
+            "IFT (corrente de disparo do LED)": "5 mA máx. (mais sensível da família)",
+            "VF (LED)": "1,15V típ. / 1,5V máx. @ IF=10mA",
+            "IF (LED contínuo)": "60 mA máx.; VR reverso 3V",
+            "VTM (tensão on-state)": "1,8V típ. / 3V máx. @ ITM=100mA pico",
+            "IDRM (corrente de bloqueio)": "10 nA típ. / 100 nA máx.",
+            "dv/dt (estático)": "10 V/µs típ.",
+            "ITSM (surge)": "1A (PW=1ms, 120 pps)",
+            "Isolamento": "VISO 7500 Vac(pk) | UL1577: 4170 VACrms (1 min)",
+            "Potência": "LED 100 mW | detector 300 mW | total 330 mW (25°C, derating 4,4 mW/°C)",
+            "Temperatura": "TA −40°C a +85°C | TJ −40°C a +100°C | Tstg −40°C a +150°C",
+            "Pacotes": "DIP-6 (thru-hole) modelado | também SMD (MOC3023SM)",
+            "Aplicações": "Interfacing de microcontroladores a periféricos AC, dimmers, SSR, controle de motores; disparo direto de MCU (IFT baixo)",
+            "Datasheet": "Fairchild MOC301xM/MOC302xM — Rev 1.5, Jul 2015"
+          }
+        },
+        "pins_per_side": {
+          "left": 3,
+          "right": 3,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 6,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ANODE",
+              "Tipo": "Entrada",
+              "Função": "ANODE: ânodo do LED infravermelho de entrada. Conectar ao lado positivo da linha de controle (via resistor limitador).",
+              "Tensão": "VF ≈ 1,15V típ. @ IF=10mA",
+              "Corrente": "IF até 60 mA máx.; dispara em IFT ≤ 5 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "CATHODE",
+              "Tipo": "Entrada",
+              "Função": "CATHODE: cátodo do LED infravermelho de entrada. Normalmente conectado ao GND da linha de controle.",
+              "Tensão": "VR reverso 3V máx.",
+              "Corrente": "IF até 60 mA máx."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "NC",
+              "Tipo": "—",
+              "Função": "NC: sem conexão interna.",
+              "Extra": "Não conectar."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "MT1",
+              "Tipo": "Saída",
+              "Função": "MAIN TERMINAL 1: terminal principal do fotodetectador (lado TRIAC de saída). Conectar ao lado do TRIAC de potência.",
+              "Tensão": "VDRM 400V pico",
+              "Corrente": "ITSM 1A surge (PW=1ms)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "SUB",
+              "Tipo": "—",
+              "Função": "SUBSTRATE: substrato do fotodetectador.",
+              "Extra": "DO NOT CONNECT — não conectar."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "MT2",
+              "Tipo": "Saída",
+              "Função": "MAIN TERMINAL 2: terminal principal do fotodetectador (lado TRIAC de saída).",
+              "Tensão": "VDRM 400V pico",
+              "Corrente": "VTM 1,8V típ. @ ITM=100mA; ITSM 1A surge"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "moc3021"
+      ]
+    },
+    {
+      "id": "uln2003",
+      "nome": "ULN2003A",
+      "subtitulo": "Arranjo de 7 transistores Darlington (driver de alta tensão/corrente)",
+      "imagem": null,
+      "pinos": [
+        "1: 1B",
+        "2: 2B",
+        "3: 3B",
+        "4: 4B",
+        "5: 5B",
+        "6: 6B",
+        "7: 7B",
+        "8: E",
+        "9: COM",
+        "10: 7C",
+        "11: 6C",
+        "12: 5C",
+        "13: 4C",
+        "14: 3C",
+        "15: 2C",
+        "16: 1C"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ULN2003A",
+          "funcao": "Arranjo de 7 transistores Darlington (driver de alta tensão/corrente)",
+          "custom_fields": {
+            "Descrição": "Arranjo de 7 transistores Darlington NPN com diodos de clampeamento (flyback) para acionar relés, motores, LEDs de alta potência, etc. A versão A tem resistor de base série menor para operar com TTL/5V.",
+            "Fabricante": "Texas Instruments",
+            "VCE (coletores)": "50V máx.",
+            "VCE(sat)": "0,9V típ./1,1V máx. @ IC=100mA | 1,0/1,3V @ 200mA | 1,2/1,6V @ 350mA",
+            "IC (corrente por canal)": "500mA máx. | total no emissor 2,5A máx.",
+            "VI (tensão de entrada)": "30V máx.",
+            "II (corrente de entrada)": "0,93 a 1,35mA @ VI=3,85V (resistor de base série 2,7kΩ)",
+            "VI(on)": "2,4V @ IC=200mA | 2,7V @ 250mA | 3,0V @ 300mA",
+            "VF (diodo de clampeamento)": "1,7V típ. / 2V máx. @ IF=350mA",
+            "Ganho (Darlington)": "β muito alto, até 10.000 A/A",
+            "Temperatura de operação": "ULN2003A/2004A: −40°C a 70°C | variantes AI: −40°C a 105°C",
+            "Máximos absolutos": "VCE 50V | VI 30V | IC pico 500mA | IOK 500mA | corrente total do emissor 2,5A | Tj 150°C",
+            "ESD": "HBM ±2000V | CDM ±500V",
+            "Pacotes": "N (PDIP-16) | D (SOIC-16) | NS (SO-16) | PW (TSSOP-16)",
+            "Datasheet": "SLRS027T — Dez 1976, rev. Mar 2025"
+          }
+        },
+        "pins_per_side": {
+          "left": 8,
+          "right": 8,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "1B",
+              "Tipo": "Entrada",
+              "Função": "1B: entrada de base do canal 1 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "2B",
+              "Tipo": "Entrada",
+              "Função": "2B: entrada de base do canal 2 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "3B",
+              "Tipo": "Entrada",
+              "Função": "3B: entrada de base do canal 3 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "4B",
+              "Tipo": "Entrada",
+              "Função": "4B: entrada de base do canal 4 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "5B",
+              "Tipo": "Entrada",
+              "Função": "5B: entrada de base do canal 5 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "6B",
+              "Tipo": "Entrada",
+              "Função": "6B: entrada de base do canal 6 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "7B",
+              "Tipo": "Entrada",
+              "Função": "7B: entrada de base do canal 7 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "1C",
+              "Tipo": "Saída",
+              "Função": "1C: coletor do canal 1 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "2C",
+              "Tipo": "Saída",
+              "Função": "2C: coletor do canal 2 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "3C",
+              "Tipo": "Saída",
+              "Função": "3C: coletor do canal 3 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "4C",
+              "Tipo": "Saída",
+              "Função": "4C: coletor do canal 4 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "5C",
+              "Tipo": "Saída",
+              "Função": "5C: coletor do canal 5 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "6C",
+              "Tipo": "Saída",
+              "Função": "6C: coletor do canal 6 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "7C",
+              "Tipo": "Saída",
+              "Função": "7C: coletor do canal 7 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "E",
+              "Tipo": "Comum/GND",
+              "Função": "E: emissor comum a todos os canais (normalmente aterrado).",
+              "Corrente": "Corrente total do emissor 2,5A máx."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "COM",
+              "Função": "COM: cátodo comum dos diodos de proteção (flyback) para cargas indutivas. Conectar à tensão da carga.",
+              "Tensão": "Tensão reversa do diodo 50V máx."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "uln2004"
+      ]
+    },
+    {
+      "id": "uln2004",
+      "nome": "ULN2004A",
+      "subtitulo": "Arranjo de 7 transistores Darlington (driver de alta tensão/corrente)",
+      "imagem": null,
+      "pinos": [
+        "1: 1B",
+        "2: 2B",
+        "3: 3B",
+        "4: 4B",
+        "5: 5B",
+        "6: 6B",
+        "7: 7B",
+        "8: E",
+        "9: COM",
+        "10: 7C",
+        "11: 6C",
+        "12: 5C",
+        "13: 4C",
+        "14: 3C",
+        "15: 2C",
+        "16: 1C"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "ULN2004A",
+          "funcao": "Arranjo de 7 transistores Darlington (driver de alta tensão/corrente)",
+          "custom_fields": {
+            "Descrição": "Arranjo de 7 transistores Darlington NPN com diodos de clampeamento (flyback) para acionar relés, motores, LEDs de alta potência, etc. Resistor de base série de 10,5kΩ para operar com CMOS de 6V a 15V.",
+            "Fabricante": "Texas Instruments",
+            "VCE (coletores)": "50V máx.",
+            "VCE(sat)": "0,9V típ./1,1V máx. @ IC=100mA | 1,0/1,3V @ 200mA | 1,2/1,6V @ 350mA",
+            "IC (corrente por canal)": "500mA máx. | total no emissor 2,5A máx.",
+            "VI (tensão de entrada)": "30V máx.",
+            "II (corrente de entrada)": "0,35 a 0,5mA @ VI=5V | 1,0 a 1,45mA @ VI=12V (resistor de base série 10,5kΩ)",
+            "VI(on)": "5V @ IC=125mA | 6V @ 200mA | 7V @ 275mA | 8V @ 350mA",
+            "VF (diodo de clampeamento)": "1,7V típ. / 2V máx. @ IF=350mA",
+            "Ganho (Darlington)": "β muito alto, até 10.000 A/A",
+            "Temperatura de operação": "ULN2003A/2004A: −40°C a 70°C | variantes AI: −40°C a 105°C",
+            "Máximos absolutos": "VCE 50V | VI 30V | IC pico 500mA | IOK 500mA | corrente total do emissor 2,5A | Tj 150°C",
+            "ESD": "HBM ±2000V | CDM ±500V",
+            "Pacotes": "N (PDIP-16) | D (SOIC-16) | NS (SO-16) | PW (TSSOP-16)",
+            "Datasheet": "SLRS027T — Dez 1976, rev. Mar 2025"
+          }
+        },
+        "pins_per_side": {
+          "left": 8,
+          "right": 8,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 16,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "1B",
+              "Tipo": "Entrada",
+              "Função": "1B: entrada de base do canal 1 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "2B",
+              "Tipo": "Entrada",
+              "Função": "2B: entrada de base do canal 2 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "3B",
+              "Tipo": "Entrada",
+              "Função": "3B: entrada de base do canal 3 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "4B",
+              "Tipo": "Entrada",
+              "Função": "4B: entrada de base do canal 4 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "5B",
+              "Tipo": "Entrada",
+              "Função": "5B: entrada de base do canal 5 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "6B",
+              "Tipo": "Entrada",
+              "Função": "6B: entrada de base do canal 6 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "7B",
+              "Tipo": "Entrada",
+              "Função": "7B: entrada de base do canal 7 (par Darlington). Sinal lógico via resistor de base interno.",
+              "Tensão": "VI máx. 30V",
+              "Corrente": "II 0,93 a 1,35mA @ VI=3,85V (ULN2003A)"
+            }
+          },
+          "16": {
+            "number": 16,
+            "fields": {
+              "Nome": "1C",
+              "Tipo": "Saída",
+              "Função": "1C: coletor do canal 1 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "15": {
+            "number": 15,
+            "fields": {
+              "Nome": "2C",
+              "Tipo": "Saída",
+              "Função": "2C: coletor do canal 2 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "14": {
+            "number": 14,
+            "fields": {
+              "Nome": "3C",
+              "Tipo": "Saída",
+              "Função": "3C: coletor do canal 3 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "13": {
+            "number": 13,
+            "fields": {
+              "Nome": "4C",
+              "Tipo": "Saída",
+              "Função": "4C: coletor do canal 4 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "12": {
+            "number": 12,
+            "fields": {
+              "Nome": "5C",
+              "Tipo": "Saída",
+              "Função": "5C: coletor do canal 5 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "11": {
+            "number": 11,
+            "fields": {
+              "Nome": "6C",
+              "Tipo": "Saída",
+              "Função": "6C: coletor do canal 6 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "10": {
+            "number": 10,
+            "fields": {
+              "Nome": "7C",
+              "Tipo": "Saída",
+              "Função": "7C: coletor do canal 7 (saída open-collector). Carga entre o pino e a tensão positiva; usar COM para cargas indutivas.",
+              "Tensão": "VCE máx. 50V",
+              "Corrente": "IC 500mA máx. por canal"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "E",
+              "Tipo": "Comum/GND",
+              "Função": "E: emissor comum a todos os canais (normalmente aterrado).",
+              "Corrente": "Corrente total do emissor 2,5A máx."
+            }
+          },
+          "9": {
+            "number": 9,
+            "fields": {
+              "Nome": "COM",
+              "Função": "COM: cátodo comum dos diodos de proteção (flyback) para cargas indutivas. Conectar à tensão da carga.",
+              "Tensão": "Tensão reversa do diodo 50V máx."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "uln2003"
+      ]
+    },
+    {
+      "id": "max485",
+      "nome": "MAX485",
+      "subtitulo": "Transceiver RS-485/RS-422 (half-duplex, 2,5Mbps)",
+      "imagem": null,
+      "pinos": [
+        "1: RO",
+        "2: RE",
+        "3: DE",
+        "4: DI",
+        "5: GND",
+        "6: A",
+        "7: B",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "MAX485",
+          "funcao": "Transceiver RS-485/RS-422 (half-duplex, 2,5Mbps)",
+          "custom_fields": {
+            "Descrição": "Transceiver half-duplex RS-485/RS-422 de baixo consumo (1 driver + 1 receptor). Slew rate sem limitação → até 2,5Mbps. Driver limitado em corrente de curto com proteção térmica; fail-safe na entrada do receptor (saída em HIGH com entrada aberta).",
+            "Fabricante": "Analog Devices (Maxim)",
+            "VCC (alimentação)": "4,75V a 5,25V (5V ±5%)",
+            "Consumo (ICC)": "300µA típ. / 500µA máx. sem carga",
+            "Data rate (fMAX)": "2,5Mbps (slew rate sem limitação)",
+            "Transceptores no barramento": "32 (carga unitária, RIN 12kΩ)",
+            "Faixa de modo comum": "−7V a +12V",
+            "Fail-safe": "RO em HIGH se a entrada estiver aberta (open circuit)",
+            "Proteções": "Driver limitado em corrente de curto + desligamento térmico",
+            "Temperatura de operação": "C: 0°C a 70°C | E: −40°C a 85°C",
+            "Máximos absolutos": "VCC 12V | A/B −8V a +12,5V | pinos de controle −0,5V a VCC+0,5V",
+            "Pacotes": "PDIP-8 | SO-8 | µMAX-8 | CERDIP-8",
+            "Datasheet": "MAX1487-MAX491 (Maxim Integrated) — família MAX481/483/485/487–491/1487"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "right": 4,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "RO",
+              "Tipo": "Saída",
+              "Função": "RO: saída do receptor. Nível alto se A > B por 200mV; nível baixo se A < B por 200mV.",
+              "Nível": "A−B > 200mV → HIGH | A−B < −200mV → LOW"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "RE",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "RE: habilitação do receptor (ativa em baixo). RO habilitado quando RE=0; em alta impedância quando RE=1.",
+              "Nível": "RE=0 → RO habilitado | RE=1 → RO em alta impedância"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "DE",
+              "Tipo": "Entrada (ativa em alto)",
+              "Função": "DE: habilitação do driver (ativa em alto). Saídas A/B ativas quando DE=1; em alta impedância quando DE=0.",
+              "Nível": "DE=1 → driver ativo | DE=0 → A/B em alta impedância"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "DI",
+              "Tipo": "Entrada",
+              "Função": "DI: entrada de dados do driver. Nível baixo força A baixo / B alto; nível alto o inverso.",
+              "Nível": "DI=0 → A baixo, B alto | DI=1 → A alto, B baixo"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "GND: terra comum do circuito."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "A",
+              "Tipo": "Entrada/Saída",
+              "Função": "A: saída não inversora do driver / entrada não inversora do receptor (linha RS-485).",
+              "Tensão": "Faixa de modo comum −7V a +12V"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "B",
+              "Tipo": "Entrada/Saída",
+              "Função": "B: saída inversora do driver / entrada inversora do receptor (linha RS-485).",
+              "Tensão": "Faixa de modo comum −7V a +12V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "VCC: alimentação positiva.",
+              "Tensão": "4,75V a 5,25V (5V ±5%)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "max487"
+      ]
+    },
+    {
+      "id": "max487",
+      "nome": "MAX487",
+      "subtitulo": "Transceiver RS-485/RS-422 (half-duplex, 250kbps)",
+      "imagem": null,
+      "pinos": [
+        "1: RO",
+        "2: RE",
+        "3: DE",
+        "4: DI",
+        "5: GND",
+        "6: A",
+        "7: B",
+        "8: VCC"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "MAX487",
+          "funcao": "Transceiver RS-485/RS-422 (half-duplex, 250kbps)",
+          "custom_fields": {
+            "Descrição": "Transceiver half-duplex RS-485/RS-422 de baixo consumo (1 driver + 1 receptor). Slew rate limitado → menor EMI e reflexões, até 250kbps. Entrada de carga de quarto de unidade → até 128 transceptores no barramento. Modo shutdown de 0,1µA.",
+            "Fabricante": "Analog Devices (Maxim)",
+            "VCC (alimentação)": "4,75V a 5,25V (5V ±5%)",
+            "Consumo (ICC)": "120µA típ. / 250µA máx. sem carga",
+            "Data rate (fMAX)": "250kbps (slew rate limitado — reduz EMI)",
+            "Transceptores no barramento": "128 (carga de quarto de unidade, RIN 48kΩ)",
+            "Faixa de modo comum": "−7V a +12V",
+            "Fail-safe": "RO em HIGH se a entrada estiver aberta (open circuit)",
+            "Proteções": "Driver limitado em corrente de curto + desligamento térmico",
+            "Temperatura de operação": "C: 0°C a 70°C | E: −40°C a 85°C",
+            "Máximos absolutos": "VCC 12V | A/B −8V a +12,5V | pinos de controle −0,5V a VCC+0,5V",
+            "Pacotes": "PDIP-8 | SO-8 | µMAX-8 | CERDIP-8",
+            "Datasheet": "MAX1487-MAX491 (Maxim Integrated) — família MAX481/483/485/487–491/1487",
+            "Shutdown": "ISHDN 0,1µA típ. / 10µA máx. (DE=0 e RE=1)"
+          }
+        },
+        "pins_per_side": {
+          "left": 4,
+          "right": 4,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 8,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "RO",
+              "Tipo": "Saída",
+              "Função": "RO: saída do receptor. Nível alto se A > B por 200mV; nível baixo se A < B por 200mV.",
+              "Nível": "A−B > 200mV → HIGH | A−B < −200mV → LOW"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "RE",
+              "Tipo": "Entrada (ativa em baixo)",
+              "Função": "RE: habilitação do receptor (ativa em baixo). RO habilitado quando RE=0; em alta impedância quando RE=1.",
+              "Nível": "RE=0 → RO habilitado | RE=1 → RO em alta impedância"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "DE",
+              "Tipo": "Entrada (ativa em alto)",
+              "Função": "DE: habilitação do driver (ativa em alto). Saídas A/B ativas quando DE=1; em alta impedância quando DE=0.",
+              "Nível": "DE=1 → driver ativo | DE=0 → A/B em alta impedância"
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "DI",
+              "Tipo": "Entrada",
+              "Função": "DI: entrada de dados do driver. Nível baixo força A baixo / B alto; nível alto o inverso.",
+              "Nível": "DI=0 → A baixo, B alto | DI=1 → A alto, B baixo"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "GND: terra comum do circuito."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "A",
+              "Tipo": "Entrada/Saída",
+              "Função": "A: saída não inversora do driver / entrada não inversora do receptor (linha RS-485).",
+              "Tensão": "Faixa de modo comum −7V a +12V"
+            }
+          },
+          "7": {
+            "number": 7,
+            "fields": {
+              "Nome": "B",
+              "Tipo": "Entrada/Saída",
+              "Função": "B: saída inversora do driver / entrada inversora do receptor (linha RS-485).",
+              "Tensão": "Faixa de modo comum −7V a +12V"
+            }
+          },
+          "8": {
+            "number": 8,
+            "fields": {
+              "Nome": "VCC",
+              "Tipo": "Alimentação",
+              "Função": "VCC: alimentação positiva.",
+              "Tensão": "4,75V a 5,25V (5V ±5%)"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "max485"
       ]
     }
   ],
