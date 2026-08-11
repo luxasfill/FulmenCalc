@@ -4515,6 +4515,81 @@
       "substitutos": [
         "atmega328p"
       ]
+    },
+    {
+      "id": "tl431",
+      "nome": "TL431",
+      "subtitulo": "Referência de Tensão Programável",
+      "imagem": null,
+      "pinos": [
+        "1: CATHODE",
+        "2: ANODE",
+        "3: REF"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "TL431",
+          "funcao": "Referência de Tensão Programável",
+          "custom_fields": {
+            "Descrição": "Referência de tensão programável de precisão (shunt regulator). Vref ≈ 2,5V, catodo ajustável de Vref até 36V. Família TL431/TL432 da TI.",
+            "Fabricante": "Texas Instruments",
+            "Vref": "2495 mV típ. (2440 a 2550 mV) @ VKA=Vref, IKA=10mA",
+            "VKA (tensão de catodo)": "Vref a 36V (máx. absoluto 37V)",
+            "IKA (corrente de catodo)": "1 mA a 100 mA (máx. absoluto −100 a +150 mA)",
+            "Imin (regulação)": "0,4 mA típ. / 1 mA máx.",
+            "Ioff (off-state)": "0,1 µA típ. / 1 µA máx. @ VKA=36V",
+            "Iref (corrente de referência)": "2 µA típ. / 4 µA máx.",
+            "|ZKA| (impedância dinâmica)": "0,2 Ω típ. / 0,5 Ω máx. (IKA 1–100mA, f ≤ 1kHz)",
+            "Precisão": "B: 0,5% | A: 1% | (sem sufixo): 2%",
+            "Temperatura de operação": "C: 0°C a 70°C | I: −40°C a 85°C | Q: −40°C a 125°C",
+            "Máximos absolutos": "VKA ≤ 37V | IKA −100 a +150 mA | II(ref) −0,05 a 10 mA | Tj ≤ 150°C",
+            "ESD": "HBM ±2000V | CDM ±1000V",
+            "Térmica (TO-92)": "RθJA 140 °C/W | RθJC(top) 55 °C/W",
+            "Pacotes": "LP (TO-92) modelado | também: D (SOIC-8), P (PDIP-8), PS (SO-8), PW (TSSOP-8), DBV (SOT-23-5), DBZ (SOT-23-3), PK (SOT-89), DCK (SC70-6)",
+            "Datasheet": "SLVS543S — Ago 2004, rev. Mai 2024"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 3
+        },
+        "total_pins": 3,
+        "body_style": "rect",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "CATHODE",
+              "Tipo": "I/O",
+              "Função": "Entrada de corrente/tensão shunt (catodo)."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "ANODE",
+              "Tipo": "Referência",
+              "Função": "Pino comum, normalmente conectado ao terra (anodo)."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "REF",
+              "Tipo": "Entrada",
+              "Função": "Limiar de referência relativo ao anodo. Comparado internamente com Vref ≈ 2,5V."
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": []
     }
   ],
   "infos": [
