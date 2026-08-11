@@ -5672,6 +5672,117 @@
       ],
       "categoria": "encapsulamento",
       "svg": null
+    },
+    {
+      "id": "pino1_ci",
+      "nome": "Como identificar o pino 1 e orientar um CI",
+      "descricao": "Como achar o pino 1 e a orientação correta em qualquer encapsulamento de CI.",
+      "imagem": "ic_pino1_orientacao",
+      "detalhes": [
+        "Notch (meia-lua): pino 1 é o primeiro à esquerda do entalhe",
+        "DIP/SOIC: pino 1 no canto superior esquerdo (topo com o notch)",
+        "Ponto ou bolinha pintada indica o pino 1",
+        "Chanfro cortado (chamfer) marca o canto do pino 1",
+        "SOT-23/QFN: marca no canto = pino 1",
+        "Numeração anti-horária em DIP: sobe pela esquerda, desce pela direita",
+        "TO-92: face plana para você, pinos 1-2-3 da esquerda para a direita",
+        "Sempre conferir com o datasheet antes de energizar"
+      ],
+      "categoria": "conceito",
+      "svg": null
+    },
+    {
+      "id": "sot23",
+      "nome": "SOT-23 (e SOT-23-5)",
+      "descricao": "Encapsulamento SMD pequeno, de 3 (ou 5) pinos, comum em transistores e referências.",
+      "imagem": "ic_sot23",
+      "detalhes": [
+        "Pinos: 3 (SOT-23) ou 5 (SOT-23-5), pitch 0,95mm",
+        "Uso: transistores SMD (2N7000, BC847), referências (TL431/TL432), sensores",
+        "Marca no canto (ponto/chanfro) indica o pino 1",
+        "SOT-23 de 3 pinos: lado com 1 pino = pino 1",
+        "Corpo pequeno (~2,9 x 1,6mm)",
+        "Potência: tipicamente até 0,3W"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "soic8",
+      "nome": "SOIC-8 / SOP-8",
+      "descricao": "Versão SMD do DIP-8: mesmo diagrama de pinos, tamanho reduzido.",
+      "imagem": "ic_soic8",
+      "detalhes": [
+        "Pinos: 8, pitch 1,27mm",
+        "Uso: NE555, LM741, MAX485/MAX487, memórias (24Cxx)",
+        "Mesma pinagem do DIP-8 (pino 1 no canto do notch/ponto)",
+        "Corpo ~5mm de comprimento, cerca de 50% menor que o DIP",
+        "Montagem: surface mount, sem furos na placa"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "dip14_16",
+      "nome": "DIP-14 / DIP-16",
+      "descricao": "Encapsulamentos through-hole com dois lados de pinos, para CIs com mais pinos.",
+      "imagem": "ic_dip16",
+      "detalhes": [
+        "Pinos: 14 ou 16, pitch 2,54mm",
+        "Uso: opamps quádruplos (LM2902, TL084), drivers (ULN2003/ULN2004)",
+        "Pino 1: canto superior esquerdo com o notch",
+        "Numeração anti-horária: esquerda de cima para baixo, direita de baixo para cima",
+        "Montagem: through-hole, ideal para protoboard"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "sot89_sot223_dpak",
+      "nome": "SOT-89 / SOT-223 / DPAK (TO-252)",
+      "descricao": "Encapsulamentos SMD de potência média, com terminal grande para dissipar calor.",
+      "imagem": "ic_smd_potencia",
+      "detalhes": [
+        "Uso: reguladores de tensão e transistores de potência SMD",
+        "O terminal grande (saída/coletor/dreno) ajuda na dissipação",
+        "SOT-89: 3 pinos + aba | SOT-223: 4 pinos (2 ligados à aba) | DPAK: 3 pinos + aba",
+        "Pino 1 marcado por ponto ou chanfro",
+        "Dissipação: tipicamente 1 a 3W com cobre na placa"
+      ],
+      "categoria": "encapsulamento",
+      "svg": null
+    },
+    {
+      "id": "prefixos_si",
+      "nome": "Prefixos de unidades (SI)",
+      "descricao": "Os múltiplos e submúltiplos usados em eletrônica: k, M, G, m, µ, n, p.",
+      "imagem": "prefixos_si",
+      "detalhes": [
+        "k = quilo (x10³) | M = mega (x10⁶) | G = giga (x10⁹)",
+        "m = mili (x10⁻³) | µ = micro (x10⁻⁶) | n = nano (x10⁻⁹) | p = pico (x10⁻¹²)",
+        "Ex.: 4,7kΩ = 4700Ω | 10µF = 10.000.000pF",
+        "1MHz = 1.000.000Hz | 250kbps = 250.000bps",
+        "No app dá pra digitar 4k7, 10u, 100n nas calculadoras"
+      ],
+      "categoria": "conceito",
+      "svg": null
+    },
+    {
+      "id": "npn_pnp",
+      "nome": "Transistores NPN vs PNP",
+      "descricao": "Como diferenciar transistores bipolares NPN e PNP.",
+      "imagem": "npn_pnp",
+      "detalhes": [
+        "NPN: corrente flui do coletor para o emissor (mais comum)",
+        "PNP: corrente flui do emissor para o coletor (polaridades invertidas)",
+        "Símbolo: seta no emissor — NPN aponta para fora, PNP para dentro",
+        "A base controla a corrente; hFE é o ganho",
+        "Ex.: BC547/2N2222 (NPN) | BC557/2N2907 (PNP)",
+        "Complementares: mesmo comportamento, tensões invertidas",
+        "Pinagem varia com o encapsulamento — veja no app na lista de CIs"
+      ],
+      "categoria": "conceito",
+      "svg": null
     }
   ]
 }
