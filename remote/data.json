@@ -4596,6 +4596,121 @@
       },
       "complementar": null,
       "substitutos": []
+    },
+    {
+      "id": "moc3021",
+      "nome": "MOC3021",
+      "subtitulo": "Acionador de TRIAC (Optoisolador 400V)",
+      "imagem": null,
+      "pinos": [
+        "1: ANODE",
+        "2: CATHODE",
+        "3: NC",
+        "4: MT1",
+        "5: SUBSTRATE",
+        "6: MT2"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "MOC3021",
+          "funcao": "Acionador de TRIAC (Optoisolador 400V)",
+          "custom_fields": {
+            "Descrição": "Optoacoplador com LED infravermelho de entrada e fotodetectores em ponte funcionando como TRIAC na saída. Projetado para acionar TRIACs de potência em cargas resistivas e indutivas em 115/240 VAC.",
+            "Fabricante": "Fairchild / onsemi (série MOC301xM/MOC302xM)",
+            "VDRM (tensão de bloqueio)": "400V (MOC3021); série MOC301x: 250V",
+            "IFT (corrente de disparo do LED)": "8 mA típ. / 15 mA máx. (MOC3021)",
+            "VF (LED)": "1,15V típ. / 1,5V máx. @ IF=10mA",
+            "IF (LED contínuo)": "60 mA máx.; VR reverso 3V",
+            "VTM (tensão on-state)": "1,8V típ. / 3V máx. @ ITM=100mA pico",
+            "IDRM (corrente de bloqueio)": "10 nA típ. / 100 nA máx.",
+            "dv/dt (estático)": "10 V/µs típ.",
+            "ITSM (surge)": "1A (PW=1ms, 120 pps)",
+            "Isolamento": "VISO 7500 Vac(pk) | UL1577: 4170 VACrms (1 min)",
+            "Potência": "LED 100 mW | detector 300 mW | total 330 mW (25°C, derating 4,4 mW/°C)",
+            "Temperatura": "TA −40°C a +85°C | TJ −40°C a +100°C | Tstg −40°C a +150°C",
+            "Pacotes": "DIP-6 (thru-hole) modelado | também SMD (MOC3021SM/SR2M)",
+            "Aplicações": "Interfacing de microcontroladores a periféricos AC, dimmers, SSR, controle de motores, acionamento de TRIAC de potência",
+            "Datasheet": "Fairchild MOC301xM/MOC302xM — Rev 1.5, Jul 2015"
+          }
+        },
+        "pins_per_side": {
+          "left": 3,
+          "right": 3,
+          "top": 0,
+          "bottom": 0
+        },
+        "total_pins": 6,
+        "body_style": "rect",
+        "marker_style": "notch",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ANODE",
+              "Tipo": "Entrada",
+              "Função": "ANODE: ânodo do LED infravermelho de entrada. Conectar ao lado positivo da linha de controle (via resistor limitador).",
+              "Tensão": "VF ≈ 1,15V típ. @ IF=10mA",
+              "Corrente": "IF até 60 mA máx.; dispara em IFT ≤ 15 mA"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "CATHODE",
+              "Tipo": "Entrada",
+              "Função": "CATHODE: cátodo do LED infravermelho de entrada. Normalmente conectado ao GND da linha de controle.",
+              "Tensão": "VR reverso 3V máx.",
+              "Corrente": "IF até 60 mA máx."
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "NC",
+              "Tipo": "—",
+              "Função": "NC: sem conexão interna.",
+              "Extra": "Não conectar."
+            }
+          },
+          "4": {
+            "number": 4,
+            "fields": {
+              "Nome": "MT1",
+              "Tipo": "Saída",
+              "Função": "MAIN TERMINAL 1: terminal principal do fotodetectador (lado TRIAC de saída). Conectar ao lado do TRIAC de potência.",
+              "Tensão": "VDRM 400V pico",
+              "Corrente": "ITSM 1A surge (PW=1ms)"
+            }
+          },
+          "5": {
+            "number": 5,
+            "fields": {
+              "Nome": "SUB",
+              "Tipo": "—",
+              "Função": "SUBSTRATE: substrato do fotodetectador.",
+              "Extra": "DO NOT CONNECT — não conectar."
+            }
+          },
+          "6": {
+            "number": 6,
+            "fields": {
+              "Nome": "MT2",
+              "Tipo": "Saída",
+              "Função": "MAIN TERMINAL 2: terminal principal do fotodetectador (lado TRIAC de saída).",
+              "Tensão": "VDRM 400V pico",
+              "Corrente": "VTM 1,8V típ. @ ITM=100mA; ITSM 1A surge"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "moc3022",
+        "moc3023"
+      ]
     }
   ],
   "infos": [
