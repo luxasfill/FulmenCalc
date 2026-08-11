@@ -4564,16 +4564,20 @@
             "number": 1,
             "fields": {
               "Nome": "CATHODE",
-              "Tipo": "I/O",
-              "Função": "Entrada de corrente/tensão shunt (catodo)."
+              "Tipo": "Entrada (Shunt)",
+              "Função": "CATHODE: entrada de corrente/tensão shunt. Terminal que desvia corrente para o anodo, controlando a regulação.",
+              "Tensão": "VKA de Vref até 36V (máx. absoluto 37V)",
+              "Corrente": "IKA 1 mA a 100 mA (máx. absoluto −100 a +150 mA)"
             }
           },
           "2": {
             "number": 2,
             "fields": {
               "Nome": "ANODE",
-              "Tipo": "Referência",
-              "Função": "Pino comum, normalmente conectado ao terra (anodo)."
+              "Tipo": "Comum/GND",
+              "Função": "ANODE: pino comum, normalmente conectado ao terra. Todas as tensões são referenciadas ao anodo.",
+              "Tensão": "Referência de terra do circuito",
+              "Corrente": "IKA 1 mA a 100 mA"
             }
           },
           "3": {
@@ -4581,7 +4585,9 @@
             "fields": {
               "Nome": "REF",
               "Tipo": "Entrada",
-              "Função": "Limiar de referência relativo ao anodo. Comparado internamente com Vref ≈ 2,5V."
+              "Função": "REF: limiar de referência relativo ao anodo. Comparado internamente com a referência de precisão interna.",
+              "Tensão": "Vref ≈ 2,5V (2495 mV típ., 2440 a 2550 mV @ IKA 10mA)",
+              "Corrente": "Iref 2 µA típ. / 4 µA máx."
             }
           }
         },
