@@ -5684,7 +5684,7 @@
         "Ponto ou bolinha pintada indica o pino 1",
         "Chanfro cortado (chamfer) marca o canto do pino 1",
         "SOT-23/QFN: marca no canto = pino 1",
-        "Numeração anti-horária em DIP: sobe pela esquerda, desce pela direita",
+        "Numeração anti-horária em DIP: pino 1 no topo esquerdo; desce pela esquerda, sobe pela direita",
         "TO-92: face plana para você, pinos 1-2-3 da esquerda para a direita",
         "Sempre conferir com o datasheet antes de energizar"
       ],
