@@ -5606,6 +5606,163 @@
       "substitutos": [
         "max485"
       ]
+    },
+    {
+      "id": "lm1117",
+      "nome": "LM1117",
+      "subtitulo": "Regulador LDO Ajustável",
+      "imagem": null,
+      "pinos": [
+        "1: ADJ",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "LM1117",
+          "funcao": "Regulador LDO Ajustável",
+          "custom_fields": {
+            "Descrição": "Regulador LDO (baixa queda) positivo ajustável de 3 terminais — saída de 1,25V a 13,8V com até 800mA. Dropout baixo: regula com apenas ~1,1V acima da saída.",
+            "Fabricante": "Texas Instruments (National) — família com versões fixas de 1,8V a 5V (LM1117-3.3, LM1117-5.0). Pin-compatível com AMS1117",
+            "Tensão de saída": "1,25V a 13,8V (ajustável); versões fixas: 1,8 / 2,5 / 2,85 / 3,3 / 5V",
+            "Tensão de entrada": "máx. 15V",
+            "Corrente de saída": "800mA (IO); limite interno de corrente",
+            "Dropout": "1,1V typ / 1,2V max @ 800mA — é um LDO de verdade",
+            "VREF": "1,25V typ entre ADJ e OUT (faixa 1,2–1,3V)",
+            "IADJ (corrente de ajuste)": "120µA typ / 150µA max (60µA typ na versão A)",
+            "Regulação de linha": "0,2% max",
+            "Regulação de carga": "0,4% max",
+            "Proteções": "Limite de corrente e proteção térmica (internas)",
+            "Temperatura": "TJ 0°C a 125°C; Tstg −65°C a 150°C",
+            "Pacotes": "SOT-223 (DCY), TO-252/DPAK (NDE), SO-8 (D)",
+            "Datasheet": "SNVS307 — Regulador LDO de 800mA"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "ADJ",
+              "Tipo": "Entrada (Ajuste)",
+              "Função": "ADJUST: pino de ajuste da tensão de saída. Conectar a um divisor resistivo (R1 entre OUT e ADJ, R2 de ADJ a GND). Nas versões fixas este pino é o GND.",
+              "Tensão": "VOUT = VREF×(1+R2/R1) + IADJ×R2",
+              "Corrente": "IADJ 120µA typ"
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "OUTPUT: tensão de saída do regulador. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "1,25V a 13,8V, até 800mA"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "INPUT: tensão de entrada do regulador. Por ser LDO, funciona com entrada bem próxima da saída (ex.: 5V para saída de 3,3V).",
+              "Tensão": "até 15V (VI−VO ≥ dropout)",
+              "Extra": "Recomenda-se capacitor de 10µF na saída (tântalo) e 10µF na entrada"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "ams1117"
+      ]
+    },
+    {
+      "id": "ams1117",
+      "nome": "AMS1117",
+      "subtitulo": "Regulador LDO 3,3V",
+      "imagem": null,
+      "pinos": [
+        "1: GND",
+        "2: OUT",
+        "3: IN"
+      ],
+      "svg": {
+        "version": 4,
+        "component": {
+          "name": "AMS1117-3.3",
+          "funcao": "Regulador LDO 3,3V",
+          "custom_fields": {
+            "Descrição": "LDO fixo de 3,3V com até 1A em SOT-223 — o 'regulador do ESP8266/ESP32'. Drop-in pin-compatível do LM1117.",
+            "Fabricante": "Advanced Monolithic Systems (AMS) — equivalentes: LM1117-3.3 (TI), NCP1117",
+            "Tensão de saída": "3,3V (versão 3.3); também existe em 1,8V, 2,5V, 5V e versão ajustável (ADJ)",
+            "Tensão de entrada": "máx. 12V a 15V (veja datasheet)",
+            "Corrente de saída": "até 1A",
+            "Dropout": "1,1V max @ 1A (típico menor)",
+            "Regulação de linha": "0,2% max",
+            "Regulação de carga": "0,4% max",
+            "Proteções": "Limite de corrente e proteção térmica",
+            "Temperatura": "TJ 0°C a 125°C",
+            "Pacotes": "SOT-223 (mais comum), SO-8, TO-252",
+            "Uso típico": "Alimentar ESP8266/ESP32, sensores e MCUs de 3,3V a partir de 5V",
+            "Datasheet": "AMS1117 — LDO fixo/ajustável de 1A"
+          }
+        },
+        "pins_per_side": {
+          "left": 0,
+          "bottom": 3,
+          "right": 0,
+          "top": 0
+        },
+        "total_pins": 3,
+        "body_style": "tab",
+        "marker_style": "dot",
+        "pins": {
+          "1": {
+            "number": 1,
+            "fields": {
+              "Nome": "GND",
+              "Tipo": "Alimentação",
+              "Função": "TERRA: referência comum do circuito. Na versão ajustável (AMS1117-ADJ) este pino é o ADJ."
+            }
+          },
+          "2": {
+            "number": 2,
+            "fields": {
+              "Nome": "OUT",
+              "Tipo": "Saída",
+              "Função": "OUTPUT: saída fixa de 3,3V. O tab (heatsink) também é OUTPUT.",
+              "Tensão": "3,3V, até 1A",
+              "Extra": "Recomenda-se capacitor de 22µF tântalo na saída"
+            }
+          },
+          "3": {
+            "number": 3,
+            "fields": {
+              "Nome": "IN",
+              "Tipo": "Alimentação",
+              "Função": "INPUT: tensão de entrada. Como é LDO, aceita entrada baixa (ex.: 5V) e ainda regula 3,3V.",
+              "Tensão": "≥ 4,5V (3,3V + dropout); máx. 12V"
+            }
+          }
+        },
+        "bga_grid": null,
+        "exposed_pad": false
+      },
+      "complementar": null,
+      "substitutos": [
+        "lm1117"
+      ]
     }
   ],
   "infos": [
@@ -5780,6 +5937,62 @@
         "Ex.: BC547/2N2222 (NPN) | BC557/2N2907 (PNP)",
         "Complementares: mesmo comportamento, tensões invertidas",
         "Pinagem varia com o encapsulamento — veja no app na lista de CIs"
+      ],
+      "categoria": "conceito",
+      "svg": null
+    },
+    {
+      "id": "multimetro",
+      "nome": "Como usar o multímetro",
+      "descricao": "Referência rápida de como medir tensão, corrente e resistência com o multímetro, com segurança.",
+      "imagem": null,
+      "detalhes": [
+        "Tensão: medir EM PARALELO com o circuito energizado (escala V⎓ DC ou V~ AC)",
+        "Corrente: medir EM SÉRIE (nunca em paralelo) — mover a ponta para o plug A",
+        "Continuidade: modo bip — 0Ω ≈ curto, sem bip ≈ aberto",
+        "Resistência: circuito desligado e componente fora da placa (senão mede errado)",
+        "Capacitância: modo F — descarregar o capacitor antes de medir",
+        "Nunca medir resistência/continuidade com o circuito energizado",
+        "Segurança: começar na maior escala e descer; conferir se as pontas estão no plug certo",
+        "Diodos: modo diodo mostra a queda de tensão direta (Si ~0,6–0,7V)"
+      ],
+      "categoria": "conceito",
+      "svg": null
+    },
+    {
+      "id": "simbolos_eletricos",
+      "nome": "Símbolos elétricos (esquemáticos)",
+      "descricao": "Símbolos usados em esquemáticos elétricos e eletrônicos, para ler circuitos.",
+      "imagem": null,
+      "detalhes": [
+        "Resistor: retângulo (ou zigue-zague) com 2 pernas",
+        "Capacitor: duas linhas paralelas (eletrolítico: reta + curva, curva = positivo)",
+        "Indutor: espiral ou meias-luas",
+        "Diodo: triângulo + barra — corrente flui da base do triângulo para a barra",
+        "LED: diodo com duas setas saindo",
+        "Transistor NPN: seta do emissor aponta para fora; PNP aponta para dentro",
+        "MOSFET: símbolo de 3 terminais (D, G, S) com o corpo (diálogo) identificando N/P",
+        "Terra: 3 traços horizontais decrescentes",
+        "Relé: retângulo (bobina) + contatos (chave)",
+        "Fusível: retângulo com um traço atravessando"
+      ],
+      "categoria": "conceito",
+      "svg": null
+    },
+    {
+      "id": "disjuntores_curvas",
+      "nome": "Disjuntores e curvas B/C/D",
+      "descricao": "Como escolher o disjuntor certo: corrente nominal e curva de disparo.",
+      "imagem": null,
+      "detalhes": [
+        "Disjuntor protege contra sobrecarga e curto-circuito",
+        "Curva B: dispara entre 3 e 5× a corrente nominal — cargas resistivas (lâmpadas, tomadas de uso geral)",
+        "Curva C: dispara entre 5 e 10× In — cargas indutivas e motores pequenos (padrão em residências)",
+        "Curva D: dispara entre 10 e 20× In — motores grandes, transformadores, picos altos de partida",
+        "Corrente nominal padrão: 6, 10, 16, 20, 25, 32, 40, 63A",
+        "Regra: In ≥ corrente de carga; curva conforme o pico de partida da carga",
+        "Conferir poder de corte (kA) do disjuntor para o ponto de instalação",
+        "Motores: usar curva D ou C no máximo para evitar desarme na partida"
       ],
       "categoria": "conceito",
       "svg": null
