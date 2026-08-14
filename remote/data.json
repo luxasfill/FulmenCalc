@@ -5945,7 +5945,7 @@
       "id": "multimetro",
       "nome": "Como usar o multímetro",
       "descricao": "Referência rápida de como medir tensão, corrente e resistência com o multímetro, com segurança.",
-      "imagem": null,
+      "imagem": "multimetro",
       "detalhes": [
         "Tensão: medir EM PARALELO com o circuito energizado (escala V⎓ DC ou V~ AC)",
         "Corrente: medir EM SÉRIE (nunca em paralelo) — mover a ponta para o plug A",
@@ -5963,7 +5963,7 @@
       "id": "simbolos_eletricos",
       "nome": "Símbolos elétricos (esquemáticos)",
       "descricao": "Símbolos usados em esquemáticos elétricos e eletrônicos, para ler circuitos.",
-      "imagem": null,
+      "imagem": "simbolos_eletricos",
       "detalhes": [
         "Resistor: retângulo (ou zigue-zague) com 2 pernas",
         "Capacitor: duas linhas paralelas (eletrolítico: reta + curva, curva = positivo)",
@@ -5983,7 +5983,7 @@
       "id": "disjuntores_curvas",
       "nome": "Disjuntores e curvas B/C/D",
       "descricao": "Como escolher o disjuntor certo: corrente nominal e curva de disparo.",
-      "imagem": null,
+      "imagem": "disjuntores_curvas",
       "detalhes": [
         "Disjuntor protege contra sobrecarga e curto-circuito",
         "Curva B: dispara entre 3 e 5× a corrente nominal — cargas resistivas (lâmpadas, tomadas de uso geral)",
