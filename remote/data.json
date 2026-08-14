@@ -5947,6 +5947,7 @@
       "descricao": "Referência rápida de como medir tensão, corrente e resistência com o multímetro, com segurança.",
       "imagem": "multimetro",
       "detalhes": [
+        "Analógico (agulha): escolher a escala e ler na certa; o espelho evita erro de paralaxe",
         "Tensão: medir EM PARALELO com o circuito energizado (escala V⎓ DC ou V~ AC)",
         "Corrente: medir EM SÉRIE (nunca em paralelo) — mover a ponta para o plug A",
         "Continuidade: modo bip — 0Ω ≈ curto, sem bip ≈ aberto",
