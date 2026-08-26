@@ -5971,8 +5971,6 @@
         "Indutor: espiral ou meias-luas",
         "Diodo: triângulo + barra — corrente flui da base do triângulo para a barra",
         "LED: diodo com duas setas saindo",
-        "Transistor NPN: seta do emissor aponta para fora; PNP aponta para dentro",
-        "MOSFET: símbolo de 3 terminais (D, G, S) com o corpo (diálogo) identificando N/P",
         "Terra: 3 traços horizontais decrescentes",
         "Relé: retângulo (bobina) + contatos (chave)",
         "Fusível: retângulo com um traço atravessando"
