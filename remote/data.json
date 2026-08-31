@@ -5995,6 +5995,22 @@
       ],
       "categoria": "conceito",
       "svg": null
+    },
+    {
+      "id": "cores_fios_nbr",
+      "nome": "Cores de fios (NBR 5410)",
+      "descricao": "Cores padronizadas dos condutores em instalações elétricas residenciais.",
+      "imagem": "cores_fios_nbr",
+      "detalhes": [
+        "Fase: preta — pode variar entre as fases de um circuito trifásico (ex.: preta, vermelha, branca)",
+        "Neutro: azul-claro — obrigatória; se usada cor única, marcar as extremidades",
+        "Terra: verde ou verde-amarelo — exclusiva para proteção, nunca para outra função",
+        "Retorno: qualquer outra cor (ex.: vermelho) — comando entre interruptor e lâmpada",
+        "Tomadas 220V: fase + fase (ex.: preta e vermelha)",
+        "Cabo verde/verde-amarelo NUNCA pode ser usado como fase ou neutro"
+      ],
+      "categoria": "conceito",
+      "svg": null
     }
   ]
 }
